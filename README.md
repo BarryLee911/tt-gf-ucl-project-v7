@@ -31,3 +31,5 @@ level-23 samples and independent pin-only RTL/gate regression are retained.
 Run the `gds` and `test` Actions workflows at the recorded experiment commit.
 Documentation-only commits do not rebuild GDS; use workflow dispatch for intentional reruns.
 The first experiment does not deploy a GitHub Pages layout viewer.
+
+Current optimized AREA 0 results: worst setup -8.238365 ns; area change +1.008%; functional regression PASS; nine-corner timing FAIL. See [comparison](docs/v7-area0-optimized-comparison.md) and [machine-readable results](docs/v7-area0-optimized-results.json).
