@@ -1,0 +1,2 @@
+# Preserve the verified RTL bytes and its SHA256 on all platforms.
+src/project.v -text
