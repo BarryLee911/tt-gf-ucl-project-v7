@@ -1,48 +1,107 @@
 name: gds
-
 on:
   push:
+    paths:
+      - 'src/**'
+      - 'info.yaml'
+      - 'build_lock.json'
+      - 'scripts/verify_build.py'
+      - '.github/workflows/gds.yaml'
   workflow_dispatch:
-
+env:
+  PDK_ROOT: /home/runner/pdk
 jobs:
   gds:
     runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    outputs:
+      submission_available: ${{ steps.inventory.outputs.submission_available }}
     steps:
-      - name: checkout repo
-        uses: actions/checkout@v6
+      - uses: actions/checkout@v6
         with:
           submodules: recursive
-
-      - name: Build GDS
-        uses: TinyTapeout/tt-gds-action@ttgf26c
+          fetch-depth: 0
+      - name: Install exact v6 baseline PDK
+        uses: TinyTapeout/ciel-action@11703802099012722109e39b7e353eae0fea88bb
+        with:
+          pdk_name: gf180mcuD
+          pdk_version: 54435919abffb937387ec956209f9cf5fd2dfbee
+          pdk_root: /home/runner/pdk
+      - name: Build 80 MHz DELAY 0 GDS
+        id: build
+        continue-on-error: true
+        uses: TinyTapeout/tt-gds-action@395eedb3eeec3c2f4961c3b04ff2cf87f5525636
         with:
           pdk: gf180mcuD
-
+          tools-ref: 01d5d2814fa9dd61e9d211e0b235a4a592a9316a
+          librelane-version: '3.0.14'
+      - name: Record submission availability
+        id: inventory
+        if: always()
+        run: |
+          if test -f tt_submission/tt_um_sine_area_detector.v; then
+            echo 'submission_available=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'submission_available=false' >> "$GITHUB_OUTPUT"
+          fi
+      - name: Audit baseline constraints and all nine corners
+        if: always()
+        env:
+          GDS_BUILD_OUTCOME: ${{ steps.build.outcome }}
+        run: python scripts/verify_build.py
+      - name: Preserve assessment and build evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: v7-delay0-assessment
+          retention-days: 90
+          path: |
+            verification/build/*
+            build_lock.json
+            src/config*.json
+            runs/wokwi/resolved.json
+            runs/wokwi/pdk.json
+            runs/wokwi/final/**
+            runs/wokwi/*-openroad-stapostpnr/**
+            runs/wokwi/*-yosys-synthesis/*.log
+            runs/wokwi/*-yosys-synthesis/reports/**
+      - name: Require physical build completion
+        if: always()
+        run: test '${{ steps.build.outcome }}' = success
   precheck:
     needs: gds
+    if: ${{ always() && needs.gds.outputs.submission_available == 'true' }}
     runs-on: ubuntu-24.04
     steps:
-      - name: Run Tiny Tapeout Precheck
-        uses: TinyTapeout/tt-gds-action/precheck@ttgf26c
-
+      - name: TinyTapeout precheck (same action as v6)
+        uses: TinyTapeout/tt-gds-action/precheck@395eedb3eeec3c2f4961c3b04ff2cf87f5525636
+        with:
+          tools-ref: 01d5d2814fa9dd61e9d211e0b235a4a592a9316a
   gl_test:
     needs: gds
+    if: ${{ always() && needs.gds.outputs.submission_available == 'true' }}
     runs-on: ubuntu-24.04
+    timeout-minutes: 45
     steps:
-      - name: checkout repo
-        uses: actions/checkout@v6
+      - uses: actions/checkout@v6
         with:
           submodules: recursive
-
-      - name: GL test
-        uses: TinyTapeout/tt-gds-action/gl_test@ttgf26c
-
-  viewer:
-    if: github.ref == 'refs/heads/main'
+      - name: Functional gate-level regression (without SDF)
+        uses: TinyTapeout/tt-gds-action/gl_test@395eedb3eeec3c2f4961c3b04ff2cf87f5525636
+  all_corner_assessment:
     needs: gds
+    if: always()
     runs-on: ubuntu-24.04
-    permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
     steps:
-      - uses: TinyTapeout/tt-gds-action/viewer@ttgf26c
+      - uses: actions/download-artifact@v7
+        with:
+          name: v7-delay0-assessment
+      - name: Require nine-corner timing and electrical closure
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r = json.loads(Path('verification/build/assessment.json').read_text())
+          print(json.dumps({k: r[k] for k in ('comparable', 'build_complete', 'timing_pass', 'electrical_pass', 'physical_pass')}, indent=2))
+          raise SystemExit(0 if r['signoff_pass'] else 1)
+          PY

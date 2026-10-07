@@ -15,8 +15,8 @@
   "//": "Users have reported that values up to 80 worked well for them.",
   "PL_TARGET_DENSITY_PCT": 60,
 
-  "//": "Pin the AREA 0 strategy used by the v5 4x2 baseline.",
-  "SYNTH_STRATEGY": "AREA 0",
+  "//": "v7 controlled experiment: delay-oriented mapping, unchanged v6 RTL and constraints.",
+  "SYNTH_STRATEGY": "DELAY 0",
 
   "//": "CLOCK_PERIOD - Increase this in case you are getting setup time violations.",
   "//": "The value is in nanoseconds, so 12.5ns == 80MHz.",
