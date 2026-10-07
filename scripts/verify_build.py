@@ -141,7 +141,7 @@ for corner in lock['sta_corners']:
     groups = {}
     for p in paths:
         endpoint = p['end_register'] or ''
-        for group in ('peak_first', 'peak_second', 'prescale_count', 'running_sum', 'output_register'):
+        for group in ('peak_first', 'peak_second', 'prescale_count', 'history_pointer', 'running_sum', 'output_data'):
             if endpoint.startswith(group) and (group not in groups or p['slack_ns'] < groups[group]['slack_ns']):
                 groups[group] = p
     corners.append(dict(corner=corner, **values, unannotated_functional_nets=unannotated,
@@ -181,7 +181,7 @@ if sta:
 (OUT / 'evidence_sha256.json').write_text(json.dumps({str(p.relative_to(ROOT)): digest(p) for p in evidence if p.is_file()}, indent=2) + '\n')
 lines = ['# ' + lock['experiment'] + ' 路由后评估', '',
          f"可比性：{result['comparable']}；构建完成：{complete}；物理检查：{physical_pass}；九角时序：{timing_pass}；电气规则：{electrical_pass}。", '',
-         '| Corner | v6 AREA 0 setup ns | v7 DELAY 0 setup ns | 优化 AREA 0 setup ns | 对 v6 改善 ns | 优化 hold ns | Slew | Cap | Fanout |',
+         '| Corner | v6 AREA 0 setup ns | v7 DELAY 0 setup ns | 本轮 AREA 0 setup ns | 对 v6 改善 ns | 本轮 hold ns | Slew | Cap | Fanout |',
          '|---|---:|---:|---:|---:|---:|---:|---:|---:|']
 def fmt(v):
     return 'missing' if v is None else f'{v:.6f}'

@@ -39,7 +39,7 @@ jobs:
       - name: Before-after RTL regression and peak SAT equivalence
         run: |
           yosys -V
-          python test/run_optimization.py --source src/project.v --output test/output/optimized-area0 --sat
+          python test/run_optimization.py --source src/project.v --output test/output/divider23-area0 --sat
 
       - name: Test Summary
         uses: test-summary/action@v2.4

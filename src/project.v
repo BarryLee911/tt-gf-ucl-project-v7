@@ -121,7 +121,6 @@ module tt_um_sine_area_detector #(
     wire second_from_first;
     wire second_from_second;
     wire second_from_buffer;
-    wire keep_single_survivor;
 
     assign first_alive = peak_history_valid &&
         (peak_first_position != sample_position[9:0]);
@@ -137,27 +136,22 @@ module tt_um_sine_area_detector #(
     assign fill_second = !(first_alive && second_alive) && peak_history_valid &&
         ((first_alive && buffer_diff_first) ||
          (!first_alive && (!second_alive || buffer_diff_second)));
-    /* Direct selectors for the four survival cases; ties favor the new sample.
-     * Slot-two sources do not depend on the slot-one or new_is_second result. */
+    /* Decide whether the new sample enters slot one or two; ties favor new. */
     assign new_is_first = !(first_alive || second_alive) ||
         (first_alive && new_ge_first) ||
         (!first_alive && second_alive && new_ge_second);
-    assign keep_single_survivor =
-        (first_alive && !second_alive && !new_ge_first) ||
-        (!first_alive && second_alive && !new_ge_second);
-    assign new_is_second =
-        (first_alive && second_alive && !new_ge_first && new_ge_second) ||
-        (keep_single_survivor && (!fill_second || new_ge_buffer));
+    assign new_is_second = !new_is_first &&
+        (!((first_alive && second_alive) || fill_second) ||
+         (fill_second && new_ge_buffer) ||
+         (!fill_second && new_ge_second));
 
     /* Mutually exclusive selectors keep values and positions paired. */
-    assign first_from_first = first_alive && !new_ge_first;
-    assign first_from_second = !first_alive && second_alive && !new_ge_second;
-    assign second_from_first = first_alive && new_ge_first;
-    /* With no survivor, retain the old invalid slot-two value and position. */
-    assign second_from_second =
-        (!first_alive && (!second_alive || new_ge_second)) ||
-        (first_alive && second_alive && !new_ge_first && !new_ge_second);
-    assign second_from_buffer = keep_single_survivor && fill_second && !new_ge_buffer;
+    assign first_from_first = !new_is_first && first_alive;
+    assign first_from_second = !new_is_first && !first_alive;
+    assign second_from_first = new_is_first && first_alive;
+    assign second_from_second = (new_is_first && !first_alive) ||
+        (!new_is_first && !new_is_second && !fill_second);
+    assign second_from_buffer = !new_is_first && !new_is_second && fill_second;
 
     /* Select each value and position from the same source. */
     always @* begin
@@ -176,7 +170,8 @@ module tt_um_sine_area_detector #(
             ({10{second_from_first}} & peak_first_position) |
             ({10{second_from_second}} & peak_second_position) |
             ({10{second_from_buffer}} & peak_buffer_position);
-        peak_second_valid_next = first_alive || second_alive;
+        peak_second_valid_next = new_is_first ? (first_alive || second_alive) :
+            ((first_alive && second_alive) || fill_second || new_is_second);
     end
 
     /* Output handoff: wait 1 ms at 80 MHz before driving uio[0]. */

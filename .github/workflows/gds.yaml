@@ -27,7 +27,7 @@ jobs:
           pdk_name: gf180mcuD
           pdk_version: 54435919abffb937387ec956209f9cf5fd2dfbee
           pdk_root: /home/runner/pdk
-      - name: Build 80 MHz optimized AREA 0 GDS
+      - name: Build 80 MHz divider-only AREA 0 GDS
         id: build
         continue-on-error: true
         uses: TinyTapeout/tt-gds-action@395eedb3eeec3c2f4961c3b04ff2cf87f5525636
@@ -53,7 +53,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: v7-area0-optimized-assessment
+          name: v7-area0-divider23-assessment
           retention-days: 90
           path: |
             verification/build/*
@@ -95,7 +95,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v7
         with:
-          name: v7-area0-optimized-assessment
+          name: v7-area0-divider23-assessment
       - name: Require nine-corner timing and electrical closure
         run: |
           python - <<'PY'

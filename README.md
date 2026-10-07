@@ -3,8 +3,8 @@
 GF180 **4x2 tiles, 80 MHz (12.5 ns), AREA 0** RTL timing optimization.
 
 The current RTL derives from [v6 `dae8933`](https://github.com/BarryLee911/tt-gf-ucl-project-v6/commit/dae89331466486dab23fe0605b45c979ee50ef03).
-The sampling divider is reduced from 27 to 23 bits, and peak-candidate selectors
-are flattened to remove serial selection dependencies. The synthesis strategy
+The sampling divider is reduced from 27 to 23 bits. Peak-candidate selectors
+are restored to the original v6 implementation for this divider-only experiment. The synthesis strategy
 returns to `AREA 0`; module, pins, sampling schedule, reset, pipeline latency,
 floorplan and timing constraints are unchanged. Candidate and baseline RTL
 hashes are recorded separately in `build_lock.json`.
@@ -21,7 +21,7 @@ Previous results: **DELAY 0 regressed setup and area**. Worst setup: −9.887542
 functional gate-level regression failed at cycle 32; all-corner assessment failed.
 That experiment and its evidence remain available in the linked report.
 
-The new AREA 0 experiment adds a before/after RTL regression checking pins and
+The AREA 0 verification includes a before/after RTL regression checking pins and
 peak state every cycle, all 24 divider levels, and a Yosys SAT proof of all 37
 peak next-state bits from the actual RTL blocks. The existing three real
 level-23 samples and independent pin-only RTL/gate regression are retained.
@@ -32,4 +32,6 @@ Run the `gds` and `test` Actions workflows at the recorded experiment commit.
 Documentation-only commits do not rebuild GDS; use workflow dispatch for intentional reruns.
 The first experiment does not deploy a GitHub Pages layout viewer.
 
-Current optimized AREA 0 results: worst setup -8.238365 ns; area change +1.008%; functional regression PASS; nine-corner timing FAIL. See [comparison](docs/v7-area0-optimized-comparison.md) and [machine-readable results](docs/v7-area0-optimized-results.json).
+Previous combined AREA 0 results: worst setup -8.238365 ns; area change +1.008%; functional regression PASS; nine-corner timing FAIL. See [comparison](docs/v7-area0-optimized-comparison.md) and [machine-readable results](docs/v7-area0-optimized-results.json).
+
+Current experiment: **23-bit divider only, original peak selectors, AREA 0**. The previous combined experiment and reports are preserved. A fresh full build and regression will measure the divider-only result under the same pinned conditions; results are pending.
