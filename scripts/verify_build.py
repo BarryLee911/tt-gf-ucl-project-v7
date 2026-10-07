@@ -86,7 +86,7 @@ cells = {}
 for m in re.finditer(r'\b(gf180mcu_fd_sc_mcu7t5v0__\w+)\s+(\S+)\s*\((.*?)\);', netlist, re.S):
     q = re.search(r'\.Q\s*\(([^)]+)\)', m[3])
     if q:
-        cells[m[2]] = q[1].strip()
+        cells[m[2]] = q[1].strip().lstrip('\\')
 
 
 def paths_for(corner):

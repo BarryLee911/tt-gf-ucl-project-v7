@@ -1,0 +1,1163 @@
+{
+  "experiment": "v7 GF180 80MHz DELAY 0",
+  "experiment_commit": "411552acfb124ca4a9dec3f6768957c3cc51fceb",
+  "workflow_run_id": "37654327507",
+  "baseline_commit": "dae89331466486dab23fe0605b45c979ee50ef03",
+  "source_sha256": "E070E8658952FF7314BFD6CE7E69E035233953CCCED5E57FA44714AE7D9F2FE2",
+  "comparable": true,
+  "build_complete": true,
+  "physical_pass": true,
+  "timing_pass": false,
+  "electrical_pass": false,
+  "signoff_pass": false,
+  "corners": [
+    {
+      "corner": "nom_tt_025C_3v30",
+      "setup_ns": 1.413715406976131,
+      "hold_ns": 1.0960752615768787,
+      "setup_tns_ns": 0.0,
+      "setup_violations": 0.0,
+      "hold_violations": 0.0,
+      "slew": 0.0,
+      "capacitance": 1.0,
+      "fanout": 105.0,
+      "unannotated_functional_nets": 0,
+      "baseline_setup_ns": 2.4424090108367764,
+      "baseline_hold_ns": 1.1087591159027352,
+      "setup_improvement_ns": -1.0286936038606453,
+      "worst_reported_path": {
+        "start_register": "sample_valid",
+        "end_register": "peak_first[4]",
+        "slack_ns": 1.413715,
+        "data_delay_ns": 10.377116
+      },
+      "reported_path_groups": {
+        "peak_first": {
+          "start_register": "sample_valid",
+          "end_register": "peak_first[4]",
+          "slack_ns": 1.413715,
+          "data_delay_ns": 10.377116
+        },
+        "peak_second": {
+          "start_register": "peak_second_position[5]",
+          "end_register": "peak_second[7]",
+          "slack_ns": 2.525528,
+          "data_delay_ns": 9.213307
+        },
+        "running_sum": {
+          "start_register": "sample_overlap",
+          "end_register": "running_sum[11]",
+          "slack_ns": 3.106741,
+          "data_delay_ns": 8.694777
+        },
+        "prescale_count": {
+          "start_register": "prescale_count[4]",
+          "end_register": "prescale_count[25]",
+          "slack_ns": 3.558038,
+          "data_delay_ns": 8.206966000000001
+        }
+      }
+    },
+    {
+      "corner": "nom_ss_125C_3v00",
+      "setup_ns": -9.028724690106214,
+      "hold_ns": 1.5229369307817002,
+      "setup_tns_ns": -7874.324405622658,
+      "setup_violations": 2232.0,
+      "hold_violations": 0.0,
+      "slew": 220.0,
+      "capacitance": 1.0,
+      "fanout": 105.0,
+      "unannotated_functional_nets": 0,
+      "baseline_setup_ns": -7.547740424076341,
+      "baseline_hold_ns": 0.10924683689124666,
+      "setup_improvement_ns": -1.480984266029873,
+      "worst_reported_path": {
+        "start_register": "sample_valid",
+        "end_register": "peak_first[4]",
+        "slack_ns": -9.028725,
+        "data_delay_ns": 20.289544
+      },
+      "reported_path_groups": {
+        "peak_first": {
+          "start_register": "sample_valid",
+          "end_register": "peak_first[4]",
+          "slack_ns": -9.028725,
+          "data_delay_ns": 20.289544
+        },
+        "peak_second": {
+          "start_register": "peak_second_position[5]",
+          "end_register": "peak_second[7]",
+          "slack_ns": -7.11527,
+          "data_delay_ns": 18.273199
+        },
+        "running_sum": {
+          "start_register": "sample_overlap",
+          "end_register": "running_sum[11]",
+          "slack_ns": -6.057112,
+          "data_delay_ns": 17.31899
+        },
+        "prescale_count": {
+          "start_register": "prescale_count[4]",
+          "end_register": "prescale_count[25]",
+          "slack_ns": -5.551153,
+          "data_delay_ns": 16.769152000000002
+        }
+      }
+    },
+    {
+      "corner": "nom_ff_n40C_3v60",
+      "setup_ns": 5.579960651474448,
+      "hold_ns": 0.5080750408645351,
+      "setup_tns_ns": 0.0,
+      "setup_violations": 0.0,
+      "hold_violations": 0.0,
+      "slew": 0.0,
+      "capacitance": 1.0,
+      "fanout": 105.0,
+      "unannotated_functional_nets": 0,
+      "baseline_setup_ns": 6.142608373590947,
+      "baseline_hold_ns": 0.5062903573019759,
+      "setup_improvement_ns": -0.5626477221164983,
+      "worst_reported_path": {
+        "start_register": "rst_n",
+        "end_register": "handoff_count[14]",
+        "slack_ns": 5.579961,
+        "data_delay_ns": null
+      },
+      "reported_path_groups": {
+        "peak_first": {
+          "start_register": "sample_valid",
+          "end_register": "peak_first[4]",
+          "slack_ns": 5.911835,
+          "data_delay_ns": 6.094888999999999
+        },
+        "prescale_count": {
+          "start_register": "rst_n",
+          "end_register": "prescale_count[9]",
+          "slack_ns": 6.4355,
+          "data_delay_ns": null
+        },
+        "peak_second": {
+          "start_register": "peak_second_position[5]",
+          "end_register": "peak_second[7]",
+          "slack_ns": 6.637109,
+          "data_delay_ns": 5.339289
+        },
+        "running_sum": {
+          "start_register": "window_full",
+          "end_register": "running_sum[11]",
+          "slack_ns": 6.939083,
+          "data_delay_ns": 4.967150999999999
+        }
+      }
+    },
+    {
+      "corner": "min_tt_025C_3v30",
+      "setup_ns": 1.7974742203430834,
+      "hold_ns": 1.092066912255408,
+      "setup_tns_ns": 0.0,
+      "setup_violations": 0.0,
+      "hold_violations": 0.0,
+      "slew": 0.0,
+      "capacitance": 0.0,
+      "fanout": 105.0,
+      "unannotated_functional_nets": 0,
+      "baseline_setup_ns": 2.607088840826099,
+      "baseline_hold_ns": 1.1037937543069716,
+      "setup_improvement_ns": -0.8096146204830157,
+      "worst_reported_path": {
+        "start_register": "sample_valid",
+        "end_register": "peak_first[4]",
+        "slack_ns": 1.797474,
+        "data_delay_ns": 9.991914
+      },
+      "reported_path_groups": {
+        "peak_first": {
+          "start_register": "sample_valid",
+          "end_register": "peak_first[4]",
+          "slack_ns": 1.797474,
+          "data_delay_ns": 9.991914
+        },
+        "peak_second": {
+          "start_register": "peak_second_position[5]",
+          "end_register": "peak_second[7]",
+          "slack_ns": 2.813664,
+          "data_delay_ns": 8.926749999999998
+        },
+        "running_sum": {
+          "start_register": "sample_overlap",
+          "end_register": "running_sum[11]",
+          "slack_ns": 3.311141,
+          "data_delay_ns": 8.490394
+        },
+        "prescale_count": {
+          "start_register": "prescale_count[4]",
+          "end_register": "prescale_count[25]",
+          "slack_ns": 3.68141,
+          "data_delay_ns": 8.085656
+        }
+      }
+    },
+    {
+      "corner": "min_ss_125C_3v00",
+      "setup_ns": -8.31711256740303,
+      "hold_ns": 1.6074009245271477,
+      "setup_tns_ns": -7364.633101144984,
+      "setup_violations": 2229.0,
+      "hold_violations": 0.0,
+      "slew": 201.0,
+      "capacitance": 0.0,
+      "fanout": 105.0,
+      "unannotated_functional_nets": 0,
+      "baseline_setup_ns": -7.257012973733565,
+      "baseline_hold_ns": 0.1681459463702312,
+      "setup_improvement_ns": -1.060099593669464,
+      "worst_reported_path": {
+        "start_register": "sample_valid",
+        "end_register": "peak_first[4]",
+        "slack_ns": -8.317113,
+        "data_delay_ns": 19.575781999999997
+      },
+      "reported_path_groups": {
+        "peak_first": {
+          "start_register": "sample_valid",
+          "end_register": "peak_first[4]",
+          "slack_ns": -8.317113,
+          "data_delay_ns": 19.575781999999997
+        },
+        "peak_second": {
+          "start_register": "peak_second_position[5]",
+          "end_register": "peak_second[7]",
+          "slack_ns": -6.566453,
+          "data_delay_ns": 17.725899
+        },
+        "running_sum": {
+          "start_register": "sample_overlap",
+          "end_register": "running_sum[11]",
+          "slack_ns": -5.655799,
+          "data_delay_ns": 16.918619
+        },
+        "prescale_count": {
+          "start_register": "prescale_count[0]",
+          "end_register": "prescale_count[25]",
+          "slack_ns": -5.326445,
+          "data_delay_ns": 16.547621
+        }
+      }
+    },
+    {
+      "corner": "min_ff_n40C_3v60",
+      "setup_ns": 5.636526960268115,
+      "hold_ns": 0.5064201423772251,
+      "setup_tns_ns": 0.0,
+      "setup_violations": 0.0,
+      "hold_violations": 0.0,
+      "slew": 0.0,
+      "capacitance": 0.0,
+      "fanout": 105.0,
+      "unannotated_functional_nets": 0,
+      "baseline_setup_ns": 6.202995626054226,
+      "baseline_hold_ns": 0.5051640360116392,
+      "setup_improvement_ns": -0.5664686657861111,
+      "worst_reported_path": {
+        "start_register": "rst_n",
+        "end_register": "handoff_count[14]",
+        "slack_ns": 5.636527,
+        "data_delay_ns": null
+      },
+      "reported_path_groups": {
+        "peak_first": {
+          "start_register": "sample_valid",
+          "end_register": "peak_first[4]",
+          "slack_ns": 6.146568,
+          "data_delay_ns": 5.858854
+        },
+        "prescale_count": {
+          "start_register": "rst_n",
+          "end_register": "prescale_count[9]",
+          "slack_ns": 6.509492,
+          "data_delay_ns": null
+        },
+        "peak_second": {
+          "start_register": "peak_second_position[2]",
+          "end_register": "peak_second[7]",
+          "slack_ns": 6.80675,
+          "data_delay_ns": 5.179578
+        },
+        "running_sum": {
+          "start_register": "window_full",
+          "end_register": "running_sum[11]",
+          "slack_ns": 7.054748,
+          "data_delay_ns": 4.855950999999999
+        }
+      }
+    },
+    {
+      "corner": "max_tt_025C_3v30",
+      "setup_ns": 0.9568408558531903,
+      "hold_ns": 1.100884081721743,
+      "setup_tns_ns": 0.0,
+      "setup_violations": 0.0,
+      "hold_violations": 0.0,
+      "slew": 0.0,
+      "capacitance": 2.0,
+      "fanout": 105.0,
+      "unannotated_functional_nets": 0,
+      "baseline_setup_ns": 2.165281348841077,
+      "baseline_hold_ns": 1.0963217310953162,
+      "setup_improvement_ns": -1.208440492987887,
+      "worst_reported_path": {
+        "start_register": "sample_valid",
+        "end_register": "peak_first[4]",
+        "slack_ns": 0.956841,
+        "data_delay_ns": 10.835346999999999
+      },
+      "reported_path_groups": {
+        "peak_first": {
+          "start_register": "sample_valid",
+          "end_register": "peak_first[4]",
+          "slack_ns": 0.956841,
+          "data_delay_ns": 10.835346999999999
+        },
+        "peak_second": {
+          "start_register": "peak_second_position[5]",
+          "end_register": "peak_second[7]",
+          "slack_ns": 2.173795,
+          "data_delay_ns": 9.561641
+        },
+        "running_sum": {
+          "start_register": "sample_overlap",
+          "end_register": "running_sum[11]",
+          "slack_ns": 2.858773,
+          "data_delay_ns": 8.942772000000001
+        },
+        "prescale_count": {
+          "start_register": "prescale_count[4]",
+          "end_register": "prescale_count[25]",
+          "slack_ns": 3.411768,
+          "data_delay_ns": 8.351039
+        }
+      }
+    },
+    {
+      "corner": "max_ss_125C_3v00",
+      "setup_ns": -9.887541731896897,
+      "hold_ns": 1.4201613620394087,
+      "setup_tns_ns": -8487.112849177642,
+      "setup_violations": 2233.0,
+      "hold_violations": 0.0,
+      "slew": 236.0,
+      "capacitance": 2.0,
+      "fanout": 105.0,
+      "unannotated_functional_nets": 0,
+      "baseline_setup_ns": -7.933554482364606,
+      "baseline_hold_ns": 0.03882405617995117,
+      "setup_improvement_ns": -1.9539872495322914,
+      "worst_reported_path": {
+        "start_register": "sample_valid",
+        "end_register": "peak_first[4]",
+        "slack_ns": -9.887542,
+        "data_delay_ns": 21.150382
+      },
+      "reported_path_groups": {
+        "peak_first": {
+          "start_register": "sample_valid",
+          "end_register": "peak_first[4]",
+          "slack_ns": -9.887542,
+          "data_delay_ns": 21.150382
+        },
+        "peak_second": {
+          "start_register": "peak_second_position[5]",
+          "end_register": "peak_second[7]",
+          "slack_ns": -7.784202,
+          "data_delay_ns": 18.938473
+        },
+        "running_sum": {
+          "start_register": "sample_overlap",
+          "end_register": "running_sum[11]",
+          "slack_ns": -6.542465,
+          "data_delay_ns": 17.802972
+        },
+        "prescale_count": {
+          "start_register": "prescale_count[4]",
+          "end_register": "prescale_count[25]",
+          "slack_ns": -5.837292,
+          "data_delay_ns": 17.052298999999998
+        }
+      }
+    },
+    {
+      "corner": "max_ff_n40C_3v60",
+      "setup_ns": 5.508842427040859,
+      "hold_ns": 0.5093395849253469,
+      "setup_tns_ns": 0.0,
+      "setup_violations": 0.0,
+      "hold_violations": 0.0,
+      "slew": 0.0,
+      "capacitance": 2.0,
+      "fanout": 105.0,
+      "unannotated_functional_nets": 0,
+      "baseline_setup_ns": 6.069330099179556,
+      "baseline_hold_ns": 0.5076689212706414,
+      "setup_improvement_ns": -0.5604876721386969,
+      "worst_reported_path": {
+        "start_register": "rst_n",
+        "end_register": "prescale_terminal_latched[14]",
+        "slack_ns": 5.508842,
+        "data_delay_ns": null
+      },
+      "reported_path_groups": {
+        "peak_first": {
+          "start_register": "sample_valid",
+          "end_register": "peak_first_position[4]",
+          "slack_ns": 5.627054,
+          "data_delay_ns": 6.302117
+        },
+        "prescale_count": {
+          "start_register": "rst_n",
+          "end_register": "prescale_count[9]",
+          "slack_ns": 6.345739,
+          "data_delay_ns": null
+        },
+        "peak_second": {
+          "start_register": "sample_valid",
+          "end_register": "peak_second[4]",
+          "slack_ns": 6.4091,
+          "data_delay_ns": 5.591115
+        },
+        "running_sum": {
+          "start_register": "window_full",
+          "end_register": "running_sum[11]",
+          "slack_ns": 6.799455,
+          "data_delay_ns": 5.101386
+        }
+      }
+    }
+  ],
+  "physical": {
+    "magic__drc_error__count": 0.0,
+    "design__lvs_error__count": 0.0,
+    "route__drc_errors": 0.0,
+    "antenna__violating__nets": 0.0,
+    "antenna__violating__pins": 0.0
+  },
+  "comparison": {
+    "design__instance__area__stdcell": {
+      "baseline": 314418.0,
+      "experiment": 323709.0,
+      "change": 9291.0
+    },
+    "design__instance__count__stdcell": {
+      "baseline": 10407.0,
+      "experiment": 10806.0,
+      "change": 399.0
+    },
+    "timing__setup__ws": {
+      "baseline": -7.933554482364606,
+      "experiment": -9.887541731896897,
+      "change": -1.9539872495322914
+    },
+    "timing__hold__ws": {
+      "baseline": 0.03882405617995117,
+      "experiment": 0.5064201423772251,
+      "change": 0.46759608619727394
+    },
+    "timing__setup_vio__count": {
+      "baseline": 3880.0,
+      "experiment": 6694.0,
+      "change": 2814.0
+    },
+    "timing__hold_vio__count": {
+      "baseline": 0.0,
+      "experiment": 0.0,
+      "change": 0.0
+    }
+  },
+  "provenance_failures": [],
+  "missing_evidence": [],
+  "metrics": {
+    "design__lint_error__count": 0.0,
+    "design__lint_timing_construct__count": 0.0,
+    "design__lint_warning__count": 2.0,
+    "design__inferred_latch__count": 0.0,
+    "design__instance__count": 23082.0,
+    "design__instance__area": 455197.0,
+    "design__instance_unmapped__count": 0.0,
+    "synthesis__check_error__count": 0.0,
+    "design__max_slew_violation__count__corner:nom_tt_025C_3v30": 0.0,
+    "design__max_fanout_violation__count__corner:nom_tt_025C_3v30": 105.0,
+    "design__max_cap_violation__count__corner:nom_tt_025C_3v30": 1.0,
+    "power__internal__total": 0.0571260079741478,
+    "power__switching__total": 0.016074232757091522,
+    "power__leakage__total": 1.3718122318095993e-06,
+    "power__total": 0.07320161163806915,
+    "clock__skew__worst_hold__corner:nom_tt_025C_3v30": -0.7161011986079135,
+    "clock__skew__worst_setup__corner:nom_tt_025C_3v30": 0.482879971898034,
+    "timing__hold__ws__corner:nom_tt_025C_3v30": 1.0960752615768787,
+    "timing__setup__ws__corner:nom_tt_025C_3v30": 1.413715406976131,
+    "timing__hold__tns__corner:nom_tt_025C_3v30": 0.0,
+    "timing__setup__tns__corner:nom_tt_025C_3v30": 0.0,
+    "timing__hold__wns__corner:nom_tt_025C_3v30": 0.0,
+    "timing__setup__wns__corner:nom_tt_025C_3v30": 0.0,
+    "timing__hold_vio__count__corner:nom_tt_025C_3v30": 0.0,
+    "timing__hold_r2r__ws__corner:nom_tt_025C_3v30": 1.096075,
+    "timing__hold_r2r_vio__count__corner:nom_tt_025C_3v30": 0.0,
+    "timing__setup_vio__count__corner:nom_tt_025C_3v30": 0.0,
+    "timing__setup_r2r__ws__corner:nom_tt_025C_3v30": 1.413715,
+    "timing__setup_r2r_vio__count__corner:nom_tt_025C_3v30": 0.0,
+    "design__max_slew_violation__count__corner:nom_ss_125C_3v00": 220.0,
+    "design__max_fanout_violation__count__corner:nom_ss_125C_3v00": 105.0,
+    "design__max_cap_violation__count__corner:nom_ss_125C_3v00": 1.0,
+    "clock__skew__worst_hold__corner:nom_ss_125C_3v00": -1.1400933853021344,
+    "clock__skew__worst_setup__corner:nom_ss_125C_3v00": 0.6911481582676257,
+    "timing__hold__ws__corner:nom_ss_125C_3v00": 1.5229369307817002,
+    "timing__setup__ws__corner:nom_ss_125C_3v00": -9.028724690106214,
+    "timing__hold__tns__corner:nom_ss_125C_3v00": 0.0,
+    "timing__setup__tns__corner:nom_ss_125C_3v00": -7874.324405622658,
+    "timing__hold__wns__corner:nom_ss_125C_3v00": 0.0,
+    "timing__setup__wns__corner:nom_ss_125C_3v00": -9.028724690106214,
+    "timing__hold_vio__count__corner:nom_ss_125C_3v00": 0.0,
+    "timing__hold_r2r__ws__corner:nom_ss_125C_3v00": 2.457769,
+    "timing__hold_r2r_vio__count__corner:nom_ss_125C_3v00": 0.0,
+    "timing__setup_vio__count__corner:nom_ss_125C_3v00": 2232.0,
+    "timing__setup_r2r__ws__corner:nom_ss_125C_3v00": -9.028725,
+    "timing__setup_r2r_vio__count__corner:nom_ss_125C_3v00": 2192.0,
+    "design__max_slew_violation__count__corner:nom_ff_n40C_3v60": 0.0,
+    "design__max_fanout_violation__count__corner:nom_ff_n40C_3v60": 105.0,
+    "design__max_cap_violation__count__corner:nom_ff_n40C_3v60": 1.0,
+    "clock__skew__worst_hold__corner:nom_ff_n40C_3v60": -0.5311825574187936,
+    "clock__skew__worst_setup__corner:nom_ff_n40C_3v60": 0.3919482349618344,
+    "timing__hold__ws__corner:nom_ff_n40C_3v60": 0.5080750408645351,
+    "timing__setup__ws__corner:nom_ff_n40C_3v60": 5.579960651474448,
+    "timing__hold__tns__corner:nom_ff_n40C_3v60": 0.0,
+    "timing__setup__tns__corner:nom_ff_n40C_3v60": 0.0,
+    "timing__hold__wns__corner:nom_ff_n40C_3v60": 0.0,
+    "timing__setup__wns__corner:nom_ff_n40C_3v60": 0.0,
+    "timing__hold_vio__count__corner:nom_ff_n40C_3v60": 0.0,
+    "timing__hold_r2r__ws__corner:nom_ff_n40C_3v60": 0.508075,
+    "timing__hold_r2r_vio__count__corner:nom_ff_n40C_3v60": 0.0,
+    "timing__setup_vio__count__corner:nom_ff_n40C_3v60": 0.0,
+    "timing__setup_r2r__ws__corner:nom_ff_n40C_3v60": 5.911835,
+    "timing__setup_r2r_vio__count__corner:nom_ff_n40C_3v60": 0.0,
+    "design__max_slew_violation__count": 236.0,
+    "design__max_fanout_violation__count": 105.0,
+    "design__max_cap_violation__count": 2.0,
+    "clock__skew__worst_hold": -0.5233023051894379,
+    "clock__skew__worst_setup": 0.3823009517165103,
+    "timing__hold__ws": 0.5064201423772251,
+    "timing__setup__ws": -9.887541731896897,
+    "timing__hold__tns": 0.0,
+    "timing__setup__tns": -8487.112849177642,
+    "timing__hold__wns": 0.0,
+    "timing__setup__wns": -9.887541731896897,
+    "timing__hold_vio__count": 0.0,
+    "timing__hold_r2r__ws": 0.50642,
+    "timing__hold_r2r_vio__count": 0.0,
+    "timing__setup_vio__count": 6694.0,
+    "timing__setup_r2r__ws": -9.887542,
+    "timing__setup_r2r_vio__count": 6574.0,
+    "design__die__bbox": "0.0 0.0 1440.32 325.36",
+    "design__core__bbox": "3.36 3.92 1436.96 321.44",
+    "design__io": 45.0,
+    "design__die__area": 468623.0,
+    "design__core__area": 455197.0,
+    "design__instance__count__stdcell": 10806.0,
+    "design__instance__area__stdcell": 323709.0,
+    "design__instance__count__macros": 0.0,
+    "design__instance__area__macros": 0.0,
+    "design__instance__count__padcells": 0.0,
+    "design__instance__area__padcells": 0.0,
+    "design__instance__count__cover": 0.0,
+    "design__instance__area__cover": 0.0,
+    "design__instance__utilization": 0.71114,
+    "design__instance__utilization__stdcell": 0.71114,
+    "design__rows": 81.0,
+    "design__rows:GF018hv5v_mcu_sc7": 81.0,
+    "design__sites": 207360.0,
+    "design__sites:GF018hv5v_mcu_sc7": 207360.0,
+    "design__instance__count__class:tie_cell": 11.0,
+    "design__instance__area__class:tie_cell": 96.5888,
+    "design__instance__count__class:buffer": 2.0,
+    "design__instance__area__class:buffer": 35.1232,
+    "design__instance__count__class:inverter": 135.0,
+    "design__instance__area__class:inverter": 1299.56,
+    "design__instance__count__class:sequential_cell": 2235.0,
+    "design__instance__area__class:sequential_cell": 142754.0,
+    "design__instance__count__class:multi_input_combinational_cell": 2996.0,
+    "design__instance__area__class:multi_input_combinational_cell": 87685.1,
+    "flow__warnings__count": 1.0,
+    "flow__errors__count": 0.0,
+    "flow__warnings__count:ODB-0220": 1.0,
+    "flow__warnings__type_count": 1.0,
+    "flow__warnings__count:ORD-0039": 1.0,
+    "design__instance__count__class:endcap_cell": 162.0,
+    "design__instance__area__class:endcap_cell": 711.245,
+    "design__instance__count__class:tap_cell": 3033.0,
+    "design__instance__area__class:tap_cell": 13316.1,
+    "design__power_grid_violation__count__net:VPWR": 0.0,
+    "design__power_grid_violation__count__net:VGND": 0.0,
+    "design__power_grid_violation__count": 0.0,
+    "flow__warnings__count:GRT-0281": 2.0,
+    "timing__drv__floating__nets": 2.0,
+    "timing__drv__floating__pins": 0.0,
+    "design__instance__displacement__total": 17558.9,
+    "design__instance__displacement__mean": 1.6245,
+    "design__instance__displacement__max": 37.52,
+    "route__wirelength__estimated": 210652.0,
+    "design__violations": 0.0,
+    "design__instance__count__class:timing_repair_buffer": 2016.0,
+    "design__instance__area__class:timing_repair_buffer": 67581.4,
+    "flow__warnings__count:RSZ-0020": 1.0,
+    "flow__warnings__count:STA-1140": 6.0,
+    "design__instance__count__class:clock_buffer": 183.0,
+    "design__instance__area__class:clock_buffer": 9694.0,
+    "design__instance__count__class:clock_inverter": 33.0,
+    "design__instance__area__class:clock_inverter": 535.629,
+    "design__instance__count__setup_buffer": 60.0,
+    "design__instance__count__hold_buffer": 634.0,
+    "flow__warnings__count:RSZ-0062": 1.0,
+    "global_route__vias": 52169.0,
+    "global_route__wirelength": 381536.0,
+    "antenna__violating__nets": 0.0,
+    "antenna__violating__pins": 0.0,
+    "route__antenna_violation__count": 0.0,
+    "antenna_diodes_count": 0.0,
+    "route__net": 7543.0,
+    "route__net__special": 2.0,
+    "route__drc_errors__iter:0": 602.0,
+    "route__wirelength__iter:0": 220468.0,
+    "route__drc_errors__iter:1": 102.0,
+    "route__wirelength__iter:1": 218554.0,
+    "route__drc_errors__iter:2": 99.0,
+    "route__wirelength__iter:2": 218231.0,
+    "route__drc_errors__iter:3": 0.0,
+    "route__wirelength__iter:3": 218045.0,
+    "route__drc_errors": 0.0,
+    "route__wirelength": 218045.0,
+    "route__vias": 42721.0,
+    "route__vias__singlecut": 42721.0,
+    "route__vias__multicut": 0.0,
+    "flow__warnings__count:DRT-0349": 8.0,
+    "design__disconnected_pin__count": 4.0,
+    "design__critical_disconnected_pin__count": 0.0,
+    "route__wirelength__max": 1062.93,
+    "design__instance__count__class:fill_cell": 12276.0,
+    "design__instance__area__class:fill_cell": 131488.0,
+    "timing__unannotated_net__count__corner:nom_tt_025C_3v30": 91.0,
+    "timing__unannotated_net_filtered__count__corner:nom_tt_025C_3v30": 0.0,
+    "timing__unannotated_net__count__corner:nom_ss_125C_3v00": 91.0,
+    "timing__unannotated_net_filtered__count__corner:nom_ss_125C_3v00": 0.0,
+    "timing__unannotated_net__count__corner:nom_ff_n40C_3v60": 91.0,
+    "timing__unannotated_net_filtered__count__corner:nom_ff_n40C_3v60": 0.0,
+    "design__max_slew_violation__count__corner:min_tt_025C_3v30": 0.0,
+    "design__max_fanout_violation__count__corner:min_tt_025C_3v30": 105.0,
+    "design__max_cap_violation__count__corner:min_tt_025C_3v30": 0.0,
+    "clock__skew__worst_hold__corner:min_tt_025C_3v30": -0.7036913473322839,
+    "clock__skew__worst_setup__corner:min_tt_025C_3v30": 0.46794480725917126,
+    "timing__hold__ws__corner:min_tt_025C_3v30": 1.092066912255408,
+    "timing__setup__ws__corner:min_tt_025C_3v30": 1.7974742203430834,
+    "timing__hold__tns__corner:min_tt_025C_3v30": 0.0,
+    "timing__setup__tns__corner:min_tt_025C_3v30": 0.0,
+    "timing__hold__wns__corner:min_tt_025C_3v30": 0.0,
+    "timing__setup__wns__corner:min_tt_025C_3v30": 0.0,
+    "timing__hold_vio__count__corner:min_tt_025C_3v30": 0.0,
+    "timing__hold_r2r__ws__corner:min_tt_025C_3v30": 1.092067,
+    "timing__hold_r2r_vio__count__corner:min_tt_025C_3v30": 0.0,
+    "timing__setup_vio__count__corner:min_tt_025C_3v30": 0.0,
+    "timing__setup_r2r__ws__corner:min_tt_025C_3v30": 1.797474,
+    "timing__setup_r2r_vio__count__corner:min_tt_025C_3v30": 0.0,
+    "timing__unannotated_net__count__corner:min_tt_025C_3v30": 91.0,
+    "timing__unannotated_net_filtered__count__corner:min_tt_025C_3v30": 0.0,
+    "design__max_slew_violation__count__corner:min_ss_125C_3v00": 201.0,
+    "design__max_fanout_violation__count__corner:min_ss_125C_3v00": 105.0,
+    "design__max_cap_violation__count__corner:min_ss_125C_3v00": 0.0,
+    "clock__skew__worst_hold__corner:min_ss_125C_3v00": -1.11707135592319,
+    "clock__skew__worst_setup__corner:min_ss_125C_3v00": 0.6634594172949881,
+    "timing__hold__ws__corner:min_ss_125C_3v00": 1.6074009245271477,
+    "timing__setup__ws__corner:min_ss_125C_3v00": -8.31711256740303,
+    "timing__hold__tns__corner:min_ss_125C_3v00": 0.0,
+    "timing__setup__tns__corner:min_ss_125C_3v00": -7364.633101144984,
+    "timing__hold__wns__corner:min_ss_125C_3v00": 0.0,
+    "timing__setup__wns__corner:min_ss_125C_3v00": -8.31711256740303,
+    "timing__hold_vio__count__corner:min_ss_125C_3v00": 0.0,
+    "timing__hold_r2r__ws__corner:min_ss_125C_3v00": 2.439087,
+    "timing__hold_r2r_vio__count__corner:min_ss_125C_3v00": 0.0,
+    "timing__setup_vio__count__corner:min_ss_125C_3v00": 2229.0,
+    "timing__setup_r2r__ws__corner:min_ss_125C_3v00": -8.317113,
+    "timing__setup_r2r_vio__count__corner:min_ss_125C_3v00": 2189.0,
+    "timing__unannotated_net__count__corner:min_ss_125C_3v00": 91.0,
+    "timing__unannotated_net_filtered__count__corner:min_ss_125C_3v00": 0.0,
+    "design__max_slew_violation__count__corner:min_ff_n40C_3v60": 0.0,
+    "design__max_fanout_violation__count__corner:min_ff_n40C_3v60": 105.0,
+    "design__max_cap_violation__count__corner:min_ff_n40C_3v60": 0.0,
+    "clock__skew__worst_hold__corner:min_ff_n40C_3v60": -0.5233023051894379,
+    "clock__skew__worst_setup__corner:min_ff_n40C_3v60": 0.3823009517165103,
+    "timing__hold__ws__corner:min_ff_n40C_3v60": 0.5064201423772251,
+    "timing__setup__ws__corner:min_ff_n40C_3v60": 5.636526960268115,
+    "timing__hold__tns__corner:min_ff_n40C_3v60": 0.0,
+    "timing__setup__tns__corner:min_ff_n40C_3v60": 0.0,
+    "timing__hold__wns__corner:min_ff_n40C_3v60": 0.0,
+    "timing__setup__wns__corner:min_ff_n40C_3v60": 0.0,
+    "timing__hold_vio__count__corner:min_ff_n40C_3v60": 0.0,
+    "timing__hold_r2r__ws__corner:min_ff_n40C_3v60": 0.50642,
+    "timing__hold_r2r_vio__count__corner:min_ff_n40C_3v60": 0.0,
+    "timing__setup_vio__count__corner:min_ff_n40C_3v60": 0.0,
+    "timing__setup_r2r__ws__corner:min_ff_n40C_3v60": 6.146568,
+    "timing__setup_r2r_vio__count__corner:min_ff_n40C_3v60": 0.0,
+    "timing__unannotated_net__count__corner:min_ff_n40C_3v60": 91.0,
+    "timing__unannotated_net_filtered__count__corner:min_ff_n40C_3v60": 0.0,
+    "design__max_slew_violation__count__corner:max_tt_025C_3v30": 0.0,
+    "design__max_fanout_violation__count__corner:max_tt_025C_3v30": 105.0,
+    "design__max_cap_violation__count__corner:max_tt_025C_3v30": 2.0,
+    "clock__skew__worst_hold__corner:max_tt_025C_3v30": -0.7310374734698323,
+    "clock__skew__worst_setup__corner:max_tt_025C_3v30": 0.5005070943808392,
+    "timing__hold__ws__corner:max_tt_025C_3v30": 1.100884081721743,
+    "timing__setup__ws__corner:max_tt_025C_3v30": 0.9568408558531903,
+    "timing__hold__tns__corner:max_tt_025C_3v30": 0.0,
+    "timing__setup__tns__corner:max_tt_025C_3v30": 0.0,
+    "timing__hold__wns__corner:max_tt_025C_3v30": 0.0,
+    "timing__setup__wns__corner:max_tt_025C_3v30": 0.0,
+    "timing__hold_vio__count__corner:max_tt_025C_3v30": 0.0,
+    "timing__hold_r2r__ws__corner:max_tt_025C_3v30": 1.100884,
+    "timing__hold_r2r_vio__count__corner:max_tt_025C_3v30": 0.0,
+    "timing__setup_vio__count__corner:max_tt_025C_3v30": 0.0,
+    "timing__setup_r2r__ws__corner:max_tt_025C_3v30": 0.956841,
+    "timing__setup_r2r_vio__count__corner:max_tt_025C_3v30": 0.0,
+    "timing__unannotated_net__count__corner:max_tt_025C_3v30": 91.0,
+    "timing__unannotated_net_filtered__count__corner:max_tt_025C_3v30": 0.0,
+    "design__max_slew_violation__count__corner:max_ss_125C_3v00": 236.0,
+    "design__max_fanout_violation__count__corner:max_ss_125C_3v00": 105.0,
+    "design__max_cap_violation__count__corner:max_ss_125C_3v00": 2.0,
+    "clock__skew__worst_hold__corner:max_ss_125C_3v00": -1.1678138786541743,
+    "clock__skew__worst_setup__corner:max_ss_125C_3v00": 0.7239020698887634,
+    "timing__hold__ws__corner:max_ss_125C_3v00": 1.4201613620394087,
+    "timing__setup__ws__corner:max_ss_125C_3v00": -9.887541731896897,
+    "timing__hold__tns__corner:max_ss_125C_3v00": 0.0,
+    "timing__setup__tns__corner:max_ss_125C_3v00": -8487.112849177642,
+    "timing__hold__wns__corner:max_ss_125C_3v00": 0.0,
+    "timing__setup__wns__corner:max_ss_125C_3v00": -9.887541731896897,
+    "timing__hold_vio__count__corner:max_ss_125C_3v00": 0.0,
+    "timing__hold_r2r__ws__corner:max_ss_125C_3v00": 2.470987,
+    "timing__hold_r2r_vio__count__corner:max_ss_125C_3v00": 0.0,
+    "timing__setup_vio__count__corner:max_ss_125C_3v00": 2233.0,
+    "timing__setup_r2r__ws__corner:max_ss_125C_3v00": -9.887542,
+    "timing__setup_r2r_vio__count__corner:max_ss_125C_3v00": 2193.0,
+    "timing__unannotated_net__count__corner:max_ss_125C_3v00": 91.0,
+    "timing__unannotated_net_filtered__count__corner:max_ss_125C_3v00": 0.0,
+    "design__max_slew_violation__count__corner:max_ff_n40C_3v60": 0.0,
+    "design__max_fanout_violation__count__corner:max_ff_n40C_3v60": 105.0,
+    "design__max_cap_violation__count__corner:max_ff_n40C_3v60": 2.0,
+    "clock__skew__worst_hold__corner:max_ff_n40C_3v60": -0.5404756795092459,
+    "clock__skew__worst_setup__corner:max_ff_n40C_3v60": 0.40302570754792916,
+    "timing__hold__ws__corner:max_ff_n40C_3v60": 0.5093395849253469,
+    "timing__setup__ws__corner:max_ff_n40C_3v60": 5.508842427040859,
+    "timing__hold__tns__corner:max_ff_n40C_3v60": 0.0,
+    "timing__setup__tns__corner:max_ff_n40C_3v60": 0.0,
+    "timing__hold__wns__corner:max_ff_n40C_3v60": 0.0,
+    "timing__setup__wns__corner:max_ff_n40C_3v60": 0.0,
+    "timing__hold_vio__count__corner:max_ff_n40C_3v60": 0.0,
+    "timing__hold_r2r__ws__corner:max_ff_n40C_3v60": 0.50934,
+    "timing__hold_r2r_vio__count__corner:max_ff_n40C_3v60": 0.0,
+    "timing__setup_vio__count__corner:max_ff_n40C_3v60": 0.0,
+    "timing__setup_r2r__ws__corner:max_ff_n40C_3v60": 5.627054,
+    "timing__setup_r2r_vio__count__corner:max_ff_n40C_3v60": 0.0,
+    "timing__unannotated_net__count__corner:max_ff_n40C_3v60": 91.0,
+    "timing__unannotated_net_filtered__count__corner:max_ff_n40C_3v60": 0.0,
+    "timing__unannotated_net__count": 91.0,
+    "timing__unannotated_net_filtered__count": 0.0,
+    "design_powergrid__voltage__worst__net:VPWR__corner:nom_tt_025C_3v30": 3.29985,
+    "design_powergrid__drop__average__net:VPWR__corner:nom_tt_025C_3v30": 3.29995,
+    "design_powergrid__drop__worst__net:VPWR__corner:nom_tt_025C_3v30": 0.00014953,
+    "design_powergrid__voltage__worst__net:VGND__corner:nom_tt_025C_3v30": 0.000190797,
+    "design_powergrid__drop__average__net:VGND__corner:nom_tt_025C_3v30": 5.38691e-05,
+    "design_powergrid__drop__worst__net:VGND__corner:nom_tt_025C_3v30": 0.000190797,
+    "design_powergrid__voltage__worst": 0.000190797,
+    "design_powergrid__voltage__worst__net:VPWR": 3.29985,
+    "design_powergrid__drop__worst": 0.000190797,
+    "design_powergrid__drop__worst__net:VPWR": 0.00014953,
+    "design_powergrid__voltage__worst__net:VGND": 0.000190797,
+    "design_powergrid__drop__worst__net:VGND": 0.000190797,
+    "ir__voltage__worst": 3.3,
+    "ir__drop__avg": 5.38e-05,
+    "ir__drop__worst": 0.00015,
+    "magic__drc_error__count": 0.0,
+    "magic__illegal_overlap__count": 0.0,
+    "design__lvs_device_difference__count": 0.0,
+    "design__lvs_net_difference__count": 0.0,
+    "design__lvs_property_fail__count": 0.0,
+    "design__lvs_error__count": 0.0,
+    "design__lvs_unmatched_device__count": 0.0,
+    "design__lvs_unmatched_net__count": 0.0,
+    "design__lvs_unmatched_pin__count": 0.0
+  },
+  "scope": "Routed user-macro STA. Functional gate simulation is without SDF.",
+  "repository": "BarryLee911/tt-gf-ucl-project-v7",
+  "runs": {
+    "gds": 37654327507,
+    "rtl": 37654327470,
+    "docs": 37654327493
+  },
+  "jobs": [
+    {
+      "id": 112905471818,
+      "name": "gds",
+      "status": "completed",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install exact v6 baseline PDK",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build 80 MHz DELAY 0 GDS",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Record submission availability",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Audit baseline constraints and all nine corners",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Preserve assessment and build evidence",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Require physical build completion",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Build 80 MHz DELAY 0 GDS",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Install exact v6 baseline PDK",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 112913980625,
+      "name": "precheck",
+      "status": "completed",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "TinyTapeout precheck (same action as v6)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post TinyTapeout precheck (same action as v6)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 112913980743,
+      "name": "all_corner_assessment",
+      "status": "completed",
+      "conclusion": "failure",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/download-artifact@v7",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Require nine-corner timing and electrical closure",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 112913981205,
+      "name": "gl_test",
+      "status": "completed",
+      "conclusion": "failure",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Functional gate-level regression (without SDF)",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "name": "Post Functional gate-level regression (without SDF)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 11500240417,
+      "name": "tt_submission",
+      "size_in_bytes": 7512137,
+      "digest": "sha256:c3f44c114201e925da76f2c0f5e0d342f9a045743089815782574381838afe9c",
+      "expires_at": "2027-01-05T16:43:50Z"
+    },
+    {
+      "id": 11500170515,
+      "name": "GDS_logs",
+      "size_in_bytes": 101989265,
+      "digest": "sha256:9d22a73c1bd902170d24a02c549804032c760baa308c52ec089089c21c6128cb",
+      "expires_at": "2027-01-05T16:43:50Z"
+    },
+    {
+      "id": 11500056048,
+      "name": "precheck_reports",
+      "size_in_bytes": 16444,
+      "digest": "sha256:047e11df5541b0dc59f0d39edc537c3c43d1af90bdf091dcb201cdaefce9bfb2",
+      "expires_at": "2027-01-05T16:43:50Z"
+    },
+    {
+      "id": 11499960016,
+      "name": "gatelevel_test_results",
+      "size_in_bytes": 1024,
+      "digest": "sha256:ab3d48163535f54292e13e138ae607cec4e7445d0590e6d18d2055cd29193a6b",
+      "expires_at": "2027-01-05T16:43:50Z"
+    },
+    {
+      "id": 11499270799,
+      "name": "gds_render",
+      "size_in_bytes": 3609198,
+      "digest": "sha256:a8f070b9307b21718b4d6f5a7aaab2e73a8a18826820b3b816b5e0742c885b87",
+      "expires_at": "2027-01-05T16:43:50Z"
+    },
+    {
+      "id": 11498607529,
+      "name": "v7-delay0-assessment",
+      "size_in_bytes": 39965951,
+      "digest": "sha256:fd27bbb4113aae7c0b6469bfdb396fdf1ce24d37af1c5bafee886cedf1af1880",
+      "expires_at": "2027-01-05T16:43:50Z"
+    }
+  ],
+  "archive_sha256": {
+    "v7-tt_submission.zip": "c3f44c114201e925da76f2c0f5e0d342f9a045743089815782574381838afe9c",
+    "v7-GDS_logs.zip": "9d22a73c1bd902170d24a02c549804032c760baa308c52ec089089c21c6128cb",
+    "v7-gatelevel_test_results.zip": "ab3d48163535f54292e13e138ae607cec4e7445d0590e6d18d2055cd29193a6b",
+    "v7-v7-delay0-assessment.zip": "fd27bbb4113aae7c0b6469bfdb396fdf1ce24d37af1c5bafee886cedf1af1880",
+    "v7-test-results.zip": "77fe2144aa6de6a56d2523eaeaa5fbee93193d509fe20638afe78da29a5d3916"
+  },
+  "rtl": {
+    "status": "PASS",
+    "cycles": 460637,
+    "pin_checks": {
+      "status": "PASS",
+      "clock_hz": 80000000,
+      "clock_period_ns": 12.5,
+      "handoff_cycles": 80000,
+      "cycles": 460637,
+      "levels": [
+        {
+          "level": 0,
+          "mode": "real clock division",
+          "samples": 86300,
+          "coverage": {
+            "illegal_level": 24,
+            "latch_without_sample": 1,
+            "sample_1": 1,
+            "newer_tie": 8683,
+            "sample_1024": 1,
+            "sample_2047": 1,
+            "saturation": 80003,
+            "sample_2048": 1,
+            "sample_2049": 1,
+            "default_handoff": 1,
+            "expiry": 4,
+            "buffer_refill": 2,
+            "processed_peak_change": 5,
+            "leave_saturation": 1
+          }
+        },
+        {
+          "level": 1,
+          "mode": "real clock division",
+          "samples": 46300,
+          "coverage": {
+            "illegal_level": 24,
+            "latch_without_sample": 1,
+            "sample_1": 1,
+            "newer_tie": 6396,
+            "sample_1024": 1,
+            "sample_2047": 1,
+            "saturation": 40003,
+            "sample_2048": 1,
+            "sample_2049": 1,
+            "default_handoff": 1,
+            "expiry": 4,
+            "buffer_refill": 2,
+            "leave_saturation": 1
+          }
+        },
+        {
+          "level": 5,
+          "mode": "real clock division",
+          "samples": 8800,
+          "coverage": {
+            "illegal_level": 24,
+            "latch_without_sample": 1,
+            "sample_1": 1,
+            "newer_tie": 4675,
+            "sample_1024": 1,
+            "sample_2047": 1,
+            "saturation": 2503,
+            "sample_2048": 1,
+            "sample_2049": 1,
+            "default_handoff": 1,
+            "expiry": 4,
+            "buffer_refill": 2,
+            "leave_saturation": 1
+          }
+        }
+      ],
+      "first_reset_edge": "PASS; all output pins checked, no X/Z exception",
+      "seconds": 51.940587764000014,
+      "scope": "v6: capture at N, process at N+1, output available N+2; unchanged sample phase.",
+      "single_cycle_reset": "PASS",
+      "zero_max_pipeline": "PASS"
+    },
+    "level23": {
+      "status": "PASS",
+      "source_sha256": "E070E8658952FF7314BFD6CE7E69E035233953CCCED5E57FA44714AE7D9F2FE2",
+      "checks": {
+        "status": "PASS",
+        "level": 23,
+        "divisor": 8388608,
+        "terminal": 8388607,
+        "cycles": 25166114,
+        "samples": 3,
+        "sample_edges_after_latch": [
+          8388608,
+          16777216,
+          25165824
+        ],
+        "clock_period_ns": 12.5,
+        "sample_interval_ns": 104857600,
+        "all_pins_checked_every_cycle": true,
+        "forced_state": false,
+        "reset_checks": 6,
+        "invalid_levels": 8,
+        "handoff_checks": 1,
+        "latch_checks": 3,
+        "pipeline_latency_checks": "PASS",
+        "waveform": "event windows only; assertions always active"
+      },
+      "seconds": 375.90603013900005,
+      "commands": [
+        {
+          "name": "compile",
+          "exit_code": 0,
+          "seconds": 0.015863214000006565
+        },
+        {
+          "name": "simulation",
+          "exit_code": 0,
+          "seconds": 375.889710951
+        }
+      ]
+    }
+  },
+  "gate_level": {
+    "status": "FAIL",
+    "without_sdf": true,
+    "failure_time_ns": 400,
+    "failure_cycle": 32,
+    "first_reset_edge": "PASS",
+    "error": {
+      "error_type": "ValueError",
+      "error_msg": "Can't convert LogicArray to int: it contains non-0/1 values"
+    },
+    "root_cause": "Unresolved. Official regression retained as FAIL."
+  },
+  "worst_ss_path_comparison": {
+    "baseline": {
+      "start_register": "sample_magnitude[2]",
+      "end_register": "peak_second_position[5]",
+      "slack_ns": -7.933555,
+      "data_delay_ns": 18.87602
+    },
+    "experiment": {
+      "start_register": "sample_valid",
+      "end_register": "peak_first[4]",
+      "slack_ns": -9.887542,
+      "data_delay_ns": 21.150382
+    }
+  },
+  "decision": "Do not replace AREA 0 with this DELAY 0 implementation. Keep this experiment and use AREA 0 for the next RTL optimization.",
+  "analysis_note": "Register identifiers normalized from escaped Verilog names; all numerical metrics retained unchanged from official artifacts."
+}

@@ -13,7 +13,7 @@ sampling schedule, reset, pipeline latency, floorplan and timing constraints are
 The physical flow retains v6's original timing gates. A separate all-corner assessment
 checks setup, hold and electrical violations. Functional gate-level regression does not use SDF.
 
-Results: **pending the first v7 build**. This repository is an experiment, not a claim of timing closure.
+Results: **DELAY 0 regressed setup and area**. Worst setup: −9.887542 ns (v6: −7.933554 ns); standard-cell area: +2.955%. RTL/GDS/precheck passed; functional gate-level regression failed at cycle 32; all-corner assessment failed. See the complete comparison and raw metrics above.
 
 ## Reproduce
 
