@@ -41,14 +41,15 @@ module tt_um_sine_area_detector #(
     /*
      * Sample every 2^level clocks, including level 23.
      */
-    reg  [26:0] prescale_count;
+    reg  [22:0] prescale_count;
     wire        divider_expired;
 
     /* Decode once on the configuration edge; preserve the first sample. */
-    reg [26:0] prescale_terminal_latched;
-    wire [26:0] config_terminal;
+    reg [22:0] prescale_terminal_latched;
+    wire [22:0] config_terminal;
+    /* At level 23, unsigned wrap gives 23'h7fffff (2^23 - 1). */
     assign config_terminal =
-        (27'd1 << config_level) - 27'd1;
+        (23'd1 << config_level) - 23'd1;
     assign divider_expired =
         (prescale_count == prescale_terminal_latched);
 
@@ -225,8 +226,8 @@ module tt_um_sine_area_detector #(
 
         if (!rst_n) begin
             config_latched_valid <= 1'b0;
-            prescale_terminal_latched <= 27'd0;
-            prescale_count <= 27'd0;
+            prescale_terminal_latched <= 23'd0;
+            prescale_count <= 23'd0;
             sample_valid <= 1'b0;
             sample_magnitude <= 8'd0;
             sample_overlap <= 1'b0;
@@ -242,7 +243,7 @@ module tt_um_sine_area_detector #(
         end
 
         if (frontend_run && config_latched_valid)
-            prescale_count <= divider_expired ? 27'd0 : prescale_count + 27'd1;
+            prescale_count <= divider_expired ? 23'd0 : prescale_count + 23'd1;
 
         if (frontend_run && take_sample) begin
             sample_magnitude <= adc_magnitude;

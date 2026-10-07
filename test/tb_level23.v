@@ -93,11 +93,11 @@ module tb_level23;
             if(ready && pads[0] !== kind) $fatal(1,"Resolved type pin mismatch");
             if(pads[7:5] !== io_out[7:5]) $fatal(1,"Resolved upper-data pins mismatch");
             count_expected=configured ? elapsed % DIVISOR : 0;
-            if(dut.prescale_count !== count_expected[26:0] ||
+            if(dut.prescale_count !== count_expected[22:0] ||
                dut.config_latched_valid !== configured || dut.sample_valid !== capture ||
                dut.history_pointer !== samples[10:0])
                 $fatal(1,"Divider/capture mismatch cycle=%0d elapsed=%0d",cycles,elapsed);
-            if(configured && dut.prescale_terminal_latched !== 27'd8388607)
+            if(configured && dut.prescale_terminal_latched !== 23'd8388607)
                 $fatal(1,"Level 23 terminal must be 8388607");
             if(!resetting && cycles>1 && (dut.running_sum !== area[11:0] || dut.peak_first !== peak[7:0]))
                 $fatal(1,"N+1 processing mismatch cycle=%0d",cycles);
