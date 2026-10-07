@@ -34,4 +34,4 @@ The first experiment does not deploy a GitHub Pages layout viewer.
 
 Previous combined AREA 0 results: worst setup -8.238365 ns; area change +1.008%; functional regression PASS; nine-corner timing FAIL. See [comparison](docs/v7-area0-optimized-comparison.md) and [machine-readable results](docs/v7-area0-optimized-results.json).
 
-Current experiment: **23-bit divider only, original peak selectors, AREA 0**. The previous combined experiment and reports are preserved. A fresh full build and regression will measure the divider-only result under the same pinned conditions; results are pending.
+Current experiment: **23-bit divider only, original peak selectors, AREA 0**. Worst setup -10.293526 ns; change versus combined experiment -2.055161 ns; functional regression PASS; nine-corner timing FAIL. See [comparison](docs/v7-area0-divider23-comparison.md) and [machine-readable results](docs/v7-area0-divider23-results.json).

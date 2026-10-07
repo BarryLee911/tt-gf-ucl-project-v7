@@ -1,0 +1,4638 @@
+{
+  "experiment": "v7 GF180 80MHz AREA 0 divider23 only; original peak selectors restored",
+  "experiment_commit": "823aa4f99e1aaaf9c49a1e4fd0ae7cd27e10d61a",
+  "workflow_run_id": "37697644179",
+  "baseline_commit": "dae89331466486dab23fe0605b45c979ee50ef03",
+  "source_sha256": "8569E325B12D97F012DD110BA6919A52359387F444A2C4200BF4A53592492B7A",
+  "comparable": true,
+  "build_complete": true,
+  "baseline_source_sha256": "E070E8658952FF7314BFD6CE7E69E035233953CCCED5E57FA44714AE7D9F2FE2",
+  "delay0_experiment_commit": "411552acfb124ca4a9dec3f6768957c3cc51fceb",
+  "physical_pass": true,
+  "timing_pass": false,
+  "electrical_pass": false,
+  "signoff_pass": false,
+  "corners": [
+    {
+      "corner": "nom_tt_025C_3v30",
+      "setup_ns": 1.2286234599679655,
+      "hold_ns": 1.0619945223814862,
+      "setup_tns_ns": 0.0,
+      "setup_violations": 0.0,
+      "hold_violations": 0.0,
+      "slew": 0.0,
+      "capacitance": 1.0,
+      "fanout": 104.0,
+      "unannotated_functional_nets": 0,
+      "baseline_setup_ns": 2.4424090108367764,
+      "baseline_hold_ns": 1.1087591159027352,
+      "delay0_setup_ns": 1.413715406976131,
+      "delay0_hold_ns": 1.0960752615768787,
+      "setup_improvement_ns": -1.213785550868811,
+      "worst_reported_path": {
+        "startpoint": "_7910_",
+        "endpoint": "_8016_",
+        "start_register": "sample_position[3]",
+        "end_register": "peak_second[3]",
+        "slack_ns": 1.228624,
+        "data_arrival_ns": 12.924979,
+        "data_delay_ns": 10.50502
+      },
+      "reported_path_groups": {
+        "peak_second": {
+          "startpoint": "_7910_",
+          "endpoint": "_8016_",
+          "start_register": "sample_position[3]",
+          "end_register": "peak_second[3]",
+          "slack_ns": 1.228624,
+          "data_arrival_ns": 12.924979,
+          "data_delay_ns": 10.50502
+        },
+        "peak_first": {
+          "startpoint": "_7910_",
+          "endpoint": "_7999_",
+          "start_register": "sample_position[3]",
+          "end_register": "peak_first_position[4]",
+          "slack_ns": 2.049988,
+          "data_arrival_ns": 12.020938,
+          "data_delay_ns": 9.600978999999999
+        },
+        "history_pointer": {
+          "startpoint": "_7964_",
+          "endpoint": "_7876_",
+          "start_register": "prescale_count[13]",
+          "end_register": "history_pointer[10]",
+          "slack_ns": 3.329433,
+          "data_arrival_ns": 10.74754,
+          "data_delay_ns": 8.348118000000001
+        },
+        "running_sum": {
+          "startpoint": "_7850_",
+          "endpoint": "_7863_",
+          "start_register": "window_full",
+          "end_register": "running_sum[11]",
+          "slack_ns": 3.753679,
+          "data_arrival_ns": 10.511037,
+          "data_delay_ns": 8.091396
+        },
+        "prescale_count": {
+          "startpoint": "_7951_",
+          "endpoint": "_7971_",
+          "start_register": "prescale_count[0]",
+          "end_register": "prescale_count[20]",
+          "slack_ns": 3.978549,
+          "data_arrival_ns": 10.28811,
+          "data_delay_ns": 7.908962
+        }
+      }
+    },
+    {
+      "corner": "nom_ss_125C_3v00",
+      "setup_ns": -9.809366041540772,
+      "hold_ns": 0.27664227247560536,
+      "setup_tns_ns": -1912.838169557484,
+      "setup_violations": 1532.0,
+      "hold_violations": 0.0,
+      "slew": 126.0,
+      "capacitance": 1.0,
+      "fanout": 104.0,
+      "unannotated_functional_nets": 0,
+      "baseline_setup_ns": -7.547740424076341,
+      "baseline_hold_ns": 0.10924683689124666,
+      "delay0_setup_ns": -9.028724690106214,
+      "delay0_hold_ns": 1.5229369307817002,
+      "setup_improvement_ns": -2.2616256174644302,
+      "worst_reported_path": {
+        "startpoint": "_7910_",
+        "endpoint": "_8016_",
+        "start_register": "sample_position[3]",
+        "end_register": "peak_second[3]",
+        "slack_ns": -9.809366,
+        "data_arrival_ns": 25.593868,
+        "data_delay_ns": 20.958558
+      },
+      "reported_path_groups": {
+        "peak_second": {
+          "startpoint": "_7910_",
+          "endpoint": "_8016_",
+          "start_register": "sample_position[3]",
+          "end_register": "peak_second[3]",
+          "slack_ns": -9.809366,
+          "data_arrival_ns": 25.593868,
+          "data_delay_ns": 20.958558
+        },
+        "peak_first": {
+          "startpoint": "_7910_",
+          "endpoint": "_7999_",
+          "start_register": "sample_position[3]",
+          "end_register": "peak_first_position[4]",
+          "slack_ns": -8.221684,
+          "data_arrival_ns": 23.83411,
+          "data_delay_ns": 19.1988
+        },
+        "history_pointer": {
+          "startpoint": "_7964_",
+          "endpoint": "_7876_",
+          "start_register": "prescale_count[13]",
+          "end_register": "history_pointer[10]",
+          "slack_ns": -5.964438,
+          "data_arrival_ns": 21.622095,
+          "data_delay_ns": 17.030061000000003
+        },
+        "running_sum": {
+          "startpoint": "_7850_",
+          "endpoint": "_7863_",
+          "start_register": "window_full",
+          "end_register": "running_sum[11]",
+          "slack_ns": -4.963047,
+          "data_arrival_ns": 20.959188,
+          "data_delay_ns": 16.324197
+        },
+        "prescale_count": {
+          "startpoint": "_7951_",
+          "endpoint": "_7971_",
+          "start_register": "prescale_count[0]",
+          "end_register": "prescale_count[20]",
+          "slack_ns": -4.594007,
+          "data_arrival_ns": 20.601269,
+          "data_delay_ns": 16.044044999999997
+        }
+      }
+    },
+    {
+      "corner": "nom_ff_n40C_3v60",
+      "setup_ns": 5.836614023960168,
+      "hold_ns": 0.49062344464688745,
+      "setup_tns_ns": 0.0,
+      "setup_violations": 0.0,
+      "hold_violations": 0.0,
+      "slew": 0.0,
+      "capacitance": 1.0,
+      "fanout": 104.0,
+      "unannotated_functional_nets": 0,
+      "baseline_setup_ns": 6.142608373590947,
+      "baseline_hold_ns": 0.5062903573019759,
+      "delay0_setup_ns": 5.579960651474448,
+      "delay0_hold_ns": 0.5080750408645351,
+      "setup_improvement_ns": -0.30599434963077865,
+      "worst_reported_path": {
+        "startpoint": "_8028_",
+        "endpoint": "_8016_",
+        "start_register": "peak_first[7]",
+        "end_register": "peak_second[3]",
+        "slack_ns": 5.836614,
+        "data_arrival_ns": 7.58701,
+        "data_delay_ns": 6.133492
+      },
+      "reported_path_groups": {
+        "peak_second": {
+          "startpoint": "_8028_",
+          "endpoint": "_8016_",
+          "start_register": "peak_first[7]",
+          "end_register": "peak_second[3]",
+          "slack_ns": 5.836614,
+          "data_arrival_ns": 7.58701,
+          "data_delay_ns": 6.133492
+        },
+        "peak_first": {
+          "startpoint": "_8028_",
+          "endpoint": "_8002_",
+          "start_register": "peak_first[7]",
+          "end_register": "peak_first_position[7]",
+          "slack_ns": 6.371448,
+          "data_arrival_ns": 6.993563,
+          "data_delay_ns": 5.540045
+        },
+        "history_pointer": {
+          "startpoint": "rst_n",
+          "endpoint": "_7876_",
+          "start_register": null,
+          "end_register": "history_pointer[10]",
+          "slack_ns": 6.662021,
+          "data_arrival_ns": 6.638361,
+          "data_delay_ns": null
+        },
+        "prescale_count": {
+          "startpoint": "rst_n",
+          "endpoint": "_7973_",
+          "start_register": null,
+          "end_register": "prescale_count[22]",
+          "slack_ns": 7.077833,
+          "data_arrival_ns": 6.32438,
+          "data_delay_ns": null
+        },
+        "running_sum": {
+          "startpoint": "_7850_",
+          "endpoint": "_7863_",
+          "start_register": "window_full",
+          "end_register": "running_sum[11]",
+          "slack_ns": 7.395009,
+          "data_arrival_ns": 6.09755,
+          "data_delay_ns": 4.644801
+        }
+      }
+    },
+    {
+      "corner": "min_tt_025C_3v30",
+      "setup_ns": 1.436363957319029,
+      "hold_ns": 1.066882168363328,
+      "setup_tns_ns": 0.0,
+      "setup_violations": 0.0,
+      "hold_violations": 0.0,
+      "slew": 0.0,
+      "capacitance": 0.0,
+      "fanout": 104.0,
+      "unannotated_functional_nets": 0,
+      "baseline_setup_ns": 2.607088840826099,
+      "baseline_hold_ns": 1.1037937543069716,
+      "delay0_setup_ns": 1.7974742203430834,
+      "delay0_hold_ns": 1.092066912255408,
+      "setup_improvement_ns": -1.17072488350707,
+      "worst_reported_path": {
+        "startpoint": "_7910_",
+        "endpoint": "_8016_",
+        "start_register": "sample_position[3]",
+        "end_register": "peak_second[3]",
+        "slack_ns": 1.436364,
+        "data_arrival_ns": 12.667423,
+        "data_delay_ns": 10.306864
+      },
+      "reported_path_groups": {
+        "peak_second": {
+          "startpoint": "_7910_",
+          "endpoint": "_8016_",
+          "start_register": "sample_position[3]",
+          "end_register": "peak_second[3]",
+          "slack_ns": 1.436364,
+          "data_arrival_ns": 12.667423,
+          "data_delay_ns": 10.306864
+        },
+        "peak_first": {
+          "startpoint": "_7910_",
+          "endpoint": "_7999_",
+          "start_register": "sample_position[3]",
+          "end_register": "peak_first_position[4]",
+          "slack_ns": 2.188359,
+          "data_arrival_ns": 11.834314,
+          "data_delay_ns": 9.473754999999999
+        },
+        "history_pointer": {
+          "startpoint": "_7964_",
+          "endpoint": "_7876_",
+          "start_register": "prescale_count[13]",
+          "end_register": "history_pointer[10]",
+          "slack_ns": 3.448875,
+          "data_arrival_ns": 10.582648,
+          "data_delay_ns": 8.240916
+        },
+        "running_sum": {
+          "startpoint": "_7850_",
+          "endpoint": "_7863_",
+          "start_register": "window_full",
+          "end_register": "running_sum[11]",
+          "slack_ns": 3.875539,
+          "data_arrival_ns": 10.329248,
+          "data_delay_ns": 7.968968
+        },
+        "prescale_count": {
+          "startpoint": "_7951_",
+          "endpoint": "_7971_",
+          "start_register": "prescale_count[0]",
+          "end_register": "prescale_count[20]",
+          "slack_ns": 4.06597,
+          "data_arrival_ns": 10.138217,
+          "data_delay_ns": 7.813632999999999
+        }
+      }
+    },
+    {
+      "corner": "min_ss_125C_3v00",
+      "setup_ns": -9.40965376694797,
+      "hold_ns": 0.3169389285170673,
+      "setup_tns_ns": -1685.3249939298555,
+      "setup_violations": 1423.0,
+      "hold_violations": 0.0,
+      "slew": 91.0,
+      "capacitance": 0.0,
+      "fanout": 104.0,
+      "unannotated_functional_nets": 0,
+      "baseline_setup_ns": -7.257012973733565,
+      "baseline_hold_ns": 0.1681459463702312,
+      "delay0_setup_ns": -8.31711256740303,
+      "delay0_hold_ns": 1.6074009245271477,
+      "setup_improvement_ns": -2.152640793214405,
+      "worst_reported_path": {
+        "startpoint": "_7910_",
+        "endpoint": "_8016_",
+        "start_register": "sample_position[3]",
+        "end_register": "peak_second[3]",
+        "slack_ns": -9.409654,
+        "data_arrival_ns": 25.101938,
+        "data_delay_ns": 20.57842
+      },
+      "reported_path_groups": {
+        "peak_second": {
+          "startpoint": "_7910_",
+          "endpoint": "_8016_",
+          "start_register": "sample_position[3]",
+          "end_register": "peak_second[3]",
+          "slack_ns": -9.409654,
+          "data_arrival_ns": 25.101938,
+          "data_delay_ns": 20.57842
+        },
+        "peak_first": {
+          "startpoint": "_7910_",
+          "endpoint": "_7999_",
+          "start_register": "sample_position[3]",
+          "end_register": "peak_first_position[4]",
+          "slack_ns": -7.947611,
+          "data_arrival_ns": 23.469736,
+          "data_delay_ns": 18.946218000000002
+        },
+        "history_pointer": {
+          "startpoint": "_7964_",
+          "endpoint": "_7876_",
+          "start_register": "prescale_count[13]",
+          "end_register": "history_pointer[10]",
+          "slack_ns": -5.727886,
+          "data_arrival_ns": 21.298452,
+          "data_delay_ns": 16.813454
+        },
+        "running_sum": {
+          "startpoint": "_7850_",
+          "endpoint": "_7863_",
+          "start_register": "window_full",
+          "end_register": "running_sum[11]",
+          "slack_ns": -4.750893,
+          "data_arrival_ns": 20.634117,
+          "data_delay_ns": 16.110879
+        },
+        "prescale_count": {
+          "startpoint": "_7951_",
+          "endpoint": "_7971_",
+          "start_register": "prescale_count[0]",
+          "end_register": "prescale_count[20]",
+          "slack_ns": -4.425156,
+          "data_arrival_ns": 20.315449,
+          "data_delay_ns": 15.859957000000001
+        }
+      }
+    },
+    {
+      "corner": "min_ff_n40C_3v60",
+      "setup_ns": 6.012595924659819,
+      "hold_ns": 0.49330174674724075,
+      "setup_tns_ns": 0.0,
+      "setup_violations": 0.0,
+      "hold_violations": 0.0,
+      "slew": 0.0,
+      "capacitance": 0.0,
+      "fanout": 104.0,
+      "unannotated_functional_nets": 0,
+      "baseline_setup_ns": 6.202995626054226,
+      "baseline_hold_ns": 0.5051640360116392,
+      "delay0_setup_ns": 5.636526960268115,
+      "delay0_hold_ns": 0.5064201423772251,
+      "setup_improvement_ns": -0.19039970139440676,
+      "worst_reported_path": {
+        "startpoint": "_7913_",
+        "endpoint": "_8016_",
+        "start_register": "sample_position[6]",
+        "end_register": "peak_second[3]",
+        "slack_ns": 6.012596,
+        "data_arrival_ns": 7.352952,
+        "data_delay_ns": 5.977658
+      },
+      "reported_path_groups": {
+        "peak_second": {
+          "startpoint": "_7913_",
+          "endpoint": "_8016_",
+          "start_register": "sample_position[6]",
+          "end_register": "peak_second[3]",
+          "slack_ns": 6.012596,
+          "data_arrival_ns": 7.352952,
+          "data_delay_ns": 5.977658
+        },
+        "peak_first": {
+          "startpoint": "_7910_",
+          "endpoint": "_7999_",
+          "start_register": "sample_position[3]",
+          "end_register": "peak_first_position[4]",
+          "slack_ns": 6.466139,
+          "data_arrival_ns": 6.882482,
+          "data_delay_ns": 5.465893
+        },
+        "history_pointer": {
+          "startpoint": "rst_n",
+          "endpoint": "_7876_",
+          "start_register": null,
+          "end_register": "history_pointer[10]",
+          "slack_ns": 6.721283,
+          "data_arrival_ns": 6.553222,
+          "data_delay_ns": null
+        },
+        "prescale_count": {
+          "startpoint": "rst_n",
+          "endpoint": "_7973_",
+          "start_register": null,
+          "end_register": "prescale_count[22]",
+          "slack_ns": 7.162629,
+          "data_arrival_ns": 6.204216,
+          "data_delay_ns": null
+        },
+        "running_sum": {
+          "startpoint": "_7850_",
+          "endpoint": "_7863_",
+          "start_register": "window_full",
+          "end_register": "running_sum[11]",
+          "slack_ns": 7.466834,
+          "data_arrival_ns": 5.988836,
+          "data_delay_ns": 4.572528
+        }
+      }
+    },
+    {
+      "corner": "max_tt_025C_3v30",
+      "setup_ns": 0.9173169150587214,
+      "hold_ns": 1.0561254392181187,
+      "setup_tns_ns": 0.0,
+      "setup_violations": 0.0,
+      "hold_violations": 0.0,
+      "slew": 0.0,
+      "capacitance": 1.0,
+      "fanout": 104.0,
+      "unannotated_functional_nets": 0,
+      "baseline_setup_ns": 2.165281348841077,
+      "baseline_hold_ns": 1.0963217310953162,
+      "delay0_setup_ns": 0.9568408558531903,
+      "delay0_hold_ns": 1.100884081721743,
+      "setup_improvement_ns": -1.2479644337823559,
+      "worst_reported_path": {
+        "startpoint": "_8028_",
+        "endpoint": "_8016_",
+        "start_register": "peak_first[7]",
+        "end_register": "peak_second[3]",
+        "slack_ns": 0.917317,
+        "data_arrival_ns": 13.295649,
+        "data_delay_ns": 10.8044
+      },
+      "reported_path_groups": {
+        "peak_second": {
+          "startpoint": "_8028_",
+          "endpoint": "_8016_",
+          "start_register": "peak_first[7]",
+          "end_register": "peak_second[3]",
+          "slack_ns": 0.917317,
+          "data_arrival_ns": 13.295649,
+          "data_delay_ns": 10.8044
+        },
+        "peak_first": {
+          "startpoint": "_7910_",
+          "endpoint": "_7999_",
+          "start_register": "sample_position[3]",
+          "end_register": "peak_first_position[4]",
+          "slack_ns": 1.87976,
+          "data_arrival_ns": 12.248819,
+          "data_delay_ns": 9.757852999999999
+        },
+        "history_pointer": {
+          "startpoint": "_7964_",
+          "endpoint": "_7876_",
+          "start_register": "prescale_count[13]",
+          "end_register": "history_pointer[10]",
+          "slack_ns": 3.184708,
+          "data_arrival_ns": 10.946369,
+          "data_delay_ns": 8.478288000000001
+        },
+        "running_sum": {
+          "startpoint": "_7850_",
+          "endpoint": "_7863_",
+          "start_register": "window_full",
+          "end_register": "running_sum[11]",
+          "slack_ns": 3.605517,
+          "data_arrival_ns": 10.730186,
+          "data_delay_ns": 8.239582
+        },
+        "prescale_count": {
+          "startpoint": "_7951_",
+          "endpoint": "_7971_",
+          "start_register": "prescale_count[0]",
+          "end_register": "prescale_count[20]",
+          "slack_ns": 3.873163,
+          "data_arrival_ns": 10.467768,
+          "data_delay_ns": 8.023634
+        }
+      }
+    },
+    {
+      "corner": "max_ss_125C_3v00",
+      "setup_ns": -10.293526322667013,
+      "hold_ns": 0.22644731175585217,
+      "setup_tns_ns": -2202.092735821647,
+      "setup_violations": 1622.0,
+      "hold_violations": 0.0,
+      "slew": 160.0,
+      "capacitance": 1.0,
+      "fanout": 104.0,
+      "unannotated_functional_nets": 0,
+      "baseline_setup_ns": -7.933554482364606,
+      "baseline_hold_ns": 0.03882405617995117,
+      "delay0_setup_ns": -9.887541731896897,
+      "delay0_hold_ns": 1.4201613620394087,
+      "setup_improvement_ns": -2.359971840302407,
+      "worst_reported_path": {
+        "startpoint": "_7910_",
+        "endpoint": "_8016_",
+        "start_register": "sample_position[3]",
+        "end_register": "peak_second[3]",
+        "slack_ns": -10.293527,
+        "data_arrival_ns": 26.188696,
+        "data_delay_ns": 21.419603000000002
+      },
+      "reported_path_groups": {
+        "peak_second": {
+          "startpoint": "_7910_",
+          "endpoint": "_8016_",
+          "start_register": "sample_position[3]",
+          "end_register": "peak_second[3]",
+          "slack_ns": -10.293527,
+          "data_arrival_ns": 26.188696,
+          "data_delay_ns": 21.419603000000002
+        },
+        "peak_first": {
+          "startpoint": "_7910_",
+          "endpoint": "_7999_",
+          "start_register": "sample_position[3]",
+          "end_register": "peak_first_position[4]",
+          "slack_ns": -8.553137,
+          "data_arrival_ns": 24.273964,
+          "data_delay_ns": 19.504871
+        },
+        "history_pointer": {
+          "startpoint": "_7964_",
+          "endpoint": "_7876_",
+          "start_register": "prescale_count[13]",
+          "end_register": "history_pointer[10]",
+          "slack_ns": -6.239471,
+          "data_arrival_ns": 22.00094,
+          "data_delay_ns": 17.280853999999998
+        },
+        "running_sum": {
+          "startpoint": "_7850_",
+          "endpoint": "_7863_",
+          "start_register": "window_full",
+          "end_register": "running_sum[11]",
+          "slack_ns": -5.22239,
+          "data_arrival_ns": 21.353395,
+          "data_delay_ns": 16.584664
+        },
+        "prescale_count": {
+          "startpoint": "_7951_",
+          "endpoint": "_7973_",
+          "start_register": "prescale_count[0]",
+          "end_register": "prescale_count[22]",
+          "slack_ns": -4.808305,
+          "data_arrival_ns": 21.037249,
+          "data_delay_ns": 16.35821
+        }
+      }
+    },
+    {
+      "corner": "max_ff_n40C_3v60",
+      "setup_ns": 5.6117725388325495,
+      "hold_ns": 0.4876577057973294,
+      "setup_tns_ns": 0.0,
+      "setup_violations": 0.0,
+      "hold_violations": 0.0,
+      "slew": 0.0,
+      "capacitance": 1.0,
+      "fanout": 104.0,
+      "unannotated_functional_nets": 0,
+      "baseline_setup_ns": 6.069330099179556,
+      "baseline_hold_ns": 0.5076689212706414,
+      "delay0_setup_ns": 5.508842427040859,
+      "delay0_hold_ns": 0.5093395849253469,
+      "setup_improvement_ns": -0.45755756034700656,
+      "worst_reported_path": {
+        "startpoint": "_8028_",
+        "endpoint": "_8016_",
+        "start_register": "peak_first[7]",
+        "end_register": "peak_second[3]",
+        "slack_ns": 5.611773,
+        "data_arrival_ns": 7.848733,
+        "data_delay_ns": 6.351543
+      },
+      "reported_path_groups": {
+        "peak_second": {
+          "startpoint": "_8028_",
+          "endpoint": "_8016_",
+          "start_register": "peak_first[7]",
+          "end_register": "peak_second[3]",
+          "slack_ns": 5.611773,
+          "data_arrival_ns": 7.848733,
+          "data_delay_ns": 6.351543
+        },
+        "peak_first": {
+          "startpoint": "_8028_",
+          "endpoint": "_8002_",
+          "start_register": "peak_first[7]",
+          "end_register": "peak_first_position[7]",
+          "slack_ns": 6.211657,
+          "data_arrival_ns": 7.186757,
+          "data_delay_ns": 5.689567
+        },
+        "history_pointer": {
+          "startpoint": "rst_n",
+          "endpoint": "_7876_",
+          "start_register": null,
+          "end_register": "history_pointer[10]",
+          "slack_ns": 6.590787,
+          "data_arrival_ns": 6.740121,
+          "data_delay_ns": null
+        },
+        "prescale_count": {
+          "startpoint": "rst_n",
+          "endpoint": "_7973_",
+          "start_register": null,
+          "end_register": "prescale_count[22]",
+          "slack_ns": 6.976482,
+          "data_arrival_ns": 6.467906,
+          "data_delay_ns": null
+        },
+        "running_sum": {
+          "startpoint": "_7850_",
+          "endpoint": "_7863_",
+          "start_register": "window_full",
+          "end_register": "running_sum[11]",
+          "slack_ns": 7.308628,
+          "data_arrival_ns": 6.227649,
+          "data_delay_ns": 4.731661000000001
+        }
+      }
+    }
+  ],
+  "physical": {
+    "magic__drc_error__count": 0.0,
+    "design__lvs_error__count": 0.0,
+    "route__drc_errors": 0.0,
+    "antenna__violating__nets": 0.0,
+    "antenna__violating__pins": 0.0
+  },
+  "comparison": {
+    "design__instance__area__stdcell": {
+      "baseline": 314418.0,
+      "experiment": 315196.0,
+      "change": 778.0
+    },
+    "design__instance__count__stdcell": {
+      "baseline": 10407.0,
+      "experiment": 10387.0,
+      "change": -20.0
+    },
+    "timing__setup__ws": {
+      "baseline": -7.933554482364606,
+      "experiment": -10.293526322667013,
+      "change": -2.359971840302407
+    },
+    "timing__hold__ws": {
+      "baseline": 0.03882405617995117,
+      "experiment": 0.22644731175585217,
+      "change": 0.187623255575901
+    },
+    "timing__setup_vio__count": {
+      "baseline": 3880.0,
+      "experiment": 4577.0,
+      "change": 697.0
+    },
+    "timing__hold_vio__count": {
+      "baseline": 0.0,
+      "experiment": 0.0,
+      "change": 0.0
+    }
+  },
+  "provenance_failures": [],
+  "missing_evidence": [],
+  "metrics": {
+    "design__lint_error__count": 0.0,
+    "design__lint_timing_construct__count": 0.0,
+    "design__lint_warning__count": 2.0,
+    "design__inferred_latch__count": 0.0,
+    "design__instance__count": 22386.0,
+    "design__instance__area": 455197.0,
+    "design__instance_unmapped__count": 0.0,
+    "synthesis__check_error__count": 0.0,
+    "design__max_slew_violation__count__corner:nom_tt_025C_3v30": 0.0,
+    "design__max_fanout_violation__count__corner:nom_tt_025C_3v30": 104.0,
+    "design__max_cap_violation__count__corner:nom_tt_025C_3v30": 1.0,
+    "power__internal__total": 0.05719909444451332,
+    "power__switching__total": 0.015836583450436592,
+    "power__leakage__total": 1.3358803698793054e-06,
+    "power__total": 0.07303701341152191,
+    "clock__skew__worst_hold__corner:nom_tt_025C_3v30": -0.7156352379913,
+    "clock__skew__worst_setup__corner:nom_tt_025C_3v30": 0.5262402884625953,
+    "timing__hold__ws__corner:nom_tt_025C_3v30": 1.0619945223814862,
+    "timing__setup__ws__corner:nom_tt_025C_3v30": 1.2286234599679655,
+    "timing__hold__tns__corner:nom_tt_025C_3v30": 0.0,
+    "timing__setup__tns__corner:nom_tt_025C_3v30": 0.0,
+    "timing__hold__wns__corner:nom_tt_025C_3v30": 0.0,
+    "timing__setup__wns__corner:nom_tt_025C_3v30": 0.0,
+    "timing__hold_vio__count__corner:nom_tt_025C_3v30": 0.0,
+    "timing__hold_r2r__ws__corner:nom_tt_025C_3v30": 1.061995,
+    "timing__hold_r2r_vio__count__corner:nom_tt_025C_3v30": 0.0,
+    "timing__setup_vio__count__corner:nom_tt_025C_3v30": 0.0,
+    "timing__setup_r2r__ws__corner:nom_tt_025C_3v30": 1.228624,
+    "timing__setup_r2r_vio__count__corner:nom_tt_025C_3v30": 0.0,
+    "design__max_slew_violation__count__corner:nom_ss_125C_3v00": 126.0,
+    "design__max_fanout_violation__count__corner:nom_ss_125C_3v00": 104.0,
+    "design__max_cap_violation__count__corner:nom_ss_125C_3v00": 1.0,
+    "clock__skew__worst_hold__corner:nom_ss_125C_3v00": -1.1358154738226611,
+    "clock__skew__worst_setup__corner:nom_ss_125C_3v00": 0.7757728012892798,
+    "timing__hold__ws__corner:nom_ss_125C_3v00": 0.27664227247560536,
+    "timing__setup__ws__corner:nom_ss_125C_3v00": -9.809366041540772,
+    "timing__hold__tns__corner:nom_ss_125C_3v00": 0.0,
+    "timing__setup__tns__corner:nom_ss_125C_3v00": -1912.838169557484,
+    "timing__hold__wns__corner:nom_ss_125C_3v00": 0.0,
+    "timing__setup__wns__corner:nom_ss_125C_3v00": -9.809366041540772,
+    "timing__hold_vio__count__corner:nom_ss_125C_3v00": 0.0,
+    "timing__hold_r2r__ws__corner:nom_ss_125C_3v00": 2.404515,
+    "timing__hold_r2r_vio__count__corner:nom_ss_125C_3v00": 0.0,
+    "timing__setup_vio__count__corner:nom_ss_125C_3v00": 1532.0,
+    "timing__setup_r2r__ws__corner:nom_ss_125C_3v00": -9.809366,
+    "timing__setup_r2r_vio__count__corner:nom_ss_125C_3v00": 1531.0,
+    "design__max_slew_violation__count__corner:nom_ff_n40C_3v60": 0.0,
+    "design__max_fanout_violation__count__corner:nom_ff_n40C_3v60": 104.0,
+    "design__max_cap_violation__count__corner:nom_ff_n40C_3v60": 1.0,
+    "clock__skew__worst_hold__corner:nom_ff_n40C_3v60": -0.5314097090560561,
+    "clock__skew__worst_setup__corner:nom_ff_n40C_3v60": 0.415563123452696,
+    "timing__hold__ws__corner:nom_ff_n40C_3v60": 0.49062344464688745,
+    "timing__setup__ws__corner:nom_ff_n40C_3v60": 5.836614023960168,
+    "timing__hold__tns__corner:nom_ff_n40C_3v60": 0.0,
+    "timing__setup__tns__corner:nom_ff_n40C_3v60": 0.0,
+    "timing__hold__wns__corner:nom_ff_n40C_3v60": 0.0,
+    "timing__setup__wns__corner:nom_ff_n40C_3v60": 0.0,
+    "timing__hold_vio__count__corner:nom_ff_n40C_3v60": 0.0,
+    "timing__hold_r2r__ws__corner:nom_ff_n40C_3v60": 0.490623,
+    "timing__hold_r2r_vio__count__corner:nom_ff_n40C_3v60": 0.0,
+    "timing__setup_vio__count__corner:nom_ff_n40C_3v60": 0.0,
+    "timing__setup_r2r__ws__corner:nom_ff_n40C_3v60": 5.836614,
+    "timing__setup_r2r_vio__count__corner:nom_ff_n40C_3v60": 0.0,
+    "design__max_slew_violation__count": 160.0,
+    "design__max_fanout_violation__count": 104.0,
+    "design__max_cap_violation__count": 1.0,
+    "clock__skew__worst_hold": -0.522217062152174,
+    "clock__skew__worst_setup": 0.4038691440035909,
+    "timing__hold__ws": 0.22644731175585217,
+    "timing__setup__ws": -10.293526322667013,
+    "timing__hold__tns": 0.0,
+    "timing__setup__tns": -2202.092735821647,
+    "timing__hold__wns": 0.0,
+    "timing__setup__wns": -10.293526322667013,
+    "timing__hold_vio__count": 0.0,
+    "timing__hold_r2r__ws": 0.487658,
+    "timing__hold_r2r_vio__count": 0.0,
+    "timing__setup_vio__count": 4577.0,
+    "timing__setup_r2r__ws": -10.293527,
+    "timing__setup_r2r_vio__count": 4575.0,
+    "design__die__bbox": "0.0 0.0 1440.32 325.36",
+    "design__core__bbox": "3.36 3.92 1436.96 321.44",
+    "design__io": 45.0,
+    "design__die__area": 468623.0,
+    "design__core__area": 455197.0,
+    "design__instance__count__stdcell": 10387.0,
+    "design__instance__area__stdcell": 315196.0,
+    "design__instance__count__macros": 0.0,
+    "design__instance__area__macros": 0.0,
+    "design__instance__count__padcells": 0.0,
+    "design__instance__area__padcells": 0.0,
+    "design__instance__count__cover": 0.0,
+    "design__instance__area__cover": 0.0,
+    "design__instance__utilization": 0.692438,
+    "design__instance__utilization__stdcell": 0.692438,
+    "design__rows": 81.0,
+    "design__rows:GF018hv5v_mcu_sc7": 81.0,
+    "design__sites": 207360.0,
+    "design__sites:GF018hv5v_mcu_sc7": 207360.0,
+    "design__instance__count__class:tie_cell": 11.0,
+    "design__instance__area__class:tie_cell": 96.5888,
+    "design__instance__count__class:buffer": 2.0,
+    "design__instance__area__class:buffer": 35.1232,
+    "design__instance__count__class:inverter": 137.0,
+    "design__instance__area__class:inverter": 1286.39,
+    "design__instance__count__class:sequential_cell": 2227.0,
+    "design__instance__area__class:sequential_cell": 142253.0,
+    "design__instance__count__class:multi_input_combinational_cell": 2765.0,
+    "design__instance__area__class:multi_input_combinational_cell": 84394.5,
+    "flow__warnings__count": 1.0,
+    "flow__errors__count": 0.0,
+    "flow__warnings__count:ODB-0220": 1.0,
+    "flow__warnings__type_count": 1.0,
+    "flow__warnings__count:ORD-0039": 1.0,
+    "design__instance__count__class:endcap_cell": 162.0,
+    "design__instance__area__class:endcap_cell": 711.245,
+    "design__instance__count__class:tap_cell": 3033.0,
+    "design__instance__area__class:tap_cell": 13316.1,
+    "design__power_grid_violation__count__net:VPWR": 0.0,
+    "design__power_grid_violation__count__net:VGND": 0.0,
+    "design__power_grid_violation__count": 0.0,
+    "flow__warnings__count:GRT-0281": 2.0,
+    "timing__drv__floating__nets": 2.0,
+    "timing__drv__floating__pins": 0.0,
+    "design__instance__displacement__total": 17080.2,
+    "design__instance__displacement__mean": 1.644,
+    "design__instance__displacement__max": 33.3,
+    "route__wirelength__estimated": 192721.0,
+    "design__violations": 0.0,
+    "design__instance__count__class:timing_repair_buffer": 1836.0,
+    "design__instance__area__class:timing_repair_buffer": 62727.8,
+    "flow__warnings__count:RSZ-0020": 1.0,
+    "flow__warnings__count:STA-1140": 6.0,
+    "design__instance__count__class:clock_buffer": 189.0,
+    "design__instance__area__class:clock_buffer": 9970.6,
+    "design__instance__count__class:clock_inverter": 25.0,
+    "design__instance__area__class:clock_inverter": 403.917,
+    "design__instance__count__setup_buffer": 49.0,
+    "design__instance__count__hold_buffer": 645.0,
+    "flow__warnings__count:RSZ-0062": 1.0,
+    "global_route__vias": 49325.0,
+    "global_route__wirelength": 350716.0,
+    "antenna__violating__nets": 0.0,
+    "antenna__violating__pins": 0.0,
+    "route__antenna_violation__count": 0.0,
+    "antenna_diodes_count": 0.0,
+    "route__net": 7126.0,
+    "route__net__special": 2.0,
+    "route__drc_errors__iter:0": 511.0,
+    "route__wirelength__iter:0": 198595.0,
+    "route__drc_errors__iter:1": 42.0,
+    "route__wirelength__iter:1": 196618.0,
+    "route__drc_errors__iter:2": 27.0,
+    "route__wirelength__iter:2": 196601.0,
+    "route__drc_errors__iter:3": 0.0,
+    "route__wirelength__iter:3": 196616.0,
+    "route__drc_errors": 0.0,
+    "route__wirelength": 196616.0,
+    "route__vias": 39678.0,
+    "route__vias__singlecut": 39678.0,
+    "route__vias__multicut": 0.0,
+    "flow__warnings__count:DRT-0349": 8.0,
+    "design__disconnected_pin__count": 4.0,
+    "design__critical_disconnected_pin__count": 0.0,
+    "route__wirelength__max": 1060.53,
+    "design__instance__count__class:fill_cell": 11999.0,
+    "design__instance__area__class:fill_cell": 140001.0,
+    "timing__unannotated_net__count__corner:nom_tt_025C_3v30": 89.0,
+    "timing__unannotated_net_filtered__count__corner:nom_tt_025C_3v30": 0.0,
+    "timing__unannotated_net__count__corner:nom_ss_125C_3v00": 89.0,
+    "timing__unannotated_net_filtered__count__corner:nom_ss_125C_3v00": 0.0,
+    "timing__unannotated_net__count__corner:nom_ff_n40C_3v60": 89.0,
+    "timing__unannotated_net_filtered__count__corner:nom_ff_n40C_3v60": 0.0,
+    "design__max_slew_violation__count__corner:min_tt_025C_3v30": 0.0,
+    "design__max_fanout_violation__count__corner:min_tt_025C_3v30": 104.0,
+    "design__max_cap_violation__count__corner:min_tt_025C_3v30": 0.0,
+    "clock__skew__worst_hold__corner:min_tt_025C_3v30": -0.7019549584726616,
+    "clock__skew__worst_setup__corner:min_tt_025C_3v30": 0.5072887808962586,
+    "timing__hold__ws__corner:min_tt_025C_3v30": 1.066882168363328,
+    "timing__setup__ws__corner:min_tt_025C_3v30": 1.436363957319029,
+    "timing__hold__tns__corner:min_tt_025C_3v30": 0.0,
+    "timing__setup__tns__corner:min_tt_025C_3v30": 0.0,
+    "timing__hold__wns__corner:min_tt_025C_3v30": 0.0,
+    "timing__setup__wns__corner:min_tt_025C_3v30": 0.0,
+    "timing__hold_vio__count__corner:min_tt_025C_3v30": 0.0,
+    "timing__hold_r2r__ws__corner:min_tt_025C_3v30": 1.066882,
+    "timing__hold_r2r_vio__count__corner:min_tt_025C_3v30": 0.0,
+    "timing__setup_vio__count__corner:min_tt_025C_3v30": 0.0,
+    "timing__setup_r2r__ws__corner:min_tt_025C_3v30": 1.436364,
+    "timing__setup_r2r_vio__count__corner:min_tt_025C_3v30": 0.0,
+    "timing__unannotated_net__count__corner:min_tt_025C_3v30": 89.0,
+    "timing__unannotated_net_filtered__count__corner:min_tt_025C_3v30": 0.0,
+    "design__max_slew_violation__count__corner:min_ss_125C_3v00": 91.0,
+    "design__max_fanout_violation__count__corner:min_ss_125C_3v00": 104.0,
+    "design__max_cap_violation__count__corner:min_ss_125C_3v00": 0.0,
+    "clock__skew__worst_hold__corner:min_ss_125C_3v00": -1.1139507409573164,
+    "clock__skew__worst_setup__corner:min_ss_125C_3v00": 0.7397811461698581,
+    "timing__hold__ws__corner:min_ss_125C_3v00": 0.3169389285170673,
+    "timing__setup__ws__corner:min_ss_125C_3v00": -9.40965376694797,
+    "timing__hold__tns__corner:min_ss_125C_3v00": 0.0,
+    "timing__setup__tns__corner:min_ss_125C_3v00": -1685.3249939298555,
+    "timing__hold__wns__corner:min_ss_125C_3v00": 0.0,
+    "timing__setup__wns__corner:min_ss_125C_3v00": -9.40965376694797,
+    "timing__hold_vio__count__corner:min_ss_125C_3v00": 0.0,
+    "timing__hold_r2r__ws__corner:min_ss_125C_3v00": 2.415332,
+    "timing__hold_r2r_vio__count__corner:min_ss_125C_3v00": 0.0,
+    "timing__setup_vio__count__corner:min_ss_125C_3v00": 1423.0,
+    "timing__setup_r2r__ws__corner:min_ss_125C_3v00": -9.409654,
+    "timing__setup_r2r_vio__count__corner:min_ss_125C_3v00": 1423.0,
+    "timing__unannotated_net__count__corner:min_ss_125C_3v00": 89.0,
+    "timing__unannotated_net_filtered__count__corner:min_ss_125C_3v00": 0.0,
+    "design__max_slew_violation__count__corner:min_ff_n40C_3v60": 0.0,
+    "design__max_fanout_violation__count__corner:min_ff_n40C_3v60": 104.0,
+    "design__max_cap_violation__count__corner:min_ff_n40C_3v60": 0.0,
+    "clock__skew__worst_hold__corner:min_ff_n40C_3v60": -0.522217062152174,
+    "clock__skew__worst_setup__corner:min_ff_n40C_3v60": 0.4038691440035909,
+    "timing__hold__ws__corner:min_ff_n40C_3v60": 0.49330174674724075,
+    "timing__setup__ws__corner:min_ff_n40C_3v60": 6.012595924659819,
+    "timing__hold__tns__corner:min_ff_n40C_3v60": 0.0,
+    "timing__setup__tns__corner:min_ff_n40C_3v60": 0.0,
+    "timing__hold__wns__corner:min_ff_n40C_3v60": 0.0,
+    "timing__setup__wns__corner:min_ff_n40C_3v60": 0.0,
+    "timing__hold_vio__count__corner:min_ff_n40C_3v60": 0.0,
+    "timing__hold_r2r__ws__corner:min_ff_n40C_3v60": 0.493302,
+    "timing__hold_r2r_vio__count__corner:min_ff_n40C_3v60": 0.0,
+    "timing__setup_vio__count__corner:min_ff_n40C_3v60": 0.0,
+    "timing__setup_r2r__ws__corner:min_ff_n40C_3v60": 6.012596,
+    "timing__setup_r2r_vio__count__corner:min_ff_n40C_3v60": 0.0,
+    "timing__unannotated_net__count__corner:min_ff_n40C_3v60": 89.0,
+    "timing__unannotated_net_filtered__count__corner:min_ff_n40C_3v60": 0.0,
+    "design__max_slew_violation__count__corner:max_tt_025C_3v30": 0.0,
+    "design__max_fanout_violation__count__corner:max_tt_025C_3v30": 104.0,
+    "design__max_cap_violation__count__corner:max_tt_025C_3v30": 1.0,
+    "clock__skew__worst_hold__corner:max_tt_025C_3v30": -0.7370024799052403,
+    "clock__skew__worst_setup__corner:max_tt_025C_3v30": 0.5488785137310722,
+    "timing__hold__ws__corner:max_tt_025C_3v30": 1.0561254392181187,
+    "timing__setup__ws__corner:max_tt_025C_3v30": 0.9173169150587214,
+    "timing__hold__tns__corner:max_tt_025C_3v30": 0.0,
+    "timing__setup__tns__corner:max_tt_025C_3v30": 0.0,
+    "timing__hold__wns__corner:max_tt_025C_3v30": 0.0,
+    "timing__setup__wns__corner:max_tt_025C_3v30": 0.0,
+    "timing__hold_vio__count__corner:max_tt_025C_3v30": 0.0,
+    "timing__hold_r2r__ws__corner:max_tt_025C_3v30": 1.056125,
+    "timing__hold_r2r_vio__count__corner:max_tt_025C_3v30": 0.0,
+    "timing__setup_vio__count__corner:max_tt_025C_3v30": 0.0,
+    "timing__setup_r2r__ws__corner:max_tt_025C_3v30": 0.917317,
+    "timing__setup_r2r_vio__count__corner:max_tt_025C_3v30": 0.0,
+    "timing__unannotated_net__count__corner:max_tt_025C_3v30": 89.0,
+    "timing__unannotated_net_filtered__count__corner:max_tt_025C_3v30": 0.0,
+    "design__max_slew_violation__count__corner:max_ss_125C_3v00": 160.0,
+    "design__max_fanout_violation__count__corner:max_ss_125C_3v00": 104.0,
+    "design__max_cap_violation__count__corner:max_ss_125C_3v00": 1.0,
+    "clock__skew__worst_hold__corner:max_ss_125C_3v00": -1.1768524265978801,
+    "clock__skew__worst_setup__corner:max_ss_125C_3v00": 0.8182790232568415,
+    "timing__hold__ws__corner:max_ss_125C_3v00": 0.22644731175585217,
+    "timing__setup__ws__corner:max_ss_125C_3v00": -10.293526322667013,
+    "timing__hold__tns__corner:max_ss_125C_3v00": 0.0,
+    "timing__setup__tns__corner:max_ss_125C_3v00": -2202.092735821647,
+    "timing__hold__wns__corner:max_ss_125C_3v00": 0.0,
+    "timing__setup__wns__corner:max_ss_125C_3v00": -10.293526322667013,
+    "timing__hold_vio__count__corner:max_ss_125C_3v00": 0.0,
+    "timing__hold_r2r__ws__corner:max_ss_125C_3v00": 2.391573,
+    "timing__hold_r2r_vio__count__corner:max_ss_125C_3v00": 0.0,
+    "timing__setup_vio__count__corner:max_ss_125C_3v00": 1622.0,
+    "timing__setup_r2r__ws__corner:max_ss_125C_3v00": -10.293527,
+    "timing__setup_r2r_vio__count__corner:max_ss_125C_3v00": 1621.0,
+    "timing__unannotated_net__count__corner:max_ss_125C_3v00": 89.0,
+    "timing__unannotated_net_filtered__count__corner:max_ss_125C_3v00": 0.0,
+    "design__max_slew_violation__count__corner:max_ff_n40C_3v60": 0.0,
+    "design__max_fanout_violation__count__corner:max_ff_n40C_3v60": 104.0,
+    "design__max_cap_violation__count__corner:max_ff_n40C_3v60": 1.0,
+    "clock__skew__worst_hold__corner:max_ff_n40C_3v60": -0.5446875327168856,
+    "clock__skew__worst_setup__corner:max_ff_n40C_3v60": 0.4292807619771696,
+    "timing__hold__ws__corner:max_ff_n40C_3v60": 0.4876577057973294,
+    "timing__setup__ws__corner:max_ff_n40C_3v60": 5.6117725388325495,
+    "timing__hold__tns__corner:max_ff_n40C_3v60": 0.0,
+    "timing__setup__tns__corner:max_ff_n40C_3v60": 0.0,
+    "timing__hold__wns__corner:max_ff_n40C_3v60": 0.0,
+    "timing__setup__wns__corner:max_ff_n40C_3v60": 0.0,
+    "timing__hold_vio__count__corner:max_ff_n40C_3v60": 0.0,
+    "timing__hold_r2r__ws__corner:max_ff_n40C_3v60": 0.487658,
+    "timing__hold_r2r_vio__count__corner:max_ff_n40C_3v60": 0.0,
+    "timing__setup_vio__count__corner:max_ff_n40C_3v60": 0.0,
+    "timing__setup_r2r__ws__corner:max_ff_n40C_3v60": 5.611773,
+    "timing__setup_r2r_vio__count__corner:max_ff_n40C_3v60": 0.0,
+    "timing__unannotated_net__count__corner:max_ff_n40C_3v60": 89.0,
+    "timing__unannotated_net_filtered__count__corner:max_ff_n40C_3v60": 0.0,
+    "timing__unannotated_net__count": 89.0,
+    "timing__unannotated_net_filtered__count": 0.0,
+    "design_powergrid__voltage__worst__net:VPWR__corner:nom_tt_025C_3v30": 3.29979,
+    "design_powergrid__drop__average__net:VPWR__corner:nom_tt_025C_3v30": 3.29995,
+    "design_powergrid__drop__worst__net:VPWR__corner:nom_tt_025C_3v30": 0.000206401,
+    "design_powergrid__voltage__worst__net:VGND__corner:nom_tt_025C_3v30": 0.000152137,
+    "design_powergrid__drop__average__net:VGND__corner:nom_tt_025C_3v30": 5.36045e-05,
+    "design_powergrid__drop__worst__net:VGND__corner:nom_tt_025C_3v30": 0.000152137,
+    "design_powergrid__voltage__worst": 0.000152137,
+    "design_powergrid__voltage__worst__net:VPWR": 3.29979,
+    "design_powergrid__drop__worst": 0.000206401,
+    "design_powergrid__drop__worst__net:VPWR": 0.000206401,
+    "design_powergrid__voltage__worst__net:VGND": 0.000152137,
+    "design_powergrid__drop__worst__net:VGND": 0.000152137,
+    "ir__voltage__worst": 3.3,
+    "ir__drop__avg": 5.38e-05,
+    "ir__drop__worst": 0.000206,
+    "magic__drc_error__count": 0.0,
+    "magic__illegal_overlap__count": 0.0,
+    "design__lvs_device_difference__count": 0.0,
+    "design__lvs_net_difference__count": 0.0,
+    "design__lvs_property_fail__count": 0.0,
+    "design__lvs_error__count": 0.0,
+    "design__lvs_unmatched_device__count": 0.0,
+    "design__lvs_unmatched_net__count": 0.0,
+    "design__lvs_unmatched_pin__count": 0.0
+  },
+  "scope": "Routed user-macro STA. Functional gate simulation is without SDF.",
+  "repository": "BarryLee911/tt-gf-ucl-project-v7",
+  "runs": {
+    "gds": 37697644179,
+    "test": 37697644095,
+    "docs": 37697644097
+  },
+  "jobs": [
+    {
+      "id": 113053201852,
+      "name": "gds",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 37697644179,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Install exact v6 baseline PDK",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Build 80 MHz divider-only AREA 0 GDS",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Record submission availability",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Audit baseline constraints and all nine corners",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Preserve assessment and build evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Require physical build completion",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Post Build 80 MHz divider-only AREA 0 GDS",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14
+        },
+        {
+          "name": "Post Install exact v6 baseline PDK",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17
+        }
+      ]
+    },
+    {
+      "id": 113057070648,
+      "name": "precheck",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 37697644179,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "TinyTapeout precheck (same action as v6)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Post TinyTapeout precheck (same action as v6)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        }
+      ]
+    },
+    {
+      "id": 113057070693,
+      "name": "gl_test",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 37697644179,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Functional gate-level regression (without SDF)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Post Functional gate-level regression (without SDF)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        }
+      ]
+    },
+    {
+      "id": 113057070731,
+      "name": "all_corner_assessment",
+      "status": "completed",
+      "conclusion": "failure",
+      "run_id": 37697644179,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/download-artifact@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Require nine-corner timing and electrical closure",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 3
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        }
+      ]
+    },
+    {
+      "id": 113053201381,
+      "name": "test",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 37697644095,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Checkout repo",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Install iverilog",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Setup python",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Install Python packages",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Run tests",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Level 23 real divider (three samples, RTL only)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Before-after RTL regression and peak SAT equivalence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Test Summary",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "upload waveform and test results",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Post Setup python",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19
+        },
+        {
+          "name": "Post Checkout repo",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21
+        }
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 11517275220,
+      "name": "gds_render",
+      "size_in_bytes": 3378261,
+      "url": "https://api.github.com/repos/BarryLee911/tt-gf-ucl-project-v7/actions/artifacts/11517275220",
+      "archive_download_url": "https://api.github.com/repos/BarryLee911/tt-gf-ucl-project-v7/actions/artifacts/11517275220/zip",
+      "expired": false,
+      "created_at": "2026-10-07T22:51:28Z",
+      "expires_at": "2027-01-05T22:40:15Z",
+      "updated_at": "2026-10-07T22:51:28Z",
+      "digest": "sha256:7efcf51cc4549856b9693b94ea1b0ffa9a94ab6ebb83540996830c106d0f29dc",
+      "workflow_run": {
+        "id": 37697644179,
+        "repository_id": 1409087357,
+        "head_repository_id": 1409087357,
+        "head_branch": "main",
+        "head_sha": "823aa4f99e1aaaf9c49a1e4fd0ae7cd27e10d61a"
+      }
+    },
+    {
+      "id": 11517205888,
+      "name": "gatelevel_test_results",
+      "size_in_bytes": 17302,
+      "url": "https://api.github.com/repos/BarryLee911/tt-gf-ucl-project-v7/actions/artifacts/11517205888",
+      "archive_download_url": "https://api.github.com/repos/BarryLee911/tt-gf-ucl-project-v7/actions/artifacts/11517205888/zip",
+      "expired": false,
+      "created_at": "2026-10-07T22:54:55Z",
+      "expires_at": "2027-01-05T22:40:15Z",
+      "updated_at": "2026-10-07T22:54:55Z",
+      "digest": "sha256:bd943d4142f464c1d39cfe90992b5d95e60a2ed37645121c9606ca3964b9fec7",
+      "workflow_run": {
+        "id": 37697644179,
+        "repository_id": 1409087357,
+        "head_repository_id": 1409087357,
+        "head_branch": "main",
+        "head_sha": "823aa4f99e1aaaf9c49a1e4fd0ae7cd27e10d61a"
+      }
+    },
+    {
+      "id": 11516815852,
+      "name": "tt_submission",
+      "size_in_bytes": 6957081,
+      "url": "https://api.github.com/repos/BarryLee911/tt-gf-ucl-project-v7/actions/artifacts/11516815852",
+      "archive_download_url": "https://api.github.com/repos/BarryLee911/tt-gf-ucl-project-v7/actions/artifacts/11516815852/zip",
+      "expired": false,
+      "created_at": "2026-10-07T22:51:07Z",
+      "expires_at": "2027-01-05T22:40:15Z",
+      "updated_at": "2026-10-07T22:51:07Z",
+      "digest": "sha256:149e3ea93792a977d7275516bac829f8316157202dfbf0d2099efae58193ecd9",
+      "workflow_run": {
+        "id": 37697644179,
+        "repository_id": 1409087357,
+        "head_repository_id": 1409087357,
+        "head_branch": "main",
+        "head_sha": "823aa4f99e1aaaf9c49a1e4fd0ae7cd27e10d61a"
+      }
+    },
+    {
+      "id": 11516772019,
+      "name": "precheck_reports",
+      "size_in_bytes": 16443,
+      "url": "https://api.github.com/repos/BarryLee911/tt-gf-ucl-project-v7/actions/artifacts/11516772019",
+      "archive_download_url": "https://api.github.com/repos/BarryLee911/tt-gf-ucl-project-v7/actions/artifacts/11516772019/zip",
+      "expired": false,
+      "created_at": "2026-10-07T22:57:51Z",
+      "expires_at": "2027-01-05T22:40:15Z",
+      "updated_at": "2026-10-07T22:57:51Z",
+      "digest": "sha256:dad5b3b6ac18f600a3294b1e85a6ae4b30e2281f76fe9abf2ea16ba68541e323",
+      "workflow_run": {
+        "id": 37697644179,
+        "repository_id": 1409087357,
+        "head_repository_id": 1409087357,
+        "head_branch": "main",
+        "head_sha": "823aa4f99e1aaaf9c49a1e4fd0ae7cd27e10d61a"
+      }
+    },
+    {
+      "id": 11516482035,
+      "name": "GDS_logs",
+      "size_in_bytes": 96399175,
+      "url": "https://api.github.com/repos/BarryLee911/tt-gf-ucl-project-v7/actions/artifacts/11516482035",
+      "archive_download_url": "https://api.github.com/repos/BarryLee911/tt-gf-ucl-project-v7/actions/artifacts/11516482035/zip",
+      "expired": false,
+      "created_at": "2026-10-07T22:51:04Z",
+      "expires_at": "2027-01-05T22:40:15Z",
+      "updated_at": "2026-10-07T22:51:04Z",
+      "digest": "sha256:5fb6357c96a4881f5b0dd7f24addfbd2f0fcd66dc2054c340821993f204dacc3",
+      "workflow_run": {
+        "id": 37697644179,
+        "repository_id": 1409087357,
+        "head_repository_id": 1409087357,
+        "head_branch": "main",
+        "head_sha": "823aa4f99e1aaaf9c49a1e4fd0ae7cd27e10d61a"
+      }
+    },
+    {
+      "id": 11516223216,
+      "name": "v7-area0-divider23-assessment",
+      "size_in_bytes": 37378307,
+      "url": "https://api.github.com/repos/BarryLee911/tt-gf-ucl-project-v7/actions/artifacts/11516223216",
+      "archive_download_url": "https://api.github.com/repos/BarryLee911/tt-gf-ucl-project-v7/actions/artifacts/11516223216/zip",
+      "expired": false,
+      "created_at": "2026-10-07T22:51:43Z",
+      "expires_at": "2027-01-05T22:40:15Z",
+      "updated_at": "2026-10-07T22:51:43Z",
+      "digest": "sha256:91be8b309238cc8fae6840babd880c5b95f0220e65d14e426fe3187329207b5c",
+      "workflow_run": {
+        "id": 37697644179,
+        "repository_id": 1409087357,
+        "head_repository_id": 1409087357,
+        "head_branch": "main",
+        "head_sha": "823aa4f99e1aaaf9c49a1e4fd0ae7cd27e10d61a"
+      }
+    },
+    {
+      "id": 11516720451,
+      "name": "test-results",
+      "size_in_bytes": 670283,
+      "url": "https://api.github.com/repos/BarryLee911/tt-gf-ucl-project-v7/actions/artifacts/11516720451",
+      "archive_download_url": "https://api.github.com/repos/BarryLee911/tt-gf-ucl-project-v7/actions/artifacts/11516720451/zip",
+      "expired": false,
+      "created_at": "2026-10-07T22:44:53Z",
+      "expires_at": "2027-01-05T22:40:15Z",
+      "updated_at": "2026-10-07T22:44:53Z",
+      "digest": "sha256:14ecb22bc5ea1e6a1d5c2bcfc5221eeeff0200d4f3b2f2e4cc817c3d19c3c320",
+      "workflow_run": {
+        "id": 37697644095,
+        "repository_id": 1409087357,
+        "head_repository_id": 1409087357,
+        "head_branch": "main",
+        "head_sha": "823aa4f99e1aaaf9c49a1e4fd0ae7cd27e10d61a"
+      }
+    }
+  ],
+  "archive_sha256": {
+    "divider23-v7-area0-divider23-assessment.zip": "91be8b309238cc8fae6840babd880c5b95f0220e65d14e426fe3187329207b5c",
+    "divider23-GDS_logs.zip": "5fb6357c96a4881f5b0dd7f24addfbd2f0fcd66dc2054c340821993f204dacc3",
+    "divider23-tt_submission.zip": "149e3ea93792a977d7275516bac829f8316157202dfbf0d2099efae58193ecd9",
+    "divider23-gatelevel_test_results.zip": "bd943d4142f464c1d39cfe90992b5d95e60a2ed37645121c9606ca3964b9fec7",
+    "divider23-test-results.zip": "14ecb22bc5ea1e6a1d5c2bcfc5221eeeff0200d4f3b2f2e4cc817c3d19c3c320",
+    "divider23-precheck_reports.zip": "dad5b3b6ac18f600a3294b1e85a6ae4b30e2281f76fe9abf2ea16ba68541e323"
+  },
+  "rtl": {
+    "pin_checks": {
+      "status": "PASS",
+      "clock_hz": 80000000,
+      "clock_period_ns": 12.5,
+      "handoff_cycles": 80000,
+      "cycles": 460637,
+      "levels": [
+        {
+          "level": 0,
+          "mode": "real clock division",
+          "samples": 86300,
+          "coverage": {
+            "illegal_level": 24,
+            "latch_without_sample": 1,
+            "sample_1": 1,
+            "newer_tie": 8683,
+            "sample_1024": 1,
+            "sample_2047": 1,
+            "saturation": 80003,
+            "sample_2048": 1,
+            "sample_2049": 1,
+            "default_handoff": 1,
+            "expiry": 4,
+            "buffer_refill": 2,
+            "processed_peak_change": 5,
+            "leave_saturation": 1
+          }
+        },
+        {
+          "level": 1,
+          "mode": "real clock division",
+          "samples": 46300,
+          "coverage": {
+            "illegal_level": 24,
+            "latch_without_sample": 1,
+            "sample_1": 1,
+            "newer_tie": 6396,
+            "sample_1024": 1,
+            "sample_2047": 1,
+            "saturation": 40003,
+            "sample_2048": 1,
+            "sample_2049": 1,
+            "default_handoff": 1,
+            "expiry": 4,
+            "buffer_refill": 2,
+            "leave_saturation": 1
+          }
+        },
+        {
+          "level": 5,
+          "mode": "real clock division",
+          "samples": 8800,
+          "coverage": {
+            "illegal_level": 24,
+            "latch_without_sample": 1,
+            "sample_1": 1,
+            "newer_tie": 4675,
+            "sample_1024": 1,
+            "sample_2047": 1,
+            "saturation": 2503,
+            "sample_2048": 1,
+            "sample_2049": 1,
+            "default_handoff": 1,
+            "expiry": 4,
+            "buffer_refill": 2,
+            "leave_saturation": 1
+          }
+        }
+      ],
+      "first_reset_edge": "PASS; all output pins checked, no X/Z exception",
+      "seconds": 21.766104674000005,
+      "scope": "v6: capture at N, process at N+1, output available N+2; unchanged sample phase.",
+      "single_cycle_reset": "PASS",
+      "zero_max_pipeline": "PASS"
+    },
+    "level23": {
+      "status": "PASS",
+      "source_sha256": "8569E325B12D97F012DD110BA6919A52359387F444A2C4200BF4A53592492B7A",
+      "checks": {
+        "status": "PASS",
+        "level": 23,
+        "divisor": 8388608,
+        "terminal": 8388607,
+        "cycles": 25166114,
+        "samples": 3,
+        "sample_edges_after_latch": [
+          8388608,
+          16777216,
+          25165824
+        ],
+        "clock_period_ns": 12.5,
+        "sample_interval_ns": 104857600,
+        "all_pins_checked_every_cycle": true,
+        "forced_state": false,
+        "reset_checks": 6,
+        "invalid_levels": 8,
+        "handoff_checks": 1,
+        "latch_checks": 3,
+        "pipeline_latency_checks": "PASS",
+        "waveform": "event windows only; assertions always active"
+      },
+      "seconds": 225.038970752,
+      "commands": [
+        {
+          "name": "compile",
+          "exit_code": 0,
+          "seconds": 0.01592302600000295
+        },
+        {
+          "name": "simulation",
+          "exit_code": 0,
+          "seconds": 225.02260548
+        }
+      ]
+    },
+    "equivalence": {
+      "status": "PASS",
+      "source_sha256": "8569E325B12D97F012DD110BA6919A52359387F444A2C4200BF4A53592492B7A",
+      "baseline_ref": "0b31615fe098f962caa0cbd24dd1010ff01d4746",
+      "baseline_source_sha256": "E070E8658952FF7314BFD6CE7E69E035233953CCCED5E57FA44714AE7D9F2FE2",
+      "commands": [
+        {
+          "name": "decoder_compile",
+          "exit_code": 0,
+          "seconds": 0.007854989999998452
+        },
+        {
+          "name": "decoder_simulation",
+          "exit_code": 0,
+          "seconds": 0.007845596000038313
+        },
+        {
+          "name": "equivalence_compile",
+          "exit_code": 0,
+          "seconds": 0.01593917700000702
+        },
+        {
+          "name": "equivalence_simulation",
+          "exit_code": 0,
+          "seconds": 4.775621225999998
+        },
+        {
+          "name": "peak_sat",
+          "exit_code": 0,
+          "seconds": 0.03193193500004554
+        }
+      ],
+      "vectors": {
+        "cycles": 468829,
+        "levels": [
+          {
+            "level": 0,
+            "samples": 86300,
+            "coverage": {
+              "illegal_level": 24,
+              "latch_without_sample": 1,
+              "sample_1": 1,
+              "newer_tie": 8683,
+              "sample_1024": 1,
+              "sample_2047": 1,
+              "saturation": 80003,
+              "sample_2048": 1,
+              "sample_2049": 1,
+              "default_handoff": 1,
+              "expiry": 4,
+              "buffer_refill": 2,
+              "processed_peak_change": 5,
+              "leave_saturation": 1
+            }
+          },
+          {
+            "level": 1,
+            "samples": 46300,
+            "coverage": {
+              "illegal_level": 24,
+              "latch_without_sample": 1,
+              "sample_1": 1,
+              "newer_tie": 6396,
+              "sample_1024": 1,
+              "sample_2047": 1,
+              "saturation": 40003,
+              "sample_2048": 1,
+              "sample_2049": 1,
+              "default_handoff": 1,
+              "expiry": 4,
+              "buffer_refill": 2,
+              "leave_saturation": 1
+            }
+          },
+          {
+            "level": 5,
+            "samples": 8800,
+            "coverage": {
+              "illegal_level": 24,
+              "latch_without_sample": 1,
+              "sample_1": 1,
+              "newer_tie": 4675,
+              "sample_1024": 1,
+              "sample_2047": 1,
+              "saturation": 2503,
+              "sample_2048": 1,
+              "sample_2049": 1,
+              "default_handoff": 1,
+              "expiry": 4,
+              "buffer_refill": 2,
+              "leave_saturation": 1
+            }
+          }
+        ],
+        "coverage": {
+          "illegal_level": 72,
+          "latch_without_sample": 3,
+          "sample_1": 3,
+          "newer_tie": 19754,
+          "sample_1024": 3,
+          "sample_2047": 3,
+          "saturation": 122509,
+          "sample_2048": 3,
+          "sample_2049": 3,
+          "default_handoff": 3,
+          "expiry": 12,
+          "buffer_refill": 6,
+          "processed_peak_change": 5,
+          "leave_saturation": 3
+        },
+        "vector_sha256": "F3F965CE1D14A661F40C18D3D16290E4054888CE6EB3E8D69838368C5E53C9F1"
+      },
+      "equivalence": {
+        "status": "PASS",
+        "cycles": 468829,
+        "all_four_alive_cases": true,
+        "all_pins_checked_every_cycle": true,
+        "peak_state_checked_every_cycle": true,
+        "forced_state": false
+      },
+      "peak_sat": "PASS: all binary inputs, 37 next-state bits, actual RTL blocks",
+      "seconds": 6.508187430000021
+    }
+  },
+  "local_stage_checks": {
+    "vs_v6": {
+      "status": "PASS",
+      "source_sha256": "8569E325B12D97F012DD110BA6919A52359387F444A2C4200BF4A53592492B7A",
+      "baseline_ref": "0b31615fe098f962caa0cbd24dd1010ff01d4746",
+      "baseline_source_sha256": "E070E8658952FF7314BFD6CE7E69E035233953CCCED5E57FA44714AE7D9F2FE2",
+      "commands": [
+        {
+          "name": "decoder_compile",
+          "exit_code": 0,
+          "seconds": 0.11379309999756515
+        },
+        {
+          "name": "decoder_simulation",
+          "exit_code": 0,
+          "seconds": 0.035132599994540215
+        },
+        {
+          "name": "equivalence_compile",
+          "exit_code": 0,
+          "seconds": 0.108822499983944
+        },
+        {
+          "name": "equivalence_simulation",
+          "exit_code": 0,
+          "seconds": 7.070590900024399
+        },
+        {
+          "name": "peak_sat",
+          "exit_code": 0,
+          "seconds": 0.5554483999731019
+        }
+      ],
+      "vectors": {
+        "cycles": 468829,
+        "levels": [
+          {
+            "level": 0,
+            "samples": 86300,
+            "coverage": {
+              "illegal_level": 24,
+              "latch_without_sample": 1,
+              "sample_1": 1,
+              "newer_tie": 8683,
+              "sample_1024": 1,
+              "sample_2047": 1,
+              "saturation": 80003,
+              "sample_2048": 1,
+              "sample_2049": 1,
+              "default_handoff": 1,
+              "expiry": 4,
+              "buffer_refill": 2,
+              "processed_peak_change": 5,
+              "leave_saturation": 1
+            }
+          },
+          {
+            "level": 1,
+            "samples": 46300,
+            "coverage": {
+              "illegal_level": 24,
+              "latch_without_sample": 1,
+              "sample_1": 1,
+              "newer_tie": 6396,
+              "sample_1024": 1,
+              "sample_2047": 1,
+              "saturation": 40003,
+              "sample_2048": 1,
+              "sample_2049": 1,
+              "default_handoff": 1,
+              "expiry": 4,
+              "buffer_refill": 2,
+              "leave_saturation": 1
+            }
+          },
+          {
+            "level": 5,
+            "samples": 8800,
+            "coverage": {
+              "illegal_level": 24,
+              "latch_without_sample": 1,
+              "sample_1": 1,
+              "newer_tie": 4675,
+              "sample_1024": 1,
+              "sample_2047": 1,
+              "saturation": 2503,
+              "sample_2048": 1,
+              "sample_2049": 1,
+              "default_handoff": 1,
+              "expiry": 4,
+              "buffer_refill": 2,
+              "leave_saturation": 1
+            }
+          }
+        ],
+        "coverage": {
+          "illegal_level": 72,
+          "latch_without_sample": 3,
+          "sample_1": 3,
+          "newer_tie": 19754,
+          "sample_1024": 3,
+          "sample_2047": 3,
+          "saturation": 122509,
+          "sample_2048": 3,
+          "sample_2049": 3,
+          "default_handoff": 3,
+          "expiry": 12,
+          "buffer_refill": 6,
+          "processed_peak_change": 5,
+          "leave_saturation": 3
+        },
+        "vector_sha256": "94D843C83CD9249197D4D90D402D2587B69277D2D0A36B88B9BB5903AEA1AEA4"
+      },
+      "equivalence": {
+        "status": "PASS",
+        "cycles": 468829,
+        "all_four_alive_cases": true,
+        "all_pins_checked_every_cycle": true,
+        "peak_state_checked_every_cycle": true,
+        "forced_state": false
+      },
+      "peak_sat": "PASS: all binary inputs, 37 next-state bits, actual RTL blocks",
+      "seconds": 9.416137599968351
+    },
+    "vs_combined": {
+      "status": "PASS",
+      "source_sha256": "8569E325B12D97F012DD110BA6919A52359387F444A2C4200BF4A53592492B7A",
+      "baseline_ref": "6a0745e8885cb8a88764bf30a45a7e36faaf0df1",
+      "baseline_source_sha256": "54345977664514456EF74C2CDCDB114BE37523DA76E48CA9FCDB1144F9EE9088",
+      "commands": [
+        {
+          "name": "decoder_compile",
+          "exit_code": 0,
+          "seconds": 0.08855729992501438
+        },
+        {
+          "name": "decoder_simulation",
+          "exit_code": 0,
+          "seconds": 0.029670199961401522
+        },
+        {
+          "name": "equivalence_compile",
+          "exit_code": 0,
+          "seconds": 0.09572430001571774
+        },
+        {
+          "name": "equivalence_simulation",
+          "exit_code": 0,
+          "seconds": 12.669971400056966
+        },
+        {
+          "name": "peak_sat",
+          "exit_code": 0,
+          "seconds": 0.49153950007166713
+        }
+      ],
+      "vectors": {
+        "cycles": 468829,
+        "levels": [
+          {
+            "level": 0,
+            "samples": 86300,
+            "coverage": {
+              "illegal_level": 24,
+              "latch_without_sample": 1,
+              "sample_1": 1,
+              "newer_tie": 8683,
+              "sample_1024": 1,
+              "sample_2047": 1,
+              "saturation": 80003,
+              "sample_2048": 1,
+              "sample_2049": 1,
+              "default_handoff": 1,
+              "expiry": 4,
+              "buffer_refill": 2,
+              "processed_peak_change": 5,
+              "leave_saturation": 1
+            }
+          },
+          {
+            "level": 1,
+            "samples": 46300,
+            "coverage": {
+              "illegal_level": 24,
+              "latch_without_sample": 1,
+              "sample_1": 1,
+              "newer_tie": 6396,
+              "sample_1024": 1,
+              "sample_2047": 1,
+              "saturation": 40003,
+              "sample_2048": 1,
+              "sample_2049": 1,
+              "default_handoff": 1,
+              "expiry": 4,
+              "buffer_refill": 2,
+              "leave_saturation": 1
+            }
+          },
+          {
+            "level": 5,
+            "samples": 8800,
+            "coverage": {
+              "illegal_level": 24,
+              "latch_without_sample": 1,
+              "sample_1": 1,
+              "newer_tie": 4675,
+              "sample_1024": 1,
+              "sample_2047": 1,
+              "saturation": 2503,
+              "sample_2048": 1,
+              "sample_2049": 1,
+              "default_handoff": 1,
+              "expiry": 4,
+              "buffer_refill": 2,
+              "leave_saturation": 1
+            }
+          }
+        ],
+        "coverage": {
+          "illegal_level": 72,
+          "latch_without_sample": 3,
+          "sample_1": 3,
+          "newer_tie": 19754,
+          "sample_1024": 3,
+          "sample_2047": 3,
+          "saturation": 122509,
+          "sample_2048": 3,
+          "sample_2049": 3,
+          "default_handoff": 3,
+          "expiry": 12,
+          "buffer_refill": 6,
+          "processed_peak_change": 5,
+          "leave_saturation": 3
+        },
+        "vector_sha256": "94D843C83CD9249197D4D90D402D2587B69277D2D0A36B88B9BB5903AEA1AEA4"
+      },
+      "equivalence": {
+        "status": "PASS",
+        "cycles": 468829,
+        "all_four_alive_cases": true,
+        "all_pins_checked_every_cycle": true,
+        "peak_state_checked_every_cycle": true,
+        "forced_state": false
+      },
+      "peak_sat": "PASS: all binary inputs, 37 next-state bits, actual RTL blocks",
+      "seconds": 14.96035299997311
+    }
+  },
+  "gate_level": {
+    "status": "PASS",
+    "without_sdf": true,
+    "cycles": 460637,
+    "failures": [],
+    "testcases": [
+      {
+        "name": "pin_interface_real_dividers",
+        "classname": "test",
+        "file": "/home/runner/work/tt-gf-ucl-project-v7/tt-gf-ucl-project-v7/test/test.py",
+        "lineno": "135",
+        "time": "143.32052326202393",
+        "sim_time_ns": "5757962.5",
+        "ratio_time": "40175.42197688658"
+      }
+    ]
+  },
+  "function_pass": true,
+  "all_setup_pass": false,
+  "all_hold_pass": true,
+  "full_acceptance": false,
+  "setup_change_vs_v6_ns": -2.359971840302407,
+  "setup_change_vs_combined_ns": -2.055161432538572,
+  "area_change_vs_v6_percent": 0.24744130425102817,
+  "historical_combined": {
+    "experiment_commit": "6a0745e8885cb8a88764bf30a45a7e36faaf0df1",
+    "metrics": {
+      "design__lint_error__count": 0.0,
+      "design__lint_timing_construct__count": 0.0,
+      "design__lint_warning__count": 2.0,
+      "design__inferred_latch__count": 0.0,
+      "design__instance__count": 22445.0,
+      "design__instance__area": 455197.0,
+      "design__instance_unmapped__count": 0.0,
+      "synthesis__check_error__count": 0.0,
+      "design__max_slew_violation__count__corner:nom_tt_025C_3v30": 0.0,
+      "design__max_fanout_violation__count__corner:nom_tt_025C_3v30": 104.0,
+      "design__max_cap_violation__count__corner:nom_tt_025C_3v30": 2.0,
+      "power__internal__total": 0.05698699131608009,
+      "power__switching__total": 0.01584477350115776,
+      "power__leakage__total": 1.347091370007547e-06,
+      "power__total": 0.0728331133723259,
+      "clock__skew__worst_hold__corner:nom_tt_025C_3v30": -0.7201273114982805,
+      "clock__skew__worst_setup__corner:nom_tt_025C_3v30": 0.5121142543869631,
+      "timing__hold__ws__corner:nom_tt_025C_3v30": 1.1080159325890324,
+      "timing__setup__ws__corner:nom_tt_025C_3v30": 2.407808243161942,
+      "timing__hold__tns__corner:nom_tt_025C_3v30": 0.0,
+      "timing__setup__tns__corner:nom_tt_025C_3v30": 0.0,
+      "timing__hold__wns__corner:nom_tt_025C_3v30": 0.0,
+      "timing__setup__wns__corner:nom_tt_025C_3v30": 0.0,
+      "timing__hold_vio__count__corner:nom_tt_025C_3v30": 0.0,
+      "timing__hold_r2r__ws__corner:nom_tt_025C_3v30": 1.108016,
+      "timing__hold_r2r_vio__count__corner:nom_tt_025C_3v30": 0.0,
+      "timing__setup_vio__count__corner:nom_tt_025C_3v30": 0.0,
+      "timing__setup_r2r__ws__corner:nom_tt_025C_3v30": 2.407808,
+      "timing__setup_r2r_vio__count__corner:nom_tt_025C_3v30": 0.0,
+      "design__max_slew_violation__count__corner:nom_ss_125C_3v00": 86.0,
+      "design__max_fanout_violation__count__corner:nom_ss_125C_3v00": 104.0,
+      "design__max_cap_violation__count__corner:nom_ss_125C_3v00": 2.0,
+      "clock__skew__worst_hold__corner:nom_ss_125C_3v00": -1.1485190901189148,
+      "clock__skew__worst_setup__corner:nom_ss_125C_3v00": 0.7479227449066019,
+      "timing__hold__ws__corner:nom_ss_125C_3v00": 0.30402481392939135,
+      "timing__setup__ws__corner:nom_ss_125C_3v00": -7.8743129800951435,
+      "timing__hold__tns__corner:nom_ss_125C_3v00": 0.0,
+      "timing__setup__tns__corner:nom_ss_125C_3v00": -1623.259936857174,
+      "timing__hold__wns__corner:nom_ss_125C_3v00": 0.0,
+      "timing__setup__wns__corner:nom_ss_125C_3v00": -7.8743129800951435,
+      "timing__hold_vio__count__corner:nom_ss_125C_3v00": 0.0,
+      "timing__hold_r2r__ws__corner:nom_ss_125C_3v00": 2.471246,
+      "timing__hold_r2r_vio__count__corner:nom_ss_125C_3v00": 0.0,
+      "timing__setup_vio__count__corner:nom_ss_125C_3v00": 1519.0,
+      "timing__setup_r2r__ws__corner:nom_ss_125C_3v00": -7.874313,
+      "timing__setup_r2r_vio__count__corner:nom_ss_125C_3v00": 1501.0,
+      "design__max_slew_violation__count__corner:nom_ff_n40C_3v60": 0.0,
+      "design__max_fanout_violation__count__corner:nom_ff_n40C_3v60": 104.0,
+      "design__max_cap_violation__count__corner:nom_ff_n40C_3v60": 2.0,
+      "clock__skew__worst_hold__corner:nom_ff_n40C_3v60": -0.534750814320856,
+      "clock__skew__worst_setup__corner:nom_ff_n40C_3v60": 0.4083437870085917,
+      "timing__hold__ws__corner:nom_ff_n40C_3v60": 0.507199852029471,
+      "timing__setup__ws__corner:nom_ff_n40C_3v60": 6.07375722463776,
+      "timing__hold__tns__corner:nom_ff_n40C_3v60": 0.0,
+      "timing__setup__tns__corner:nom_ff_n40C_3v60": 0.0,
+      "timing__hold__wns__corner:nom_ff_n40C_3v60": 0.0,
+      "timing__setup__wns__corner:nom_ff_n40C_3v60": 0.0,
+      "timing__hold_vio__count__corner:nom_ff_n40C_3v60": 0.0,
+      "timing__hold_r2r__ws__corner:nom_ff_n40C_3v60": 0.5072,
+      "timing__hold_r2r_vio__count__corner:nom_ff_n40C_3v60": 0.0,
+      "timing__setup_vio__count__corner:nom_ff_n40C_3v60": 0.0,
+      "timing__setup_r2r__ws__corner:nom_ff_n40C_3v60": 6.665462,
+      "timing__setup_r2r_vio__count__corner:nom_ff_n40C_3v60": 0.0,
+      "design__max_slew_violation__count": 101.0,
+      "design__max_fanout_violation__count": 104.0,
+      "design__max_cap_violation__count": 2.0,
+      "clock__skew__worst_hold": -0.5266001117550528,
+      "clock__skew__worst_setup": 0.3961095175092723,
+      "timing__hold__ws": 0.21722979585551513,
+      "timing__setup__ws": -8.238364890128441,
+      "timing__hold__tns": 0.0,
+      "timing__setup__tns": -1906.294013932633,
+      "timing__hold__wns": 0.0,
+      "timing__setup__wns": -8.238364890128441,
+      "timing__hold_vio__count": 0.0,
+      "timing__hold_r2r__ws": 0.506265,
+      "timing__hold_r2r_vio__count": 0.0,
+      "timing__setup_vio__count": 4573.0,
+      "timing__setup_r2r__ws": -8.238365,
+      "timing__setup_r2r_vio__count": 4521.0,
+      "design__die__bbox": "0.0 0.0 1440.32 325.36",
+      "design__core__bbox": "3.36 3.92 1436.96 321.44",
+      "design__io": 45.0,
+      "design__die__area": 468623.0,
+      "design__core__area": 455197.0,
+      "design__instance__count__stdcell": 10330.0,
+      "design__instance__area__stdcell": 317586.0,
+      "design__instance__count__macros": 0.0,
+      "design__instance__area__macros": 0.0,
+      "design__instance__count__padcells": 0.0,
+      "design__instance__area__padcells": 0.0,
+      "design__instance__count__cover": 0.0,
+      "design__instance__area__cover": 0.0,
+      "design__instance__utilization": 0.69769,
+      "design__instance__utilization__stdcell": 0.69769,
+      "design__rows": 81.0,
+      "design__rows:GF018hv5v_mcu_sc7": 81.0,
+      "design__sites": 207360.0,
+      "design__sites:GF018hv5v_mcu_sc7": 207360.0,
+      "design__instance__count__class:tie_cell": 11.0,
+      "design__instance__area__class:tie_cell": 96.5888,
+      "design__instance__count__class:buffer": 2.0,
+      "design__instance__area__class:buffer": 35.1232,
+      "design__instance__count__class:inverter": 126.0,
+      "design__instance__area__class:inverter": 1141.5,
+      "design__instance__count__class:sequential_cell": 2227.0,
+      "design__instance__area__class:sequential_cell": 142080.0,
+      "design__instance__count__class:multi_input_combinational_cell": 2794.0,
+      "design__instance__area__class:multi_input_combinational_cell": 82625.1,
+      "flow__warnings__count": 1.0,
+      "flow__errors__count": 0.0,
+      "flow__warnings__count:ODB-0220": 1.0,
+      "flow__warnings__type_count": 1.0,
+      "flow__warnings__count:ORD-0039": 1.0,
+      "design__instance__count__class:endcap_cell": 162.0,
+      "design__instance__area__class:endcap_cell": 711.245,
+      "design__instance__count__class:tap_cell": 3033.0,
+      "design__instance__area__class:tap_cell": 13316.1,
+      "design__power_grid_violation__count__net:VPWR": 0.0,
+      "design__power_grid_violation__count__net:VGND": 0.0,
+      "design__power_grid_violation__count": 0.0,
+      "flow__warnings__count:GRT-0281": 2.0,
+      "timing__drv__floating__nets": 2.0,
+      "timing__drv__floating__pins": 0.0,
+      "design__instance__displacement__total": 18921.8,
+      "design__instance__displacement__mean": 1.8315,
+      "design__instance__displacement__max": 42.56,
+      "route__wirelength__estimated": 193325.0,
+      "design__violations": 0.0,
+      "design__instance__count__class:timing_repair_buffer": 1763.0,
+      "design__instance__area__class:timing_repair_buffer": 67355.3,
+      "flow__warnings__count:RSZ-0020": 1.0,
+      "flow__warnings__count:STA-1140": 6.0,
+      "design__instance__count__class:clock_buffer": 182.0,
+      "design__instance__area__class:clock_buffer": 9808.15,
+      "design__instance__count__class:clock_inverter": 30.0,
+      "design__instance__area__class:clock_inverter": 417.088,
+      "design__instance__count__setup_buffer": 66.0,
+      "design__instance__count__hold_buffer": 648.0,
+      "flow__warnings__count:RSZ-0062": 1.0,
+      "global_route__vias": 48955.0,
+      "global_route__wirelength": 349717.0,
+      "antenna__violating__nets": 0.0,
+      "antenna__violating__pins": 0.0,
+      "route__antenna_violation__count": 0.0,
+      "antenna_diodes_count": 0.0,
+      "route__net": 7071.0,
+      "route__net__special": 2.0,
+      "route__drc_errors__iter:0": 559.0,
+      "route__wirelength__iter:0": 199712.0,
+      "route__drc_errors__iter:1": 37.0,
+      "route__wirelength__iter:1": 197971.0,
+      "route__drc_errors__iter:2": 36.0,
+      "route__wirelength__iter:2": 197767.0,
+      "route__drc_errors__iter:3": 0.0,
+      "route__wirelength__iter:3": 197788.0,
+      "route__drc_errors": 0.0,
+      "route__wirelength": 197788.0,
+      "route__vias": 39481.0,
+      "route__vias__singlecut": 39481.0,
+      "route__vias__multicut": 0.0,
+      "flow__warnings__count:DRT-0349": 8.0,
+      "design__disconnected_pin__count": 4.0,
+      "design__critical_disconnected_pin__count": 0.0,
+      "route__wirelength__max": 1090.11,
+      "design__instance__count__class:fill_cell": 12115.0,
+      "design__instance__area__class:fill_cell": 137611.0,
+      "timing__unannotated_net__count__corner:nom_tt_025C_3v30": 87.0,
+      "timing__unannotated_net_filtered__count__corner:nom_tt_025C_3v30": 0.0,
+      "timing__unannotated_net__count__corner:nom_ss_125C_3v00": 87.0,
+      "timing__unannotated_net_filtered__count__corner:nom_ss_125C_3v00": 0.0,
+      "timing__unannotated_net__count__corner:nom_ff_n40C_3v60": 87.0,
+      "timing__unannotated_net_filtered__count__corner:nom_ff_n40C_3v60": 0.0,
+      "design__max_slew_violation__count__corner:min_tt_025C_3v30": 0.0,
+      "design__max_fanout_violation__count__corner:min_tt_025C_3v30": 104.0,
+      "design__max_cap_violation__count__corner:min_tt_025C_3v30": 1.0,
+      "clock__skew__worst_hold__corner:min_tt_025C_3v30": -0.7073468677665499,
+      "clock__skew__worst_setup__corner:min_tt_025C_3v30": 0.49261562889861765,
+      "timing__hold__ws__corner:min_tt_025C_3v30": 1.1065801921329816,
+      "timing__setup__ws__corner:min_tt_025C_3v30": 2.5598324184910313,
+      "timing__hold__tns__corner:min_tt_025C_3v30": 0.0,
+      "timing__setup__tns__corner:min_tt_025C_3v30": 0.0,
+      "timing__hold__wns__corner:min_tt_025C_3v30": 0.0,
+      "timing__setup__wns__corner:min_tt_025C_3v30": 0.0,
+      "timing__hold_vio__count__corner:min_tt_025C_3v30": 0.0,
+      "timing__hold_r2r__ws__corner:min_tt_025C_3v30": 1.10658,
+      "timing__hold_r2r_vio__count__corner:min_tt_025C_3v30": 0.0,
+      "timing__setup_vio__count__corner:min_tt_025C_3v30": 0.0,
+      "timing__setup_r2r__ws__corner:min_tt_025C_3v30": 2.559832,
+      "timing__setup_r2r_vio__count__corner:min_tt_025C_3v30": 0.0,
+      "timing__unannotated_net__count__corner:min_tt_025C_3v30": 87.0,
+      "timing__unannotated_net_filtered__count__corner:min_tt_025C_3v30": 0.0,
+      "design__max_slew_violation__count__corner:min_ss_125C_3v00": 60.0,
+      "design__max_fanout_violation__count__corner:min_ss_125C_3v00": 104.0,
+      "design__max_cap_violation__count__corner:min_ss_125C_3v00": 1.0,
+      "clock__skew__worst_hold__corner:min_ss_125C_3v00": -1.1247776361996664,
+      "clock__skew__worst_setup__corner:min_ss_125C_3v00": 0.7113784207498913,
+      "timing__hold__ws__corner:min_ss_125C_3v00": 0.3754499040156657,
+      "timing__setup__ws__corner:min_ss_125C_3v00": -7.570197127875159,
+      "timing__hold__tns__corner:min_ss_125C_3v00": 0.0,
+      "timing__setup__tns__corner:min_ss_125C_3v00": -1401.7950148542293,
+      "timing__hold__wns__corner:min_ss_125C_3v00": 0.0,
+      "timing__setup__wns__corner:min_ss_125C_3v00": -7.570197127875159,
+      "timing__hold_vio__count__corner:min_ss_125C_3v00": 0.0,
+      "timing__hold_r2r__ws__corner:min_ss_125C_3v00": 2.461322,
+      "timing__hold_r2r_vio__count__corner:min_ss_125C_3v00": 0.0,
+      "timing__setup_vio__count__corner:min_ss_125C_3v00": 1421.0,
+      "timing__setup_r2r__ws__corner:min_ss_125C_3v00": -7.570197,
+      "timing__setup_r2r_vio__count__corner:min_ss_125C_3v00": 1406.0,
+      "timing__unannotated_net__count__corner:min_ss_125C_3v00": 87.0,
+      "timing__unannotated_net_filtered__count__corner:min_ss_125C_3v00": 0.0,
+      "design__max_slew_violation__count__corner:min_ff_n40C_3v60": 0.0,
+      "design__max_fanout_violation__count__corner:min_ff_n40C_3v60": 104.0,
+      "design__max_cap_violation__count__corner:min_ff_n40C_3v60": 1.0,
+      "clock__skew__worst_hold__corner:min_ff_n40C_3v60": -0.5266001117550528,
+      "clock__skew__worst_setup__corner:min_ff_n40C_3v60": 0.3961095175092723,
+      "timing__hold__ws__corner:min_ff_n40C_3v60": 0.506265488305521,
+      "timing__setup__ws__corner:min_ff_n40C_3v60": 6.147347693772503,
+      "timing__hold__tns__corner:min_ff_n40C_3v60": 0.0,
+      "timing__setup__tns__corner:min_ff_n40C_3v60": 0.0,
+      "timing__hold__wns__corner:min_ff_n40C_3v60": 0.0,
+      "timing__setup__wns__corner:min_ff_n40C_3v60": 0.0,
+      "timing__hold_vio__count__corner:min_ff_n40C_3v60": 0.0,
+      "timing__hold_r2r__ws__corner:min_ff_n40C_3v60": 0.506265,
+      "timing__hold_r2r_vio__count__corner:min_ff_n40C_3v60": 0.0,
+      "timing__setup_vio__count__corner:min_ff_n40C_3v60": 0.0,
+      "timing__setup_r2r__ws__corner:min_ff_n40C_3v60": 6.754476,
+      "timing__setup_r2r_vio__count__corner:min_ff_n40C_3v60": 0.0,
+      "timing__unannotated_net__count__corner:min_ff_n40C_3v60": 87.0,
+      "timing__unannotated_net_filtered__count__corner:min_ff_n40C_3v60": 0.0,
+      "design__max_slew_violation__count__corner:max_tt_025C_3v30": 0.0,
+      "design__max_fanout_violation__count__corner:max_tt_025C_3v30": 104.0,
+      "design__max_cap_violation__count__corner:max_tt_025C_3v30": 2.0,
+      "clock__skew__worst_hold__corner:max_tt_025C_3v30": -0.739665016838198,
+      "clock__skew__worst_setup__corner:max_tt_025C_3v30": 0.5349889571663733,
+      "timing__hold__ws__corner:max_tt_025C_3v30": 1.1097778565789431,
+      "timing__setup__ws__corner:max_tt_025C_3v30": 2.2164555262962438,
+      "timing__hold__tns__corner:max_tt_025C_3v30": 0.0,
+      "timing__setup__tns__corner:max_tt_025C_3v30": 0.0,
+      "timing__hold__wns__corner:max_tt_025C_3v30": 0.0,
+      "timing__setup__wns__corner:max_tt_025C_3v30": 0.0,
+      "timing__hold_vio__count__corner:max_tt_025C_3v30": 0.0,
+      "timing__hold_r2r__ws__corner:max_tt_025C_3v30": 1.109778,
+      "timing__hold_r2r_vio__count__corner:max_tt_025C_3v30": 0.0,
+      "timing__setup_vio__count__corner:max_tt_025C_3v30": 0.0,
+      "timing__setup_r2r__ws__corner:max_tt_025C_3v30": 2.216455,
+      "timing__setup_r2r_vio__count__corner:max_tt_025C_3v30": 0.0,
+      "timing__unannotated_net__count__corner:max_tt_025C_3v30": 87.0,
+      "timing__unannotated_net_filtered__count__corner:max_tt_025C_3v30": 0.0,
+      "design__max_slew_violation__count__corner:max_ss_125C_3v00": 101.0,
+      "design__max_fanout_violation__count__corner:max_ss_125C_3v00": 104.0,
+      "design__max_cap_violation__count__corner:max_ss_125C_3v00": 2.0,
+      "clock__skew__worst_hold__corner:max_ss_125C_3v00": -1.1829075831454374,
+      "clock__skew__worst_setup__corner:max_ss_125C_3v00": 0.790798893196431,
+      "timing__hold__ws__corner:max_ss_125C_3v00": 0.21722979585551513,
+      "timing__setup__ws__corner:max_ss_125C_3v00": -8.238364890128441,
+      "timing__hold__tns__corner:max_ss_125C_3v00": 0.0,
+      "timing__setup__tns__corner:max_ss_125C_3v00": -1906.294013932633,
+      "timing__hold__wns__corner:max_ss_125C_3v00": 0.0,
+      "timing__setup__wns__corner:max_ss_125C_3v00": -8.238364890128441,
+      "timing__hold_vio__count__corner:max_ss_125C_3v00": 0.0,
+      "timing__hold_r2r__ws__corner:max_ss_125C_3v00": 2.482817,
+      "timing__hold_r2r_vio__count__corner:max_ss_125C_3v00": 0.0,
+      "timing__setup_vio__count__corner:max_ss_125C_3v00": 1633.0,
+      "timing__setup_r2r__ws__corner:max_ss_125C_3v00": -8.238365,
+      "timing__setup_r2r_vio__count__corner:max_ss_125C_3v00": 1614.0,
+      "timing__unannotated_net__count__corner:max_ss_125C_3v00": 87.0,
+      "timing__unannotated_net_filtered__count__corner:max_ss_125C_3v00": 0.0,
+      "design__max_slew_violation__count__corner:max_ff_n40C_3v60": 0.0,
+      "design__max_fanout_violation__count__corner:max_ff_n40C_3v60": 104.0,
+      "design__max_cap_violation__count__corner:max_ff_n40C_3v60": 2.0,
+      "clock__skew__worst_hold__corner:max_ff_n40C_3v60": -0.5451489414189694,
+      "clock__skew__worst_setup__corner:max_ff_n40C_3v60": 0.4224124225522274,
+      "timing__hold__ws__corner:max_ff_n40C_3v60": 0.5083452691563715,
+      "timing__setup__ws__corner:max_ff_n40C_3v60": 5.984703124689484,
+      "timing__hold__tns__corner:max_ff_n40C_3v60": 0.0,
+      "timing__setup__tns__corner:max_ff_n40C_3v60": 0.0,
+      "timing__hold__wns__corner:max_ff_n40C_3v60": 0.0,
+      "timing__setup__wns__corner:max_ff_n40C_3v60": 0.0,
+      "timing__hold_vio__count__corner:max_ff_n40C_3v60": 0.0,
+      "timing__hold_r2r__ws__corner:max_ff_n40C_3v60": 0.508345,
+      "timing__hold_r2r_vio__count__corner:max_ff_n40C_3v60": 0.0,
+      "timing__setup_vio__count__corner:max_ff_n40C_3v60": 0.0,
+      "timing__setup_r2r__ws__corner:max_ff_n40C_3v60": 6.533423,
+      "timing__setup_r2r_vio__count__corner:max_ff_n40C_3v60": 0.0,
+      "timing__unannotated_net__count__corner:max_ff_n40C_3v60": 87.0,
+      "timing__unannotated_net_filtered__count__corner:max_ff_n40C_3v60": 0.0,
+      "timing__unannotated_net__count": 87.0,
+      "timing__unannotated_net_filtered__count": 0.0,
+      "design_powergrid__voltage__worst__net:VPWR__corner:nom_tt_025C_3v30": 3.29985,
+      "design_powergrid__drop__average__net:VPWR__corner:nom_tt_025C_3v30": 3.29995,
+      "design_powergrid__drop__worst__net:VPWR__corner:nom_tt_025C_3v30": 0.000147897,
+      "design_powergrid__voltage__worst__net:VGND__corner:nom_tt_025C_3v30": 0.000149458,
+      "design_powergrid__drop__average__net:VGND__corner:nom_tt_025C_3v30": 5.33133e-05,
+      "design_powergrid__drop__worst__net:VGND__corner:nom_tt_025C_3v30": 0.000149458,
+      "design_powergrid__voltage__worst": 0.000149458,
+      "design_powergrid__voltage__worst__net:VPWR": 3.29985,
+      "design_powergrid__drop__worst": 0.000149458,
+      "design_powergrid__drop__worst__net:VPWR": 0.000147897,
+      "design_powergrid__voltage__worst__net:VGND": 0.000149458,
+      "design_powergrid__drop__worst__net:VGND": 0.000149458,
+      "ir__voltage__worst": 3.3,
+      "ir__drop__avg": 5.34e-05,
+      "ir__drop__worst": 0.000148,
+      "magic__drc_error__count": 0.0,
+      "magic__illegal_overlap__count": 0.0,
+      "design__lvs_device_difference__count": 0.0,
+      "design__lvs_net_difference__count": 0.0,
+      "design__lvs_property_fail__count": 0.0,
+      "design__lvs_error__count": 0.0,
+      "design__lvs_unmatched_device__count": 0.0,
+      "design__lvs_unmatched_net__count": 0.0,
+      "design__lvs_unmatched_pin__count": 0.0
+    },
+    "corners": [
+      {
+        "corner": "nom_tt_025C_3v30",
+        "setup_ns": 2.407808243161942,
+        "hold_ns": 1.1080159325890324,
+        "setup_tns_ns": 0.0,
+        "setup_violations": 0.0,
+        "hold_violations": 0.0,
+        "slew": 0.0,
+        "capacitance": 2.0,
+        "fanout": 104.0,
+        "unannotated_functional_nets": 0,
+        "baseline_setup_ns": 2.4424090108367764,
+        "baseline_hold_ns": 1.1087591159027352,
+        "delay0_setup_ns": 1.413715406976131,
+        "delay0_hold_ns": 1.0960752615768787,
+        "setup_improvement_ns": -0.034600767674834554,
+        "worst_reported_path": {
+          "start_register": "prescale_count[5]",
+          "end_register": "history_pointer[10]",
+          "slack_ns": 2.407808,
+          "data_delay_ns": 9.412783000000001
+        },
+        "reported_path_groups": {
+          "history_pointer": {
+            "start_register": "prescale_count[5]",
+            "end_register": "history_pointer[10]",
+            "slack_ns": 2.407808,
+            "data_delay_ns": 9.412783000000001
+          },
+          "peak_second": {
+            "start_register": "sample_position[5]",
+            "end_register": "peak_second_position[2]",
+            "slack_ns": 2.53116,
+            "data_delay_ns": 9.279274000000001
+          },
+          "peak_first": {
+            "start_register": "sample_position[5]",
+            "end_register": "peak_first_position[7]",
+            "slack_ns": 2.604423,
+            "data_delay_ns": 8.968912
+          },
+          "prescale_count": {
+            "start_register": "prescale_count[0]",
+            "end_register": "prescale_count[22]",
+            "slack_ns": 2.990433,
+            "data_delay_ns": 8.804349
+          },
+          "running_sum": {
+            "start_register": "window_full",
+            "end_register": "running_sum[11]",
+            "slack_ns": 3.033634,
+            "data_delay_ns": 8.740788
+          }
+        }
+      },
+      {
+        "corner": "nom_ss_125C_3v00",
+        "setup_ns": -7.8743129800951435,
+        "hold_ns": 0.30402481392939135,
+        "setup_tns_ns": -1623.259936857174,
+        "setup_violations": 1519.0,
+        "hold_violations": 0.0,
+        "slew": 86.0,
+        "capacitance": 2.0,
+        "fanout": 104.0,
+        "unannotated_functional_nets": 0,
+        "baseline_setup_ns": -7.547740424076341,
+        "baseline_hold_ns": 0.10924683689124666,
+        "delay0_setup_ns": -9.028724690106214,
+        "delay0_hold_ns": 1.5229369307817002,
+        "setup_improvement_ns": -0.3265725560188022,
+        "worst_reported_path": {
+          "start_register": "prescale_count[5]",
+          "end_register": "history_pointer[10]",
+          "slack_ns": -7.874313,
+          "data_delay_ns": 19.207627
+        },
+        "reported_path_groups": {
+          "history_pointer": {
+            "start_register": "prescale_count[5]",
+            "end_register": "history_pointer[10]",
+            "slack_ns": -7.874313,
+            "data_delay_ns": 19.207627
+          },
+          "peak_second": {
+            "start_register": "sample_position[5]",
+            "end_register": "peak_second_position[2]",
+            "slack_ns": -7.237281,
+            "data_delay_ns": 18.554068
+          },
+          "peak_first": {
+            "start_register": "sample_position[7]",
+            "end_register": "peak_first_position[7]",
+            "slack_ns": -7.03743,
+            "data_delay_ns": 17.930384000000004
+          },
+          "prescale_count": {
+            "start_register": "prescale_count[0]",
+            "end_register": "prescale_count[22]",
+            "slack_ns": -6.533988,
+            "data_delay_ns": 17.803286999999997
+          },
+          "running_sum": {
+            "start_register": "window_full",
+            "end_register": "running_sum[11]",
+            "slack_ns": -6.342692,
+            "data_delay_ns": 17.572055
+          }
+        }
+      },
+      {
+        "corner": "nom_ff_n40C_3v60",
+        "setup_ns": 6.07375722463776,
+        "hold_ns": 0.507199852029471,
+        "setup_tns_ns": 0.0,
+        "setup_violations": 0.0,
+        "hold_violations": 0.0,
+        "slew": 0.0,
+        "capacitance": 2.0,
+        "fanout": 104.0,
+        "unannotated_functional_nets": 0,
+        "baseline_setup_ns": 6.142608373590947,
+        "baseline_hold_ns": 0.5062903573019759,
+        "delay0_setup_ns": 5.579960651474448,
+        "delay0_hold_ns": 0.5080750408645351,
+        "setup_improvement_ns": -0.06885114895318711,
+        "worst_reported_path": {
+          "start_register": "rst_n",
+          "end_register": "prescale_terminal_latched[6]",
+          "slack_ns": 6.073757,
+          "data_delay_ns": null
+        },
+        "reported_path_groups": {
+          "prescale_count": {
+            "start_register": "rst_n",
+            "end_register": "prescale_count[21]",
+            "slack_ns": 6.513207,
+            "data_delay_ns": null
+          },
+          "peak_second": {
+            "start_register": "sample_position[5]",
+            "end_register": "peak_second_position[8]",
+            "slack_ns": 6.665462,
+            "data_delay_ns": 5.362051
+          },
+          "peak_first": {
+            "start_register": "sample_position[5]",
+            "end_register": "peak_first_position[7]",
+            "slack_ns": 6.69338,
+            "data_delay_ns": 5.182228
+          },
+          "history_pointer": {
+            "start_register": "prescale_count[14]",
+            "end_register": "history_pointer[10]",
+            "slack_ns": 6.702981,
+            "data_delay_ns": 5.292524
+          },
+          "running_sum": {
+            "start_register": "window_full",
+            "end_register": "running_sum[11]",
+            "slack_ns": 6.990035,
+            "data_delay_ns": 5.004507
+          }
+        }
+      },
+      {
+        "corner": "min_tt_025C_3v30",
+        "setup_ns": 2.5598324184910313,
+        "hold_ns": 1.1065801921329816,
+        "setup_tns_ns": 0.0,
+        "setup_violations": 0.0,
+        "hold_violations": 0.0,
+        "slew": 0.0,
+        "capacitance": 1.0,
+        "fanout": 104.0,
+        "unannotated_functional_nets": 0,
+        "baseline_setup_ns": 2.607088840826099,
+        "baseline_hold_ns": 1.1037937543069716,
+        "delay0_setup_ns": 1.7974742203430834,
+        "delay0_hold_ns": 1.092066912255408,
+        "setup_improvement_ns": -0.04725642233506777,
+        "worst_reported_path": {
+          "start_register": "prescale_count[5]",
+          "end_register": "history_pointer[10]",
+          "slack_ns": 2.559832,
+          "data_delay_ns": 9.261168
+        },
+        "reported_path_groups": {
+          "history_pointer": {
+            "start_register": "prescale_count[5]",
+            "end_register": "history_pointer[10]",
+            "slack_ns": 2.559832,
+            "data_delay_ns": 9.261168
+          },
+          "peak_second": {
+            "start_register": "sample_position[5]",
+            "end_register": "peak_second_position[2]",
+            "slack_ns": 2.679433,
+            "data_delay_ns": 9.132354
+          },
+          "peak_first": {
+            "start_register": "sample_position[5]",
+            "end_register": "peak_first_position[7]",
+            "slack_ns": 2.82112,
+            "data_delay_ns": 8.770419
+          },
+          "prescale_count": {
+            "start_register": "prescale_count[0]",
+            "end_register": "prescale_count[22]",
+            "slack_ns": 3.097831,
+            "data_delay_ns": 8.694949
+          },
+          "running_sum": {
+            "start_register": "window_full",
+            "end_register": "running_sum[11]",
+            "slack_ns": 3.217275,
+            "data_delay_ns": 8.560981
+          }
+        }
+      },
+      {
+        "corner": "min_ss_125C_3v00",
+        "setup_ns": -7.570197127875159,
+        "hold_ns": 0.3754499040156657,
+        "setup_tns_ns": -1401.7950148542293,
+        "setup_violations": 1421.0,
+        "hold_violations": 0.0,
+        "slew": 60.0,
+        "capacitance": 1.0,
+        "fanout": 104.0,
+        "unannotated_functional_nets": 0,
+        "baseline_setup_ns": -7.257012973733565,
+        "baseline_hold_ns": 0.1681459463702312,
+        "delay0_setup_ns": -8.31711256740303,
+        "delay0_hold_ns": 1.6074009245271477,
+        "setup_improvement_ns": -0.3131841541415934,
+        "worst_reported_path": {
+          "start_register": "prescale_count[5]",
+          "end_register": "history_pointer[10]",
+          "slack_ns": -7.570197,
+          "data_delay_ns": 18.902261
+        },
+        "reported_path_groups": {
+          "history_pointer": {
+            "start_register": "prescale_count[5]",
+            "end_register": "history_pointer[10]",
+            "slack_ns": -7.570197,
+            "data_delay_ns": 18.902261
+          },
+          "peak_second": {
+            "start_register": "sample_position[5]",
+            "end_register": "peak_second_position[2]",
+            "slack_ns": -6.951403,
+            "data_delay_ns": 18.26995
+          },
+          "peak_first": {
+            "start_register": "sample_position[7]",
+            "end_register": "peak_first_position[7]",
+            "slack_ns": -6.632847,
+            "data_delay_ns": 17.552878
+          },
+          "prescale_count": {
+            "start_register": "prescale_count[0]",
+            "end_register": "prescale_count[22]",
+            "slack_ns": -6.326618,
+            "data_delay_ns": 17.591720000000002
+          },
+          "running_sum": {
+            "start_register": "window_full",
+            "end_register": "running_sum[11]",
+            "slack_ns": -5.985447,
+            "data_delay_ns": 17.222208
+          }
+        }
+      },
+      {
+        "corner": "min_ff_n40C_3v60",
+        "setup_ns": 6.147347693772503,
+        "hold_ns": 0.506265488305521,
+        "setup_tns_ns": 0.0,
+        "setup_violations": 0.0,
+        "hold_violations": 0.0,
+        "slew": 0.0,
+        "capacitance": 1.0,
+        "fanout": 104.0,
+        "unannotated_functional_nets": 0,
+        "baseline_setup_ns": 6.202995626054226,
+        "baseline_hold_ns": 0.5051640360116392,
+        "delay0_setup_ns": 5.636526960268115,
+        "delay0_hold_ns": 0.5064201423772251,
+        "setup_improvement_ns": -0.05564793228172249,
+        "worst_reported_path": {
+          "start_register": "rst_n",
+          "end_register": "prescale_terminal_latched[6]",
+          "slack_ns": 6.147348,
+          "data_delay_ns": null
+        },
+        "reported_path_groups": {
+          "prescale_count": {
+            "start_register": "rst_n",
+            "end_register": "prescale_count[21]",
+            "slack_ns": 6.568689,
+            "data_delay_ns": null
+          },
+          "peak_second": {
+            "start_register": "sample_position[5]",
+            "end_register": "peak_second_position[2]",
+            "slack_ns": 6.754476,
+            "data_delay_ns": 5.263057999999999
+          },
+          "history_pointer": {
+            "start_register": "rst_n",
+            "end_register": "history_pointer[10]",
+            "slack_ns": 6.773665,
+            "data_delay_ns": null
+          },
+          "peak_first": {
+            "start_register": "sample_position[5]",
+            "end_register": "peak_first_position[7]",
+            "slack_ns": 6.823828,
+            "data_delay_ns": 5.063515000000001
+          },
+          "running_sum": {
+            "start_register": "window_full",
+            "end_register": "running_sum[11]",
+            "slack_ns": 7.097802,
+            "data_delay_ns": 4.89895
+          }
+        }
+      },
+      {
+        "corner": "max_tt_025C_3v30",
+        "setup_ns": 2.2164555262962438,
+        "hold_ns": 1.1097778565789431,
+        "setup_tns_ns": 0.0,
+        "setup_violations": 0.0,
+        "hold_violations": 0.0,
+        "slew": 0.0,
+        "capacitance": 2.0,
+        "fanout": 104.0,
+        "unannotated_functional_nets": 0,
+        "baseline_setup_ns": 2.165281348841077,
+        "baseline_hold_ns": 1.0963217310953162,
+        "delay0_setup_ns": 0.9568408558531903,
+        "delay0_hold_ns": 1.100884081721743,
+        "setup_improvement_ns": 0.051174177455166614,
+        "worst_reported_path": {
+          "start_register": "prescale_count[14]",
+          "end_register": "history_pointer[10]",
+          "slack_ns": 2.216455,
+          "data_delay_ns": 9.558207
+        },
+        "reported_path_groups": {
+          "history_pointer": {
+            "start_register": "prescale_count[14]",
+            "end_register": "history_pointer[10]",
+            "slack_ns": 2.216455,
+            "data_delay_ns": 9.558207
+          },
+          "peak_first": {
+            "start_register": "sample_position[5]",
+            "end_register": "peak_first_position[7]",
+            "slack_ns": 2.347061,
+            "data_delay_ns": 9.204986000000002
+          },
+          "peak_second": {
+            "start_register": "sample_position[5]",
+            "end_register": "peak_second_position[2]",
+            "slack_ns": 2.355722,
+            "data_delay_ns": 9.453168000000002
+          },
+          "running_sum": {
+            "start_register": "window_full",
+            "end_register": "running_sum[11]",
+            "slack_ns": 2.813699,
+            "data_delay_ns": 8.956188000000001
+          },
+          "prescale_count": {
+            "start_register": "prescale_count[0]",
+            "end_register": "prescale_count[22]",
+            "slack_ns": 2.861734,
+            "data_delay_ns": 8.935369000000001
+          }
+        }
+      },
+      {
+        "corner": "max_ss_125C_3v00",
+        "setup_ns": -8.238364890128441,
+        "hold_ns": 0.21722979585551513,
+        "setup_tns_ns": -1906.294013932633,
+        "setup_violations": 1633.0,
+        "hold_violations": 0.0,
+        "slew": 101.0,
+        "capacitance": 2.0,
+        "fanout": 104.0,
+        "unannotated_functional_nets": 0,
+        "baseline_setup_ns": -7.933554482364606,
+        "baseline_hold_ns": 0.03882405617995117,
+        "delay0_setup_ns": -9.887541731896897,
+        "delay0_hold_ns": 1.4201613620394087,
+        "setup_improvement_ns": -0.30481040776383495,
+        "worst_reported_path": {
+          "start_register": "prescale_count[5]",
+          "end_register": "history_pointer[10]",
+          "slack_ns": -8.238365,
+          "data_delay_ns": 19.573214999999998
+        },
+        "reported_path_groups": {
+          "history_pointer": {
+            "start_register": "prescale_count[5]",
+            "end_register": "history_pointer[10]",
+            "slack_ns": -8.238365,
+            "data_delay_ns": 19.573214999999998
+          },
+          "peak_second": {
+            "start_register": "sample_position[6]",
+            "end_register": "peak_second_position[8]",
+            "slack_ns": -7.596155,
+            "data_delay_ns": 19.066217
+          },
+          "peak_first": {
+            "start_register": "sample_position[6]",
+            "end_register": "peak_first_position[7]",
+            "slack_ns": -7.532556,
+            "data_delay_ns": 18.449497
+          },
+          "prescale_count": {
+            "start_register": "prescale_count[0]",
+            "end_register": "prescale_count[22]",
+            "slack_ns": -6.781287,
+            "data_delay_ns": 18.055662
+          },
+          "running_sum": {
+            "start_register": "window_full",
+            "end_register": "running_sum[11]",
+            "slack_ns": -6.752629,
+            "data_delay_ns": 17.972978
+          }
+        }
+      },
+      {
+        "corner": "max_ff_n40C_3v60",
+        "setup_ns": 5.984703124689484,
+        "hold_ns": 0.5083452691563715,
+        "setup_tns_ns": 0.0,
+        "setup_violations": 0.0,
+        "hold_violations": 0.0,
+        "slew": 0.0,
+        "capacitance": 2.0,
+        "fanout": 104.0,
+        "unannotated_functional_nets": 0,
+        "baseline_setup_ns": 6.069330099179556,
+        "baseline_hold_ns": 0.5076689212706414,
+        "delay0_setup_ns": 5.508842427040859,
+        "delay0_hold_ns": 0.5093395849253469,
+        "setup_improvement_ns": -0.08462697449007184,
+        "worst_reported_path": {
+          "start_register": "rst_n",
+          "end_register": "prescale_terminal_latched[6]",
+          "slack_ns": 5.984703,
+          "data_delay_ns": null
+        },
+        "reported_path_groups": {
+          "prescale_count": {
+            "start_register": "rst_n",
+            "end_register": "prescale_count[21]",
+            "slack_ns": 6.446219,
+            "data_delay_ns": null
+          },
+          "peak_first": {
+            "start_register": "peak_first_position[1]",
+            "end_register": "peak_first_position[7]",
+            "slack_ns": 6.533423,
+            "data_delay_ns": 5.328042
+          },
+          "peak_second": {
+            "start_register": "peak_first_position[1]",
+            "end_register": "peak_second_position[8]",
+            "slack_ns": 6.553416,
+            "data_delay_ns": 5.471716
+          },
+          "history_pointer": {
+            "start_register": "prescale_count[14]",
+            "end_register": "history_pointer[10]",
+            "slack_ns": 6.591402,
+            "data_delay_ns": 5.399825999999999
+          },
+          "running_sum": {
+            "start_register": "window_full",
+            "end_register": "running_sum[11]",
+            "slack_ns": 6.862018,
+            "data_delay_ns": 5.129939
+          }
+        }
+      }
+    ],
+    "function_pass": true
+  },
+  "historical_delay0": {
+    "experiment_commit": "411552acfb124ca4a9dec3f6768957c3cc51fceb",
+    "metrics": {
+      "design__lint_error__count": 0.0,
+      "design__lint_timing_construct__count": 0.0,
+      "design__lint_warning__count": 2.0,
+      "design__inferred_latch__count": 0.0,
+      "design__instance__count": 23082.0,
+      "design__instance__area": 455197.0,
+      "design__instance_unmapped__count": 0.0,
+      "synthesis__check_error__count": 0.0,
+      "design__max_slew_violation__count__corner:nom_tt_025C_3v30": 0.0,
+      "design__max_fanout_violation__count__corner:nom_tt_025C_3v30": 105.0,
+      "design__max_cap_violation__count__corner:nom_tt_025C_3v30": 1.0,
+      "power__internal__total": 0.0571260079741478,
+      "power__switching__total": 0.016074232757091522,
+      "power__leakage__total": 1.3718122318095993e-06,
+      "power__total": 0.07320161163806915,
+      "clock__skew__worst_hold__corner:nom_tt_025C_3v30": -0.7161011986079135,
+      "clock__skew__worst_setup__corner:nom_tt_025C_3v30": 0.482879971898034,
+      "timing__hold__ws__corner:nom_tt_025C_3v30": 1.0960752615768787,
+      "timing__setup__ws__corner:nom_tt_025C_3v30": 1.413715406976131,
+      "timing__hold__tns__corner:nom_tt_025C_3v30": 0.0,
+      "timing__setup__tns__corner:nom_tt_025C_3v30": 0.0,
+      "timing__hold__wns__corner:nom_tt_025C_3v30": 0.0,
+      "timing__setup__wns__corner:nom_tt_025C_3v30": 0.0,
+      "timing__hold_vio__count__corner:nom_tt_025C_3v30": 0.0,
+      "timing__hold_r2r__ws__corner:nom_tt_025C_3v30": 1.096075,
+      "timing__hold_r2r_vio__count__corner:nom_tt_025C_3v30": 0.0,
+      "timing__setup_vio__count__corner:nom_tt_025C_3v30": 0.0,
+      "timing__setup_r2r__ws__corner:nom_tt_025C_3v30": 1.413715,
+      "timing__setup_r2r_vio__count__corner:nom_tt_025C_3v30": 0.0,
+      "design__max_slew_violation__count__corner:nom_ss_125C_3v00": 220.0,
+      "design__max_fanout_violation__count__corner:nom_ss_125C_3v00": 105.0,
+      "design__max_cap_violation__count__corner:nom_ss_125C_3v00": 1.0,
+      "clock__skew__worst_hold__corner:nom_ss_125C_3v00": -1.1400933853021344,
+      "clock__skew__worst_setup__corner:nom_ss_125C_3v00": 0.6911481582676257,
+      "timing__hold__ws__corner:nom_ss_125C_3v00": 1.5229369307817002,
+      "timing__setup__ws__corner:nom_ss_125C_3v00": -9.028724690106214,
+      "timing__hold__tns__corner:nom_ss_125C_3v00": 0.0,
+      "timing__setup__tns__corner:nom_ss_125C_3v00": -7874.324405622658,
+      "timing__hold__wns__corner:nom_ss_125C_3v00": 0.0,
+      "timing__setup__wns__corner:nom_ss_125C_3v00": -9.028724690106214,
+      "timing__hold_vio__count__corner:nom_ss_125C_3v00": 0.0,
+      "timing__hold_r2r__ws__corner:nom_ss_125C_3v00": 2.457769,
+      "timing__hold_r2r_vio__count__corner:nom_ss_125C_3v00": 0.0,
+      "timing__setup_vio__count__corner:nom_ss_125C_3v00": 2232.0,
+      "timing__setup_r2r__ws__corner:nom_ss_125C_3v00": -9.028725,
+      "timing__setup_r2r_vio__count__corner:nom_ss_125C_3v00": 2192.0,
+      "design__max_slew_violation__count__corner:nom_ff_n40C_3v60": 0.0,
+      "design__max_fanout_violation__count__corner:nom_ff_n40C_3v60": 105.0,
+      "design__max_cap_violation__count__corner:nom_ff_n40C_3v60": 1.0,
+      "clock__skew__worst_hold__corner:nom_ff_n40C_3v60": -0.5311825574187936,
+      "clock__skew__worst_setup__corner:nom_ff_n40C_3v60": 0.3919482349618344,
+      "timing__hold__ws__corner:nom_ff_n40C_3v60": 0.5080750408645351,
+      "timing__setup__ws__corner:nom_ff_n40C_3v60": 5.579960651474448,
+      "timing__hold__tns__corner:nom_ff_n40C_3v60": 0.0,
+      "timing__setup__tns__corner:nom_ff_n40C_3v60": 0.0,
+      "timing__hold__wns__corner:nom_ff_n40C_3v60": 0.0,
+      "timing__setup__wns__corner:nom_ff_n40C_3v60": 0.0,
+      "timing__hold_vio__count__corner:nom_ff_n40C_3v60": 0.0,
+      "timing__hold_r2r__ws__corner:nom_ff_n40C_3v60": 0.508075,
+      "timing__hold_r2r_vio__count__corner:nom_ff_n40C_3v60": 0.0,
+      "timing__setup_vio__count__corner:nom_ff_n40C_3v60": 0.0,
+      "timing__setup_r2r__ws__corner:nom_ff_n40C_3v60": 5.911835,
+      "timing__setup_r2r_vio__count__corner:nom_ff_n40C_3v60": 0.0,
+      "design__max_slew_violation__count": 236.0,
+      "design__max_fanout_violation__count": 105.0,
+      "design__max_cap_violation__count": 2.0,
+      "clock__skew__worst_hold": -0.5233023051894379,
+      "clock__skew__worst_setup": 0.3823009517165103,
+      "timing__hold__ws": 0.5064201423772251,
+      "timing__setup__ws": -9.887541731896897,
+      "timing__hold__tns": 0.0,
+      "timing__setup__tns": -8487.112849177642,
+      "timing__hold__wns": 0.0,
+      "timing__setup__wns": -9.887541731896897,
+      "timing__hold_vio__count": 0.0,
+      "timing__hold_r2r__ws": 0.50642,
+      "timing__hold_r2r_vio__count": 0.0,
+      "timing__setup_vio__count": 6694.0,
+      "timing__setup_r2r__ws": -9.887542,
+      "timing__setup_r2r_vio__count": 6574.0,
+      "design__die__bbox": "0.0 0.0 1440.32 325.36",
+      "design__core__bbox": "3.36 3.92 1436.96 321.44",
+      "design__io": 45.0,
+      "design__die__area": 468623.0,
+      "design__core__area": 455197.0,
+      "design__instance__count__stdcell": 10806.0,
+      "design__instance__area__stdcell": 323709.0,
+      "design__instance__count__macros": 0.0,
+      "design__instance__area__macros": 0.0,
+      "design__instance__count__padcells": 0.0,
+      "design__instance__area__padcells": 0.0,
+      "design__instance__count__cover": 0.0,
+      "design__instance__area__cover": 0.0,
+      "design__instance__utilization": 0.71114,
+      "design__instance__utilization__stdcell": 0.71114,
+      "design__rows": 81.0,
+      "design__rows:GF018hv5v_mcu_sc7": 81.0,
+      "design__sites": 207360.0,
+      "design__sites:GF018hv5v_mcu_sc7": 207360.0,
+      "design__instance__count__class:tie_cell": 11.0,
+      "design__instance__area__class:tie_cell": 96.5888,
+      "design__instance__count__class:buffer": 2.0,
+      "design__instance__area__class:buffer": 35.1232,
+      "design__instance__count__class:inverter": 135.0,
+      "design__instance__area__class:inverter": 1299.56,
+      "design__instance__count__class:sequential_cell": 2235.0,
+      "design__instance__area__class:sequential_cell": 142754.0,
+      "design__instance__count__class:multi_input_combinational_cell": 2996.0,
+      "design__instance__area__class:multi_input_combinational_cell": 87685.1,
+      "flow__warnings__count": 1.0,
+      "flow__errors__count": 0.0,
+      "flow__warnings__count:ODB-0220": 1.0,
+      "flow__warnings__type_count": 1.0,
+      "flow__warnings__count:ORD-0039": 1.0,
+      "design__instance__count__class:endcap_cell": 162.0,
+      "design__instance__area__class:endcap_cell": 711.245,
+      "design__instance__count__class:tap_cell": 3033.0,
+      "design__instance__area__class:tap_cell": 13316.1,
+      "design__power_grid_violation__count__net:VPWR": 0.0,
+      "design__power_grid_violation__count__net:VGND": 0.0,
+      "design__power_grid_violation__count": 0.0,
+      "flow__warnings__count:GRT-0281": 2.0,
+      "timing__drv__floating__nets": 2.0,
+      "timing__drv__floating__pins": 0.0,
+      "design__instance__displacement__total": 17558.9,
+      "design__instance__displacement__mean": 1.6245,
+      "design__instance__displacement__max": 37.52,
+      "route__wirelength__estimated": 210652.0,
+      "design__violations": 0.0,
+      "design__instance__count__class:timing_repair_buffer": 2016.0,
+      "design__instance__area__class:timing_repair_buffer": 67581.4,
+      "flow__warnings__count:RSZ-0020": 1.0,
+      "flow__warnings__count:STA-1140": 6.0,
+      "design__instance__count__class:clock_buffer": 183.0,
+      "design__instance__area__class:clock_buffer": 9694.0,
+      "design__instance__count__class:clock_inverter": 33.0,
+      "design__instance__area__class:clock_inverter": 535.629,
+      "design__instance__count__setup_buffer": 60.0,
+      "design__instance__count__hold_buffer": 634.0,
+      "flow__warnings__count:RSZ-0062": 1.0,
+      "global_route__vias": 52169.0,
+      "global_route__wirelength": 381536.0,
+      "antenna__violating__nets": 0.0,
+      "antenna__violating__pins": 0.0,
+      "route__antenna_violation__count": 0.0,
+      "antenna_diodes_count": 0.0,
+      "route__net": 7543.0,
+      "route__net__special": 2.0,
+      "route__drc_errors__iter:0": 602.0,
+      "route__wirelength__iter:0": 220468.0,
+      "route__drc_errors__iter:1": 102.0,
+      "route__wirelength__iter:1": 218554.0,
+      "route__drc_errors__iter:2": 99.0,
+      "route__wirelength__iter:2": 218231.0,
+      "route__drc_errors__iter:3": 0.0,
+      "route__wirelength__iter:3": 218045.0,
+      "route__drc_errors": 0.0,
+      "route__wirelength": 218045.0,
+      "route__vias": 42721.0,
+      "route__vias__singlecut": 42721.0,
+      "route__vias__multicut": 0.0,
+      "flow__warnings__count:DRT-0349": 8.0,
+      "design__disconnected_pin__count": 4.0,
+      "design__critical_disconnected_pin__count": 0.0,
+      "route__wirelength__max": 1062.93,
+      "design__instance__count__class:fill_cell": 12276.0,
+      "design__instance__area__class:fill_cell": 131488.0,
+      "timing__unannotated_net__count__corner:nom_tt_025C_3v30": 91.0,
+      "timing__unannotated_net_filtered__count__corner:nom_tt_025C_3v30": 0.0,
+      "timing__unannotated_net__count__corner:nom_ss_125C_3v00": 91.0,
+      "timing__unannotated_net_filtered__count__corner:nom_ss_125C_3v00": 0.0,
+      "timing__unannotated_net__count__corner:nom_ff_n40C_3v60": 91.0,
+      "timing__unannotated_net_filtered__count__corner:nom_ff_n40C_3v60": 0.0,
+      "design__max_slew_violation__count__corner:min_tt_025C_3v30": 0.0,
+      "design__max_fanout_violation__count__corner:min_tt_025C_3v30": 105.0,
+      "design__max_cap_violation__count__corner:min_tt_025C_3v30": 0.0,
+      "clock__skew__worst_hold__corner:min_tt_025C_3v30": -0.7036913473322839,
+      "clock__skew__worst_setup__corner:min_tt_025C_3v30": 0.46794480725917126,
+      "timing__hold__ws__corner:min_tt_025C_3v30": 1.092066912255408,
+      "timing__setup__ws__corner:min_tt_025C_3v30": 1.7974742203430834,
+      "timing__hold__tns__corner:min_tt_025C_3v30": 0.0,
+      "timing__setup__tns__corner:min_tt_025C_3v30": 0.0,
+      "timing__hold__wns__corner:min_tt_025C_3v30": 0.0,
+      "timing__setup__wns__corner:min_tt_025C_3v30": 0.0,
+      "timing__hold_vio__count__corner:min_tt_025C_3v30": 0.0,
+      "timing__hold_r2r__ws__corner:min_tt_025C_3v30": 1.092067,
+      "timing__hold_r2r_vio__count__corner:min_tt_025C_3v30": 0.0,
+      "timing__setup_vio__count__corner:min_tt_025C_3v30": 0.0,
+      "timing__setup_r2r__ws__corner:min_tt_025C_3v30": 1.797474,
+      "timing__setup_r2r_vio__count__corner:min_tt_025C_3v30": 0.0,
+      "timing__unannotated_net__count__corner:min_tt_025C_3v30": 91.0,
+      "timing__unannotated_net_filtered__count__corner:min_tt_025C_3v30": 0.0,
+      "design__max_slew_violation__count__corner:min_ss_125C_3v00": 201.0,
+      "design__max_fanout_violation__count__corner:min_ss_125C_3v00": 105.0,
+      "design__max_cap_violation__count__corner:min_ss_125C_3v00": 0.0,
+      "clock__skew__worst_hold__corner:min_ss_125C_3v00": -1.11707135592319,
+      "clock__skew__worst_setup__corner:min_ss_125C_3v00": 0.6634594172949881,
+      "timing__hold__ws__corner:min_ss_125C_3v00": 1.6074009245271477,
+      "timing__setup__ws__corner:min_ss_125C_3v00": -8.31711256740303,
+      "timing__hold__tns__corner:min_ss_125C_3v00": 0.0,
+      "timing__setup__tns__corner:min_ss_125C_3v00": -7364.633101144984,
+      "timing__hold__wns__corner:min_ss_125C_3v00": 0.0,
+      "timing__setup__wns__corner:min_ss_125C_3v00": -8.31711256740303,
+      "timing__hold_vio__count__corner:min_ss_125C_3v00": 0.0,
+      "timing__hold_r2r__ws__corner:min_ss_125C_3v00": 2.439087,
+      "timing__hold_r2r_vio__count__corner:min_ss_125C_3v00": 0.0,
+      "timing__setup_vio__count__corner:min_ss_125C_3v00": 2229.0,
+      "timing__setup_r2r__ws__corner:min_ss_125C_3v00": -8.317113,
+      "timing__setup_r2r_vio__count__corner:min_ss_125C_3v00": 2189.0,
+      "timing__unannotated_net__count__corner:min_ss_125C_3v00": 91.0,
+      "timing__unannotated_net_filtered__count__corner:min_ss_125C_3v00": 0.0,
+      "design__max_slew_violation__count__corner:min_ff_n40C_3v60": 0.0,
+      "design__max_fanout_violation__count__corner:min_ff_n40C_3v60": 105.0,
+      "design__max_cap_violation__count__corner:min_ff_n40C_3v60": 0.0,
+      "clock__skew__worst_hold__corner:min_ff_n40C_3v60": -0.5233023051894379,
+      "clock__skew__worst_setup__corner:min_ff_n40C_3v60": 0.3823009517165103,
+      "timing__hold__ws__corner:min_ff_n40C_3v60": 0.5064201423772251,
+      "timing__setup__ws__corner:min_ff_n40C_3v60": 5.636526960268115,
+      "timing__hold__tns__corner:min_ff_n40C_3v60": 0.0,
+      "timing__setup__tns__corner:min_ff_n40C_3v60": 0.0,
+      "timing__hold__wns__corner:min_ff_n40C_3v60": 0.0,
+      "timing__setup__wns__corner:min_ff_n40C_3v60": 0.0,
+      "timing__hold_vio__count__corner:min_ff_n40C_3v60": 0.0,
+      "timing__hold_r2r__ws__corner:min_ff_n40C_3v60": 0.50642,
+      "timing__hold_r2r_vio__count__corner:min_ff_n40C_3v60": 0.0,
+      "timing__setup_vio__count__corner:min_ff_n40C_3v60": 0.0,
+      "timing__setup_r2r__ws__corner:min_ff_n40C_3v60": 6.146568,
+      "timing__setup_r2r_vio__count__corner:min_ff_n40C_3v60": 0.0,
+      "timing__unannotated_net__count__corner:min_ff_n40C_3v60": 91.0,
+      "timing__unannotated_net_filtered__count__corner:min_ff_n40C_3v60": 0.0,
+      "design__max_slew_violation__count__corner:max_tt_025C_3v30": 0.0,
+      "design__max_fanout_violation__count__corner:max_tt_025C_3v30": 105.0,
+      "design__max_cap_violation__count__corner:max_tt_025C_3v30": 2.0,
+      "clock__skew__worst_hold__corner:max_tt_025C_3v30": -0.7310374734698323,
+      "clock__skew__worst_setup__corner:max_tt_025C_3v30": 0.5005070943808392,
+      "timing__hold__ws__corner:max_tt_025C_3v30": 1.100884081721743,
+      "timing__setup__ws__corner:max_tt_025C_3v30": 0.9568408558531903,
+      "timing__hold__tns__corner:max_tt_025C_3v30": 0.0,
+      "timing__setup__tns__corner:max_tt_025C_3v30": 0.0,
+      "timing__hold__wns__corner:max_tt_025C_3v30": 0.0,
+      "timing__setup__wns__corner:max_tt_025C_3v30": 0.0,
+      "timing__hold_vio__count__corner:max_tt_025C_3v30": 0.0,
+      "timing__hold_r2r__ws__corner:max_tt_025C_3v30": 1.100884,
+      "timing__hold_r2r_vio__count__corner:max_tt_025C_3v30": 0.0,
+      "timing__setup_vio__count__corner:max_tt_025C_3v30": 0.0,
+      "timing__setup_r2r__ws__corner:max_tt_025C_3v30": 0.956841,
+      "timing__setup_r2r_vio__count__corner:max_tt_025C_3v30": 0.0,
+      "timing__unannotated_net__count__corner:max_tt_025C_3v30": 91.0,
+      "timing__unannotated_net_filtered__count__corner:max_tt_025C_3v30": 0.0,
+      "design__max_slew_violation__count__corner:max_ss_125C_3v00": 236.0,
+      "design__max_fanout_violation__count__corner:max_ss_125C_3v00": 105.0,
+      "design__max_cap_violation__count__corner:max_ss_125C_3v00": 2.0,
+      "clock__skew__worst_hold__corner:max_ss_125C_3v00": -1.1678138786541743,
+      "clock__skew__worst_setup__corner:max_ss_125C_3v00": 0.7239020698887634,
+      "timing__hold__ws__corner:max_ss_125C_3v00": 1.4201613620394087,
+      "timing__setup__ws__corner:max_ss_125C_3v00": -9.887541731896897,
+      "timing__hold__tns__corner:max_ss_125C_3v00": 0.0,
+      "timing__setup__tns__corner:max_ss_125C_3v00": -8487.112849177642,
+      "timing__hold__wns__corner:max_ss_125C_3v00": 0.0,
+      "timing__setup__wns__corner:max_ss_125C_3v00": -9.887541731896897,
+      "timing__hold_vio__count__corner:max_ss_125C_3v00": 0.0,
+      "timing__hold_r2r__ws__corner:max_ss_125C_3v00": 2.470987,
+      "timing__hold_r2r_vio__count__corner:max_ss_125C_3v00": 0.0,
+      "timing__setup_vio__count__corner:max_ss_125C_3v00": 2233.0,
+      "timing__setup_r2r__ws__corner:max_ss_125C_3v00": -9.887542,
+      "timing__setup_r2r_vio__count__corner:max_ss_125C_3v00": 2193.0,
+      "timing__unannotated_net__count__corner:max_ss_125C_3v00": 91.0,
+      "timing__unannotated_net_filtered__count__corner:max_ss_125C_3v00": 0.0,
+      "design__max_slew_violation__count__corner:max_ff_n40C_3v60": 0.0,
+      "design__max_fanout_violation__count__corner:max_ff_n40C_3v60": 105.0,
+      "design__max_cap_violation__count__corner:max_ff_n40C_3v60": 2.0,
+      "clock__skew__worst_hold__corner:max_ff_n40C_3v60": -0.5404756795092459,
+      "clock__skew__worst_setup__corner:max_ff_n40C_3v60": 0.40302570754792916,
+      "timing__hold__ws__corner:max_ff_n40C_3v60": 0.5093395849253469,
+      "timing__setup__ws__corner:max_ff_n40C_3v60": 5.508842427040859,
+      "timing__hold__tns__corner:max_ff_n40C_3v60": 0.0,
+      "timing__setup__tns__corner:max_ff_n40C_3v60": 0.0,
+      "timing__hold__wns__corner:max_ff_n40C_3v60": 0.0,
+      "timing__setup__wns__corner:max_ff_n40C_3v60": 0.0,
+      "timing__hold_vio__count__corner:max_ff_n40C_3v60": 0.0,
+      "timing__hold_r2r__ws__corner:max_ff_n40C_3v60": 0.50934,
+      "timing__hold_r2r_vio__count__corner:max_ff_n40C_3v60": 0.0,
+      "timing__setup_vio__count__corner:max_ff_n40C_3v60": 0.0,
+      "timing__setup_r2r__ws__corner:max_ff_n40C_3v60": 5.627054,
+      "timing__setup_r2r_vio__count__corner:max_ff_n40C_3v60": 0.0,
+      "timing__unannotated_net__count__corner:max_ff_n40C_3v60": 91.0,
+      "timing__unannotated_net_filtered__count__corner:max_ff_n40C_3v60": 0.0,
+      "timing__unannotated_net__count": 91.0,
+      "timing__unannotated_net_filtered__count": 0.0,
+      "design_powergrid__voltage__worst__net:VPWR__corner:nom_tt_025C_3v30": 3.29985,
+      "design_powergrid__drop__average__net:VPWR__corner:nom_tt_025C_3v30": 3.29995,
+      "design_powergrid__drop__worst__net:VPWR__corner:nom_tt_025C_3v30": 0.00014953,
+      "design_powergrid__voltage__worst__net:VGND__corner:nom_tt_025C_3v30": 0.000190797,
+      "design_powergrid__drop__average__net:VGND__corner:nom_tt_025C_3v30": 5.38691e-05,
+      "design_powergrid__drop__worst__net:VGND__corner:nom_tt_025C_3v30": 0.000190797,
+      "design_powergrid__voltage__worst": 0.000190797,
+      "design_powergrid__voltage__worst__net:VPWR": 3.29985,
+      "design_powergrid__drop__worst": 0.000190797,
+      "design_powergrid__drop__worst__net:VPWR": 0.00014953,
+      "design_powergrid__voltage__worst__net:VGND": 0.000190797,
+      "design_powergrid__drop__worst__net:VGND": 0.000190797,
+      "ir__voltage__worst": 3.3,
+      "ir__drop__avg": 5.38e-05,
+      "ir__drop__worst": 0.00015,
+      "magic__drc_error__count": 0.0,
+      "magic__illegal_overlap__count": 0.0,
+      "design__lvs_device_difference__count": 0.0,
+      "design__lvs_net_difference__count": 0.0,
+      "design__lvs_property_fail__count": 0.0,
+      "design__lvs_error__count": 0.0,
+      "design__lvs_unmatched_device__count": 0.0,
+      "design__lvs_unmatched_net__count": 0.0,
+      "design__lvs_unmatched_pin__count": 0.0
+    },
+    "corners": [
+      {
+        "corner": "nom_tt_025C_3v30",
+        "setup_ns": 1.413715406976131,
+        "hold_ns": 1.0960752615768787,
+        "setup_tns_ns": 0.0,
+        "setup_violations": 0.0,
+        "hold_violations": 0.0,
+        "slew": 0.0,
+        "capacitance": 1.0,
+        "fanout": 105.0,
+        "unannotated_functional_nets": 0,
+        "baseline_setup_ns": 2.4424090108367764,
+        "baseline_hold_ns": 1.1087591159027352,
+        "setup_improvement_ns": -1.0286936038606453,
+        "worst_reported_path": {
+          "start_register": "sample_valid",
+          "end_register": "peak_first[4]",
+          "slack_ns": 1.413715,
+          "data_delay_ns": 10.377116
+        },
+        "reported_path_groups": {
+          "peak_first": {
+            "start_register": "sample_valid",
+            "end_register": "peak_first[4]",
+            "slack_ns": 1.413715,
+            "data_delay_ns": 10.377116
+          },
+          "peak_second": {
+            "start_register": "peak_second_position[5]",
+            "end_register": "peak_second[7]",
+            "slack_ns": 2.525528,
+            "data_delay_ns": 9.213307
+          },
+          "running_sum": {
+            "start_register": "sample_overlap",
+            "end_register": "running_sum[11]",
+            "slack_ns": 3.106741,
+            "data_delay_ns": 8.694777
+          },
+          "prescale_count": {
+            "start_register": "prescale_count[4]",
+            "end_register": "prescale_count[25]",
+            "slack_ns": 3.558038,
+            "data_delay_ns": 8.206966000000001
+          }
+        }
+      },
+      {
+        "corner": "nom_ss_125C_3v00",
+        "setup_ns": -9.028724690106214,
+        "hold_ns": 1.5229369307817002,
+        "setup_tns_ns": -7874.324405622658,
+        "setup_violations": 2232.0,
+        "hold_violations": 0.0,
+        "slew": 220.0,
+        "capacitance": 1.0,
+        "fanout": 105.0,
+        "unannotated_functional_nets": 0,
+        "baseline_setup_ns": -7.547740424076341,
+        "baseline_hold_ns": 0.10924683689124666,
+        "setup_improvement_ns": -1.480984266029873,
+        "worst_reported_path": {
+          "start_register": "sample_valid",
+          "end_register": "peak_first[4]",
+          "slack_ns": -9.028725,
+          "data_delay_ns": 20.289544
+        },
+        "reported_path_groups": {
+          "peak_first": {
+            "start_register": "sample_valid",
+            "end_register": "peak_first[4]",
+            "slack_ns": -9.028725,
+            "data_delay_ns": 20.289544
+          },
+          "peak_second": {
+            "start_register": "peak_second_position[5]",
+            "end_register": "peak_second[7]",
+            "slack_ns": -7.11527,
+            "data_delay_ns": 18.273199
+          },
+          "running_sum": {
+            "start_register": "sample_overlap",
+            "end_register": "running_sum[11]",
+            "slack_ns": -6.057112,
+            "data_delay_ns": 17.31899
+          },
+          "prescale_count": {
+            "start_register": "prescale_count[4]",
+            "end_register": "prescale_count[25]",
+            "slack_ns": -5.551153,
+            "data_delay_ns": 16.769152000000002
+          }
+        }
+      },
+      {
+        "corner": "nom_ff_n40C_3v60",
+        "setup_ns": 5.579960651474448,
+        "hold_ns": 0.5080750408645351,
+        "setup_tns_ns": 0.0,
+        "setup_violations": 0.0,
+        "hold_violations": 0.0,
+        "slew": 0.0,
+        "capacitance": 1.0,
+        "fanout": 105.0,
+        "unannotated_functional_nets": 0,
+        "baseline_setup_ns": 6.142608373590947,
+        "baseline_hold_ns": 0.5062903573019759,
+        "setup_improvement_ns": -0.5626477221164983,
+        "worst_reported_path": {
+          "start_register": "rst_n",
+          "end_register": "handoff_count[14]",
+          "slack_ns": 5.579961,
+          "data_delay_ns": null
+        },
+        "reported_path_groups": {
+          "peak_first": {
+            "start_register": "sample_valid",
+            "end_register": "peak_first[4]",
+            "slack_ns": 5.911835,
+            "data_delay_ns": 6.094888999999999
+          },
+          "prescale_count": {
+            "start_register": "rst_n",
+            "end_register": "prescale_count[9]",
+            "slack_ns": 6.4355,
+            "data_delay_ns": null
+          },
+          "peak_second": {
+            "start_register": "peak_second_position[5]",
+            "end_register": "peak_second[7]",
+            "slack_ns": 6.637109,
+            "data_delay_ns": 5.339289
+          },
+          "running_sum": {
+            "start_register": "window_full",
+            "end_register": "running_sum[11]",
+            "slack_ns": 6.939083,
+            "data_delay_ns": 4.967150999999999
+          }
+        }
+      },
+      {
+        "corner": "min_tt_025C_3v30",
+        "setup_ns": 1.7974742203430834,
+        "hold_ns": 1.092066912255408,
+        "setup_tns_ns": 0.0,
+        "setup_violations": 0.0,
+        "hold_violations": 0.0,
+        "slew": 0.0,
+        "capacitance": 0.0,
+        "fanout": 105.0,
+        "unannotated_functional_nets": 0,
+        "baseline_setup_ns": 2.607088840826099,
+        "baseline_hold_ns": 1.1037937543069716,
+        "setup_improvement_ns": -0.8096146204830157,
+        "worst_reported_path": {
+          "start_register": "sample_valid",
+          "end_register": "peak_first[4]",
+          "slack_ns": 1.797474,
+          "data_delay_ns": 9.991914
+        },
+        "reported_path_groups": {
+          "peak_first": {
+            "start_register": "sample_valid",
+            "end_register": "peak_first[4]",
+            "slack_ns": 1.797474,
+            "data_delay_ns": 9.991914
+          },
+          "peak_second": {
+            "start_register": "peak_second_position[5]",
+            "end_register": "peak_second[7]",
+            "slack_ns": 2.813664,
+            "data_delay_ns": 8.926749999999998
+          },
+          "running_sum": {
+            "start_register": "sample_overlap",
+            "end_register": "running_sum[11]",
+            "slack_ns": 3.311141,
+            "data_delay_ns": 8.490394
+          },
+          "prescale_count": {
+            "start_register": "prescale_count[4]",
+            "end_register": "prescale_count[25]",
+            "slack_ns": 3.68141,
+            "data_delay_ns": 8.085656
+          }
+        }
+      },
+      {
+        "corner": "min_ss_125C_3v00",
+        "setup_ns": -8.31711256740303,
+        "hold_ns": 1.6074009245271477,
+        "setup_tns_ns": -7364.633101144984,
+        "setup_violations": 2229.0,
+        "hold_violations": 0.0,
+        "slew": 201.0,
+        "capacitance": 0.0,
+        "fanout": 105.0,
+        "unannotated_functional_nets": 0,
+        "baseline_setup_ns": -7.257012973733565,
+        "baseline_hold_ns": 0.1681459463702312,
+        "setup_improvement_ns": -1.060099593669464,
+        "worst_reported_path": {
+          "start_register": "sample_valid",
+          "end_register": "peak_first[4]",
+          "slack_ns": -8.317113,
+          "data_delay_ns": 19.575781999999997
+        },
+        "reported_path_groups": {
+          "peak_first": {
+            "start_register": "sample_valid",
+            "end_register": "peak_first[4]",
+            "slack_ns": -8.317113,
+            "data_delay_ns": 19.575781999999997
+          },
+          "peak_second": {
+            "start_register": "peak_second_position[5]",
+            "end_register": "peak_second[7]",
+            "slack_ns": -6.566453,
+            "data_delay_ns": 17.725899
+          },
+          "running_sum": {
+            "start_register": "sample_overlap",
+            "end_register": "running_sum[11]",
+            "slack_ns": -5.655799,
+            "data_delay_ns": 16.918619
+          },
+          "prescale_count": {
+            "start_register": "prescale_count[0]",
+            "end_register": "prescale_count[25]",
+            "slack_ns": -5.326445,
+            "data_delay_ns": 16.547621
+          }
+        }
+      },
+      {
+        "corner": "min_ff_n40C_3v60",
+        "setup_ns": 5.636526960268115,
+        "hold_ns": 0.5064201423772251,
+        "setup_tns_ns": 0.0,
+        "setup_violations": 0.0,
+        "hold_violations": 0.0,
+        "slew": 0.0,
+        "capacitance": 0.0,
+        "fanout": 105.0,
+        "unannotated_functional_nets": 0,
+        "baseline_setup_ns": 6.202995626054226,
+        "baseline_hold_ns": 0.5051640360116392,
+        "setup_improvement_ns": -0.5664686657861111,
+        "worst_reported_path": {
+          "start_register": "rst_n",
+          "end_register": "handoff_count[14]",
+          "slack_ns": 5.636527,
+          "data_delay_ns": null
+        },
+        "reported_path_groups": {
+          "peak_first": {
+            "start_register": "sample_valid",
+            "end_register": "peak_first[4]",
+            "slack_ns": 6.146568,
+            "data_delay_ns": 5.858854
+          },
+          "prescale_count": {
+            "start_register": "rst_n",
+            "end_register": "prescale_count[9]",
+            "slack_ns": 6.509492,
+            "data_delay_ns": null
+          },
+          "peak_second": {
+            "start_register": "peak_second_position[2]",
+            "end_register": "peak_second[7]",
+            "slack_ns": 6.80675,
+            "data_delay_ns": 5.179578
+          },
+          "running_sum": {
+            "start_register": "window_full",
+            "end_register": "running_sum[11]",
+            "slack_ns": 7.054748,
+            "data_delay_ns": 4.855950999999999
+          }
+        }
+      },
+      {
+        "corner": "max_tt_025C_3v30",
+        "setup_ns": 0.9568408558531903,
+        "hold_ns": 1.100884081721743,
+        "setup_tns_ns": 0.0,
+        "setup_violations": 0.0,
+        "hold_violations": 0.0,
+        "slew": 0.0,
+        "capacitance": 2.0,
+        "fanout": 105.0,
+        "unannotated_functional_nets": 0,
+        "baseline_setup_ns": 2.165281348841077,
+        "baseline_hold_ns": 1.0963217310953162,
+        "setup_improvement_ns": -1.208440492987887,
+        "worst_reported_path": {
+          "start_register": "sample_valid",
+          "end_register": "peak_first[4]",
+          "slack_ns": 0.956841,
+          "data_delay_ns": 10.835346999999999
+        },
+        "reported_path_groups": {
+          "peak_first": {
+            "start_register": "sample_valid",
+            "end_register": "peak_first[4]",
+            "slack_ns": 0.956841,
+            "data_delay_ns": 10.835346999999999
+          },
+          "peak_second": {
+            "start_register": "peak_second_position[5]",
+            "end_register": "peak_second[7]",
+            "slack_ns": 2.173795,
+            "data_delay_ns": 9.561641
+          },
+          "running_sum": {
+            "start_register": "sample_overlap",
+            "end_register": "running_sum[11]",
+            "slack_ns": 2.858773,
+            "data_delay_ns": 8.942772000000001
+          },
+          "prescale_count": {
+            "start_register": "prescale_count[4]",
+            "end_register": "prescale_count[25]",
+            "slack_ns": 3.411768,
+            "data_delay_ns": 8.351039
+          }
+        }
+      },
+      {
+        "corner": "max_ss_125C_3v00",
+        "setup_ns": -9.887541731896897,
+        "hold_ns": 1.4201613620394087,
+        "setup_tns_ns": -8487.112849177642,
+        "setup_violations": 2233.0,
+        "hold_violations": 0.0,
+        "slew": 236.0,
+        "capacitance": 2.0,
+        "fanout": 105.0,
+        "unannotated_functional_nets": 0,
+        "baseline_setup_ns": -7.933554482364606,
+        "baseline_hold_ns": 0.03882405617995117,
+        "setup_improvement_ns": -1.9539872495322914,
+        "worst_reported_path": {
+          "start_register": "sample_valid",
+          "end_register": "peak_first[4]",
+          "slack_ns": -9.887542,
+          "data_delay_ns": 21.150382
+        },
+        "reported_path_groups": {
+          "peak_first": {
+            "start_register": "sample_valid",
+            "end_register": "peak_first[4]",
+            "slack_ns": -9.887542,
+            "data_delay_ns": 21.150382
+          },
+          "peak_second": {
+            "start_register": "peak_second_position[5]",
+            "end_register": "peak_second[7]",
+            "slack_ns": -7.784202,
+            "data_delay_ns": 18.938473
+          },
+          "running_sum": {
+            "start_register": "sample_overlap",
+            "end_register": "running_sum[11]",
+            "slack_ns": -6.542465,
+            "data_delay_ns": 17.802972
+          },
+          "prescale_count": {
+            "start_register": "prescale_count[4]",
+            "end_register": "prescale_count[25]",
+            "slack_ns": -5.837292,
+            "data_delay_ns": 17.052298999999998
+          }
+        }
+      },
+      {
+        "corner": "max_ff_n40C_3v60",
+        "setup_ns": 5.508842427040859,
+        "hold_ns": 0.5093395849253469,
+        "setup_tns_ns": 0.0,
+        "setup_violations": 0.0,
+        "hold_violations": 0.0,
+        "slew": 0.0,
+        "capacitance": 2.0,
+        "fanout": 105.0,
+        "unannotated_functional_nets": 0,
+        "baseline_setup_ns": 6.069330099179556,
+        "baseline_hold_ns": 0.5076689212706414,
+        "setup_improvement_ns": -0.5604876721386969,
+        "worst_reported_path": {
+          "start_register": "rst_n",
+          "end_register": "prescale_terminal_latched[14]",
+          "slack_ns": 5.508842,
+          "data_delay_ns": null
+        },
+        "reported_path_groups": {
+          "peak_first": {
+            "start_register": "sample_valid",
+            "end_register": "peak_first_position[4]",
+            "slack_ns": 5.627054,
+            "data_delay_ns": 6.302117
+          },
+          "prescale_count": {
+            "start_register": "rst_n",
+            "end_register": "prescale_count[9]",
+            "slack_ns": 6.345739,
+            "data_delay_ns": null
+          },
+          "peak_second": {
+            "start_register": "sample_valid",
+            "end_register": "peak_second[4]",
+            "slack_ns": 6.4091,
+            "data_delay_ns": 5.591115
+          },
+          "running_sum": {
+            "start_register": "window_full",
+            "end_register": "running_sum[11]",
+            "slack_ns": 6.799455,
+            "data_delay_ns": 5.101386
+          }
+        }
+      }
+    ]
+  },
+  "baseline_metrics": {
+    "design__lint_error__count": 0.0,
+    "design__lint_timing_construct__count": 0.0,
+    "design__lint_warning__count": 2.0,
+    "design__inferred_latch__count": 0.0,
+    "design__instance__count": 22702.0,
+    "design__instance__area": 455197.0,
+    "design__instance_unmapped__count": 0.0,
+    "synthesis__check_error__count": 0.0,
+    "design__max_slew_violation__count__corner:nom_tt_025C_3v30": 0.0,
+    "design__max_fanout_violation__count__corner:nom_tt_025C_3v30": 103.0,
+    "design__max_cap_violation__count__corner:nom_tt_025C_3v30": 1.0,
+    "power__internal__total": 0.05737636238336563,
+    "power__switching__total": 0.015857722610235214,
+    "power__leakage__total": 1.3431445040623657e-06,
+    "power__total": 0.073235422372818,
+    "clock__skew__worst_hold__corner:nom_tt_025C_3v30": -0.7247707084077969,
+    "clock__skew__worst_setup__corner:nom_tt_025C_3v30": 0.5280488418208591,
+    "timing__hold__ws__corner:nom_tt_025C_3v30": 1.1087591159027352,
+    "timing__setup__ws__corner:nom_tt_025C_3v30": 2.4424090108367764,
+    "timing__hold__tns__corner:nom_tt_025C_3v30": 0.0,
+    "timing__setup__tns__corner:nom_tt_025C_3v30": 0.0,
+    "timing__hold__wns__corner:nom_tt_025C_3v30": 0.0,
+    "timing__setup__wns__corner:nom_tt_025C_3v30": 0.0,
+    "timing__hold_vio__count__corner:nom_tt_025C_3v30": 0.0,
+    "timing__hold_r2r__ws__corner:nom_tt_025C_3v30": 1.108759,
+    "timing__hold_r2r_vio__count__corner:nom_tt_025C_3v30": 0.0,
+    "timing__setup_vio__count__corner:nom_tt_025C_3v30": 0.0,
+    "timing__setup_r2r__ws__corner:nom_tt_025C_3v30": 2.442409,
+    "timing__setup_r2r_vio__count__corner:nom_tt_025C_3v30": 0.0,
+    "design__max_slew_violation__count__corner:nom_ss_125C_3v00": 66.0,
+    "design__max_fanout_violation__count__corner:nom_ss_125C_3v00": 103.0,
+    "design__max_cap_violation__count__corner:nom_ss_125C_3v00": 1.0,
+    "clock__skew__worst_hold__corner:nom_ss_125C_3v00": -1.155152006744827,
+    "clock__skew__worst_setup__corner:nom_ss_125C_3v00": 0.7780918352087036,
+    "timing__hold__ws__corner:nom_ss_125C_3v00": 0.10924683689124666,
+    "timing__setup__ws__corner:nom_ss_125C_3v00": -7.547740424076341,
+    "timing__hold__tns__corner:nom_ss_125C_3v00": 0.0,
+    "timing__setup__tns__corner:nom_ss_125C_3v00": -1227.2956047712503,
+    "timing__hold__wns__corner:nom_ss_125C_3v00": 0.0,
+    "timing__setup__wns__corner:nom_ss_125C_3v00": -7.547740424076341,
+    "timing__hold_vio__count__corner:nom_ss_125C_3v00": 0.0,
+    "timing__hold_r2r__ws__corner:nom_ss_125C_3v00": 2.479093,
+    "timing__hold_r2r_vio__count__corner:nom_ss_125C_3v00": 0.0,
+    "timing__setup_vio__count__corner:nom_ss_125C_3v00": 1290.0,
+    "timing__setup_r2r__ws__corner:nom_ss_125C_3v00": -7.54774,
+    "timing__setup_r2r_vio__count__corner:nom_ss_125C_3v00": 1264.0,
+    "design__max_slew_violation__count__corner:nom_ff_n40C_3v60": 0.0,
+    "design__max_fanout_violation__count__corner:nom_ff_n40C_3v60": 103.0,
+    "design__max_cap_violation__count__corner:nom_ff_n40C_3v60": 1.0,
+    "clock__skew__worst_hold__corner:nom_ff_n40C_3v60": -0.5360956275086184,
+    "clock__skew__worst_setup__corner:nom_ff_n40C_3v60": 0.4184287756937534,
+    "timing__hold__ws__corner:nom_ff_n40C_3v60": 0.5062903573019759,
+    "timing__setup__ws__corner:nom_ff_n40C_3v60": 6.142608373590947,
+    "timing__hold__tns__corner:nom_ff_n40C_3v60": 0.0,
+    "timing__setup__tns__corner:nom_ff_n40C_3v60": 0.0,
+    "timing__hold__wns__corner:nom_ff_n40C_3v60": 0.0,
+    "timing__setup__wns__corner:nom_ff_n40C_3v60": 0.0,
+    "timing__hold_vio__count__corner:nom_ff_n40C_3v60": 0.0,
+    "timing__hold_r2r__ws__corner:nom_ff_n40C_3v60": 0.50629,
+    "timing__hold_r2r_vio__count__corner:nom_ff_n40C_3v60": 0.0,
+    "timing__setup_vio__count__corner:nom_ff_n40C_3v60": 0.0,
+    "timing__setup_r2r__ws__corner:nom_ff_n40C_3v60": 6.628651,
+    "timing__setup_r2r_vio__count__corner:nom_ff_n40C_3v60": 0.0,
+    "design__max_slew_violation__count": 68.0,
+    "design__max_fanout_violation__count": 103.0,
+    "design__max_cap_violation__count": 1.0,
+    "clock__skew__worst_hold": -0.5267926244329675,
+    "clock__skew__worst_setup": 0.40575441377502597,
+    "timing__hold__ws": 0.03882405617995117,
+    "timing__setup__ws": -7.933554482364606,
+    "timing__hold__tns": 0.0,
+    "timing__setup__tns": -1447.1791428167624,
+    "timing__hold__wns": 0.0,
+    "timing__setup__wns": -7.933554482364606,
+    "timing__hold_vio__count": 0.0,
+    "timing__hold_r2r__ws": 0.505164,
+    "timing__hold_r2r_vio__count": 0.0,
+    "timing__setup_vio__count": 3880.0,
+    "timing__setup_r2r__ws": -7.933555,
+    "timing__setup_r2r_vio__count": 3804.0,
+    "design__die__bbox": "0.0 0.0 1440.32 325.36",
+    "design__core__bbox": "3.36 3.92 1436.96 321.44",
+    "design__io": 45.0,
+    "design__die__area": 468623.0,
+    "design__core__area": 455197.0,
+    "design__instance__count__stdcell": 10407.0,
+    "design__instance__area__stdcell": 314418.0,
+    "design__instance__count__macros": 0.0,
+    "design__instance__area__macros": 0.0,
+    "design__instance__count__padcells": 0.0,
+    "design__instance__area__padcells": 0.0,
+    "design__instance__count__cover": 0.0,
+    "design__instance__area__cover": 0.0,
+    "design__instance__utilization": 0.690731,
+    "design__instance__utilization__stdcell": 0.690731,
+    "design__rows": 81.0,
+    "design__rows:GF018hv5v_mcu_sc7": 81.0,
+    "design__sites": 207360.0,
+    "design__sites:GF018hv5v_mcu_sc7": 207360.0,
+    "design__instance__count__class:tie_cell": 11.0,
+    "design__instance__area__class:tie_cell": 96.5888,
+    "design__instance__count__class:buffer": 2.0,
+    "design__instance__area__class:buffer": 35.1232,
+    "design__instance__count__class:inverter": 129.0,
+    "design__instance__area__class:inverter": 1224.92,
+    "design__instance__count__class:sequential_cell": 2235.0,
+    "design__instance__area__class:sequential_cell": 142743.0,
+    "design__instance__count__class:multi_input_combinational_cell": 2859.0,
+    "design__instance__area__class:multi_input_combinational_cell": 84570.1,
+    "flow__warnings__count": 1.0,
+    "flow__errors__count": 0.0,
+    "flow__warnings__count:ODB-0220": 1.0,
+    "flow__warnings__type_count": 1.0,
+    "flow__warnings__count:ORD-0039": 1.0,
+    "design__instance__count__class:endcap_cell": 162.0,
+    "design__instance__area__class:endcap_cell": 711.245,
+    "design__instance__count__class:tap_cell": 3033.0,
+    "design__instance__area__class:tap_cell": 13316.1,
+    "design__power_grid_violation__count__net:VPWR": 0.0,
+    "design__power_grid_violation__count__net:VGND": 0.0,
+    "design__power_grid_violation__count": 0.0,
+    "flow__warnings__count:GRT-0281": 2.0,
+    "timing__drv__floating__nets": 2.0,
+    "timing__drv__floating__pins": 0.0,
+    "design__instance__displacement__total": 16349.7,
+    "design__instance__displacement__mean": 1.571,
+    "design__instance__displacement__max": 34.16,
+    "route__wirelength__estimated": 189619.0,
+    "design__violations": 0.0,
+    "design__instance__count__class:timing_repair_buffer": 1758.0,
+    "design__instance__area__class:timing_repair_buffer": 61329.5,
+    "flow__warnings__count:RSZ-0020": 1.0,
+    "flow__warnings__count:STA-1140": 6.0,
+    "design__instance__count__class:clock_buffer": 187.0,
+    "design__instance__area__class:clock_buffer": 9869.62,
+    "design__instance__count__class:clock_inverter": 31.0,
+    "design__instance__area__class:clock_inverter": 522.458,
+    "design__instance__count__setup_buffer": 46.0,
+    "design__instance__count__hold_buffer": 446.0,
+    "flow__warnings__count:RSZ-0062": 1.0,
+    "global_route__vias": 49350.0,
+    "global_route__wirelength": 349003.0,
+    "antenna__violating__nets": 0.0,
+    "antenna__violating__pins": 0.0,
+    "route__antenna_violation__count": 0.0,
+    "antenna_diodes_count": 0.0,
+    "route__net": 7142.0,
+    "route__net__special": 2.0,
+    "route__drc_errors__iter:0": 561.0,
+    "route__wirelength__iter:0": 197777.0,
+    "route__drc_errors__iter:1": 51.0,
+    "route__wirelength__iter:1": 195963.0,
+    "route__drc_errors__iter:2": 48.0,
+    "route__wirelength__iter:2": 195823.0,
+    "route__drc_errors__iter:3": 0.0,
+    "route__wirelength__iter:3": 195763.0,
+    "route__drc_errors": 0.0,
+    "route__wirelength": 195763.0,
+    "route__vias": 39760.0,
+    "route__vias__singlecut": 39760.0,
+    "route__vias__multicut": 0.0,
+    "flow__warnings__count:DRT-0349": 8.0,
+    "design__disconnected_pin__count": 4.0,
+    "design__critical_disconnected_pin__count": 0.0,
+    "route__wirelength__max": 1083.59,
+    "design__instance__count__class:fill_cell": 12295.0,
+    "design__instance__area__class:fill_cell": 140778.0,
+    "timing__unannotated_net__count__corner:nom_tt_025C_3v30": 93.0,
+    "timing__unannotated_net_filtered__count__corner:nom_tt_025C_3v30": 0.0,
+    "timing__unannotated_net__count__corner:nom_ss_125C_3v00": 93.0,
+    "timing__unannotated_net_filtered__count__corner:nom_ss_125C_3v00": 0.0,
+    "timing__unannotated_net__count__corner:nom_ff_n40C_3v60": 93.0,
+    "timing__unannotated_net_filtered__count__corner:nom_ff_n40C_3v60": 0.0,
+    "design__max_slew_violation__count__corner:min_tt_025C_3v30": 0.0,
+    "design__max_fanout_violation__count__corner:min_tt_025C_3v30": 103.0,
+    "design__max_cap_violation__count__corner:min_tt_025C_3v30": 0.0,
+    "clock__skew__worst_hold__corner:min_tt_025C_3v30": -0.7093246191185517,
+    "clock__skew__worst_setup__corner:min_tt_025C_3v30": 0.5075032759906826,
+    "timing__hold__ws__corner:min_tt_025C_3v30": 1.1037937543069716,
+    "timing__setup__ws__corner:min_tt_025C_3v30": 2.607088840826099,
+    "timing__hold__tns__corner:min_tt_025C_3v30": 0.0,
+    "timing__setup__tns__corner:min_tt_025C_3v30": 0.0,
+    "timing__hold__wns__corner:min_tt_025C_3v30": 0.0,
+    "timing__setup__wns__corner:min_tt_025C_3v30": 0.0,
+    "timing__hold_vio__count__corner:min_tt_025C_3v30": 0.0,
+    "timing__hold_r2r__ws__corner:min_tt_025C_3v30": 1.103794,
+    "timing__hold_r2r_vio__count__corner:min_tt_025C_3v30": 0.0,
+    "timing__setup_vio__count__corner:min_tt_025C_3v30": 0.0,
+    "timing__setup_r2r__ws__corner:min_tt_025C_3v30": 2.607089,
+    "timing__setup_r2r_vio__count__corner:min_tt_025C_3v30": 0.0,
+    "timing__unannotated_net__count__corner:min_tt_025C_3v30": 93.0,
+    "timing__unannotated_net_filtered__count__corner:min_tt_025C_3v30": 0.0,
+    "design__max_slew_violation__count__corner:min_ss_125C_3v00": 50.0,
+    "design__max_fanout_violation__count__corner:min_ss_125C_3v00": 103.0,
+    "design__max_cap_violation__count__corner:min_ss_125C_3v00": 0.0,
+    "clock__skew__worst_hold__corner:min_ss_125C_3v00": -1.1275825037284066,
+    "clock__skew__worst_setup__corner:min_ss_125C_3v00": 0.7388434517767399,
+    "timing__hold__ws__corner:min_ss_125C_3v00": 0.1681459463702312,
+    "timing__setup__ws__corner:min_ss_125C_3v00": -7.257012973733565,
+    "timing__hold__tns__corner:min_ss_125C_3v00": 0.0,
+    "timing__setup__tns__corner:min_ss_125C_3v00": -1056.3285585230215,
+    "timing__hold__wns__corner:min_ss_125C_3v00": 0.0,
+    "timing__setup__wns__corner:min_ss_125C_3v00": -7.257012973733565,
+    "timing__hold_vio__count__corner:min_ss_125C_3v00": 0.0,
+    "timing__hold_r2r__ws__corner:min_ss_125C_3v00": 2.461676,
+    "timing__hold_r2r_vio__count__corner:min_ss_125C_3v00": 0.0,
+    "timing__setup_vio__count__corner:min_ss_125C_3v00": 1193.0,
+    "timing__setup_r2r__ws__corner:min_ss_125C_3v00": -7.257013,
+    "timing__setup_r2r_vio__count__corner:min_ss_125C_3v00": 1170.0,
+    "timing__unannotated_net__count__corner:min_ss_125C_3v00": 93.0,
+    "timing__unannotated_net_filtered__count__corner:min_ss_125C_3v00": 0.0,
+    "design__max_slew_violation__count__corner:min_ff_n40C_3v60": 0.0,
+    "design__max_fanout_violation__count__corner:min_ff_n40C_3v60": 103.0,
+    "design__max_cap_violation__count__corner:min_ff_n40C_3v60": 0.0,
+    "clock__skew__worst_hold__corner:min_ff_n40C_3v60": -0.5267926244329675,
+    "clock__skew__worst_setup__corner:min_ff_n40C_3v60": 0.40575441377502597,
+    "timing__hold__ws__corner:min_ff_n40C_3v60": 0.5051640360116392,
+    "timing__setup__ws__corner:min_ff_n40C_3v60": 6.202995626054226,
+    "timing__hold__tns__corner:min_ff_n40C_3v60": 0.0,
+    "timing__setup__tns__corner:min_ff_n40C_3v60": 0.0,
+    "timing__hold__wns__corner:min_ff_n40C_3v60": 0.0,
+    "timing__setup__wns__corner:min_ff_n40C_3v60": 0.0,
+    "timing__hold_vio__count__corner:min_ff_n40C_3v60": 0.0,
+    "timing__hold_r2r__ws__corner:min_ff_n40C_3v60": 0.505164,
+    "timing__hold_r2r_vio__count__corner:min_ff_n40C_3v60": 0.0,
+    "timing__setup_vio__count__corner:min_ff_n40C_3v60": 0.0,
+    "timing__setup_r2r__ws__corner:min_ff_n40C_3v60": 6.755691,
+    "timing__setup_r2r_vio__count__corner:min_ff_n40C_3v60": 0.0,
+    "timing__unannotated_net__count__corner:min_ff_n40C_3v60": 93.0,
+    "timing__unannotated_net_filtered__count__corner:min_ff_n40C_3v60": 0.0,
+    "design__max_slew_violation__count__corner:max_tt_025C_3v30": 0.0,
+    "design__max_fanout_violation__count__corner:max_tt_025C_3v30": 103.0,
+    "design__max_cap_violation__count__corner:max_tt_025C_3v30": 1.0,
+    "clock__skew__worst_hold__corner:max_tt_025C_3v30": -0.7479879149999905,
+    "clock__skew__worst_setup__corner:max_tt_025C_3v30": 0.5524939551130157,
+    "timing__hold__ws__corner:max_tt_025C_3v30": 1.0963217310953162,
+    "timing__setup__ws__corner:max_tt_025C_3v30": 2.165281348841077,
+    "timing__hold__tns__corner:max_tt_025C_3v30": 0.0,
+    "timing__setup__tns__corner:max_tt_025C_3v30": 0.0,
+    "timing__hold__wns__corner:max_tt_025C_3v30": 0.0,
+    "timing__setup__wns__corner:max_tt_025C_3v30": 0.0,
+    "timing__hold_vio__count__corner:max_tt_025C_3v30": 0.0,
+    "timing__hold_r2r__ws__corner:max_tt_025C_3v30": 1.110577,
+    "timing__hold_r2r_vio__count__corner:max_tt_025C_3v30": 0.0,
+    "timing__setup_vio__count__corner:max_tt_025C_3v30": 0.0,
+    "timing__setup_r2r__ws__corner:max_tt_025C_3v30": 2.165281,
+    "timing__setup_r2r_vio__count__corner:max_tt_025C_3v30": 0.0,
+    "timing__unannotated_net__count__corner:max_tt_025C_3v30": 93.0,
+    "timing__unannotated_net_filtered__count__corner:max_tt_025C_3v30": 0.0,
+    "design__max_slew_violation__count__corner:max_ss_125C_3v00": 68.0,
+    "design__max_fanout_violation__count__corner:max_ss_125C_3v00": 103.0,
+    "design__max_cap_violation__count__corner:max_ss_125C_3v00": 1.0,
+    "clock__skew__worst_hold__corner:max_ss_125C_3v00": -1.1984826803537925,
+    "clock__skew__worst_setup__corner:max_ss_125C_3v00": 0.8247277538777593,
+    "timing__hold__ws__corner:max_ss_125C_3v00": 0.03882405617995117,
+    "timing__setup__ws__corner:max_ss_125C_3v00": -7.933554482364606,
+    "timing__hold__tns__corner:max_ss_125C_3v00": 0.0,
+    "timing__setup__tns__corner:max_ss_125C_3v00": -1447.1791428167624,
+    "timing__hold__wns__corner:max_ss_125C_3v00": 0.0,
+    "timing__setup__wns__corner:max_ss_125C_3v00": -7.933554482364606,
+    "timing__hold_vio__count__corner:max_ss_125C_3v00": 0.0,
+    "timing__hold_r2r__ws__corner:max_ss_125C_3v00": 2.499883,
+    "timing__hold_r2r_vio__count__corner:max_ss_125C_3v00": 0.0,
+    "timing__setup_vio__count__corner:max_ss_125C_3v00": 1397.0,
+    "timing__setup_r2r__ws__corner:max_ss_125C_3v00": -7.933555,
+    "timing__setup_r2r_vio__count__corner:max_ss_125C_3v00": 1370.0,
+    "timing__unannotated_net__count__corner:max_ss_125C_3v00": 93.0,
+    "timing__unannotated_net_filtered__count__corner:max_ss_125C_3v00": 0.0,
+    "design__max_slew_violation__count__corner:max_ff_n40C_3v60": 0.0,
+    "design__max_fanout_violation__count__corner:max_ff_n40C_3v60": 103.0,
+    "design__max_cap_violation__count__corner:max_ff_n40C_3v60": 1.0,
+    "clock__skew__worst_hold__corner:max_ff_n40C_3v60": -0.5503221367708208,
+    "clock__skew__worst_setup__corner:max_ff_n40C_3v60": 0.4333231396353073,
+    "timing__hold__ws__corner:max_ff_n40C_3v60": 0.5076689212706414,
+    "timing__setup__ws__corner:max_ff_n40C_3v60": 6.069330099179556,
+    "timing__hold__tns__corner:max_ff_n40C_3v60": 0.0,
+    "timing__setup__tns__corner:max_ff_n40C_3v60": 0.0,
+    "timing__hold__wns__corner:max_ff_n40C_3v60": 0.0,
+    "timing__setup__wns__corner:max_ff_n40C_3v60": 0.0,
+    "timing__hold_vio__count__corner:max_ff_n40C_3v60": 0.0,
+    "timing__hold_r2r__ws__corner:max_ff_n40C_3v60": 0.507669,
+    "timing__hold_r2r_vio__count__corner:max_ff_n40C_3v60": 0.0,
+    "timing__setup_vio__count__corner:max_ff_n40C_3v60": 0.0,
+    "timing__setup_r2r__ws__corner:max_ff_n40C_3v60": 6.461051,
+    "timing__setup_r2r_vio__count__corner:max_ff_n40C_3v60": 0.0,
+    "timing__unannotated_net__count__corner:max_ff_n40C_3v60": 93.0,
+    "timing__unannotated_net_filtered__count__corner:max_ff_n40C_3v60": 0.0,
+    "timing__unannotated_net__count": 93.0,
+    "timing__unannotated_net_filtered__count": 0.0,
+    "design_powergrid__voltage__worst__net:VPWR__corner:nom_tt_025C_3v30": 3.29984,
+    "design_powergrid__drop__average__net:VPWR__corner:nom_tt_025C_3v30": 3.29995,
+    "design_powergrid__drop__worst__net:VPWR__corner:nom_tt_025C_3v30": 0.000163857,
+    "design_powergrid__voltage__worst__net:VGND__corner:nom_tt_025C_3v30": 0.00015955,
+    "design_powergrid__drop__average__net:VGND__corner:nom_tt_025C_3v30": 5.36784e-05,
+    "design_powergrid__drop__worst__net:VGND__corner:nom_tt_025C_3v30": 0.00015955,
+    "design_powergrid__voltage__worst": 0.00015955,
+    "design_powergrid__voltage__worst__net:VPWR": 3.29984,
+    "design_powergrid__drop__worst": 0.000163857,
+    "design_powergrid__drop__worst__net:VPWR": 0.000163857,
+    "design_powergrid__voltage__worst__net:VGND": 0.00015955,
+    "design_powergrid__drop__worst__net:VGND": 0.00015955,
+    "ir__voltage__worst": 3.3,
+    "ir__drop__avg": 5.37e-05,
+    "ir__drop__worst": 0.000164,
+    "magic__drc_error__count": 0.0,
+    "magic__illegal_overlap__count": 0.0,
+    "design__lvs_device_difference__count": 0.0,
+    "design__lvs_net_difference__count": 0.0,
+    "design__lvs_property_fail__count": 0.0,
+    "design__lvs_error__count": 0.0,
+    "design__lvs_unmatched_device__count": 0.0,
+    "design__lvs_unmatched_net__count": 0.0,
+    "design__lvs_unmatched_pin__count": 0.0
+  },
+  "baseline_corners": {
+    "nom_tt_025C_3v30": {
+      "setup_ns": 2.4424090108367764,
+      "hold_ns": 1.1087591159027352,
+      "slew": 0.0,
+      "capacitance": 1.0,
+      "fanout": 103.0
+    },
+    "nom_ss_125C_3v00": {
+      "setup_ns": -7.547740424076341,
+      "hold_ns": 0.10924683689124666,
+      "slew": 66.0,
+      "capacitance": 1.0,
+      "fanout": 103.0
+    },
+    "nom_ff_n40C_3v60": {
+      "setup_ns": 6.142608373590947,
+      "hold_ns": 0.5062903573019759,
+      "slew": 0.0,
+      "capacitance": 1.0,
+      "fanout": 103.0
+    },
+    "min_tt_025C_3v30": {
+      "setup_ns": 2.607088840826099,
+      "hold_ns": 1.1037937543069716,
+      "slew": 0.0,
+      "capacitance": 0.0,
+      "fanout": 103.0
+    },
+    "min_ss_125C_3v00": {
+      "setup_ns": -7.257012973733565,
+      "hold_ns": 0.1681459463702312,
+      "slew": 50.0,
+      "capacitance": 0.0,
+      "fanout": 103.0
+    },
+    "min_ff_n40C_3v60": {
+      "setup_ns": 6.202995626054226,
+      "hold_ns": 0.5051640360116392,
+      "slew": 0.0,
+      "capacitance": 0.0,
+      "fanout": 103.0
+    },
+    "max_tt_025C_3v30": {
+      "setup_ns": 2.165281348841077,
+      "hold_ns": 1.0963217310953162,
+      "slew": 0.0,
+      "capacitance": 1.0,
+      "fanout": 103.0
+    },
+    "max_ss_125C_3v00": {
+      "setup_ns": -7.933554482364606,
+      "hold_ns": 0.03882405617995117,
+      "slew": 68.0,
+      "capacitance": 1.0,
+      "fanout": 103.0
+    },
+    "max_ff_n40C_3v60": {
+      "setup_ns": 6.069330099179556,
+      "hold_ns": 0.5076689212706414,
+      "slew": 0.0,
+      "capacitance": 1.0,
+      "fanout": 103.0
+    }
+  },
+  "baseline_reported_path_groups": {
+    "nom_tt_025C_3v30": {
+      "peak_second": {
+        "start_register": "sample_magnitude[2]",
+        "end_register": "peak_second_position[5]",
+        "slack_ns": 2.442409,
+        "data_delay_ns": 9.205138
+      },
+      "peak_first": {
+        "start_register": "sample_magnitude[2]",
+        "end_register": "peak_first[2]",
+        "slack_ns": 2.621294,
+        "data_delay_ns": 9.154289
+      },
+      "history_pointer": {
+        "start_register": "prescale_count[14]",
+        "end_register": "history_pointer[10]",
+        "slack_ns": 3.591058,
+        "data_delay_ns": 8.24605
+      },
+      "prescale_count": {
+        "start_register": "prescale_count[0]",
+        "end_register": "prescale_count[22]",
+        "slack_ns": 4.177017,
+        "data_delay_ns": 7.650745
+      },
+      "running_sum": {
+        "start_register": "running_sum[1]",
+        "end_register": "running_sum[11]",
+        "slack_ns": 4.764328,
+        "data_delay_ns": 7.018758
+      }
+    },
+    "nom_ss_125C_3v00": {
+      "peak_second": {
+        "start_register": "sample_magnitude[2]",
+        "end_register": "peak_second_position[5]",
+        "slack_ns": -7.54774,
+        "data_delay_ns": 18.525091000000003
+      },
+      "peak_first": {
+        "start_register": "sample_magnitude[2]",
+        "end_register": "peak_first[2]",
+        "slack_ns": -7.084271,
+        "data_delay_ns": 18.313358
+      },
+      "history_pointer": {
+        "start_register": "prescale_terminal_latched[10]",
+        "end_register": "history_pointer[10]",
+        "slack_ns": -5.387664,
+        "data_delay_ns": 16.572965
+      },
+      "prescale_count": {
+        "start_register": "prescale_count[0]",
+        "end_register": "prescale_count[22]",
+        "slack_ns": -4.462038,
+        "data_delay_ns": 15.800122
+      },
+      "running_sum": {
+        "start_register": "running_sum[1]",
+        "end_register": "running_sum[11]",
+        "slack_ns": -2.940125,
+        "data_delay_ns": 14.188554
+      }
+    },
+    "nom_ff_n40C_3v60": {
+      "peak_second": {
+        "start_register": "sample_magnitude[3]",
+        "end_register": "peak_second_position[3]",
+        "slack_ns": 6.628651,
+        "data_delay_ns": 5.332193999999999
+      },
+      "peak_first": {
+        "start_register": "sample_magnitude[2]",
+        "end_register": "peak_first[2]",
+        "slack_ns": 6.735638,
+        "data_delay_ns": 5.262854
+      },
+      "prescale_count": {
+        "start_register": "rst_n",
+        "end_register": "prescale_count[26]",
+        "slack_ns": 6.865747,
+        "data_delay_ns": null
+      },
+      "history_pointer": {
+        "start_register": "prescale_count[14]",
+        "end_register": "history_pointer[10]",
+        "slack_ns": 7.327019,
+        "data_delay_ns": 4.707243999999999
+      },
+      "running_sum": {
+        "start_register": "running_sum[1]",
+        "end_register": "running_sum[11]",
+        "slack_ns": 8.001765,
+        "data_delay_ns": 3.9995130000000003
+      }
+    },
+    "min_tt_025C_3v30": {
+      "peak_second": {
+        "start_register": "sample_magnitude[2]",
+        "end_register": "peak_second_position[5]",
+        "slack_ns": 2.607089,
+        "data_delay_ns": 9.055377
+      },
+      "peak_first": {
+        "start_register": "sample_magnitude[2]",
+        "end_register": "peak_first[2]",
+        "slack_ns": 2.794297,
+        "data_delay_ns": 8.986388
+      },
+      "history_pointer": {
+        "start_register": "prescale_count[14]",
+        "end_register": "history_pointer[10]",
+        "slack_ns": 3.703492,
+        "data_delay_ns": 8.133117
+      },
+      "prescale_count": {
+        "start_register": "prescale_count[0]",
+        "end_register": "prescale_count[22]",
+        "slack_ns": 4.247163,
+        "data_delay_ns": 7.572521
+      },
+      "running_sum": {
+        "start_register": "running_sum[1]",
+        "end_register": "running_sum[11]",
+        "slack_ns": 4.86392,
+        "data_delay_ns": 6.925580999999999
+      }
+    },
+    "min_ss_125C_3v00": {
+      "peak_second": {
+        "start_register": "sample_magnitude[0]",
+        "end_register": "peak_second_position[5]",
+        "slack_ns": -7.257013,
+        "data_delay_ns": 18.332101
+      },
+      "peak_first": {
+        "start_register": "sample_magnitude[2]",
+        "end_register": "peak_first[2]",
+        "slack_ns": -6.750744,
+        "data_delay_ns": 17.989027
+      },
+      "history_pointer": {
+        "start_register": "prescale_count[10]",
+        "end_register": "history_pointer[10]",
+        "slack_ns": -5.210508,
+        "data_delay_ns": 16.476666
+      },
+      "prescale_count": {
+        "start_register": "prescale_count[0]",
+        "end_register": "prescale_count[22]",
+        "slack_ns": -4.324306,
+        "data_delay_ns": 15.646185
+      },
+      "running_sum": {
+        "start_register": "running_sum[1]",
+        "end_register": "running_sum[11]",
+        "slack_ns": -2.7445,
+        "data_delay_ns": 14.004303999999998
+      }
+    },
+    "min_ff_n40C_3v60": {
+      "peak_second": {
+        "start_register": "sample_magnitude[2]",
+        "end_register": "peak_second_position[5]",
+        "slack_ns": 6.755691,
+        "data_delay_ns": 5.17529
+      },
+      "peak_first": {
+        "start_register": "sample_magnitude[2]",
+        "end_register": "peak_first[2]",
+        "slack_ns": 6.836661,
+        "data_delay_ns": 5.165006
+      },
+      "prescale_count": {
+        "start_register": "rst_n",
+        "end_register": "prescale_count[26]",
+        "slack_ns": 6.940374,
+        "data_delay_ns": null
+      },
+      "history_pointer": {
+        "start_register": "prescale_count[14]",
+        "end_register": "history_pointer[10]",
+        "slack_ns": 7.391983,
+        "data_delay_ns": 4.641906
+      },
+      "running_sum": {
+        "start_register": "running_sum[1]",
+        "end_register": "running_sum[11]",
+        "slack_ns": 8.061488,
+        "data_delay_ns": 3.943639
+      }
+    },
+    "max_tt_025C_3v30": {
+      "peak_second": {
+        "start_register": "sample_magnitude[3]",
+        "end_register": "peak_second_position[3]",
+        "slack_ns": 2.165281,
+        "data_delay_ns": 9.532784
+      },
+      "peak_first": {
+        "start_register": "sample_magnitude[2]",
+        "end_register": "peak_first[2]",
+        "slack_ns": 2.41364,
+        "data_delay_ns": 9.355773
+      },
+      "history_pointer": {
+        "start_register": "prescale_count[14]",
+        "end_register": "history_pointer[10]",
+        "slack_ns": 3.457184,
+        "data_delay_ns": 8.380495
+      },
+      "prescale_count": {
+        "start_register": "prescale_count[0]",
+        "end_register": "prescale_count[22]",
+        "slack_ns": 4.092438,
+        "data_delay_ns": 7.745265000000001
+      },
+      "running_sum": {
+        "start_register": "running_sum[1]",
+        "end_register": "running_sum[11]",
+        "slack_ns": 4.642143,
+        "data_delay_ns": 7.133568
+      }
+    },
+    "max_ss_125C_3v00": {
+      "peak_second": {
+        "start_register": "sample_magnitude[2]",
+        "end_register": "peak_second_position[5]",
+        "slack_ns": -7.933555,
+        "data_delay_ns": 18.87602
+      },
+      "peak_first": {
+        "start_register": "sample_magnitude[2]",
+        "end_register": "peak_first[2]",
+        "slack_ns": -7.475716,
+        "data_delay_ns": 18.693683
+      },
+      "history_pointer": {
+        "start_register": "prescale_terminal_latched[10]",
+        "end_register": "history_pointer[10]",
+        "slack_ns": -5.611179,
+        "data_delay_ns": 16.781244
+      },
+      "prescale_count": {
+        "start_register": "prescale_count[0]",
+        "end_register": "prescale_count[22]",
+        "slack_ns": -4.625337,
+        "data_delay_ns": 15.982223
+      },
+      "running_sum": {
+        "start_register": "running_sum[1]",
+        "end_register": "running_sum[11]",
+        "slack_ns": -3.177764,
+        "data_delay_ns": 14.412907999999998
+      }
+    },
+    "max_ff_n40C_3v60": {
+      "peak_second": {
+        "start_register": "sample_magnitude[3]",
+        "end_register": "peak_second_position[3]",
+        "slack_ns": 6.461051,
+        "data_delay_ns": 5.492348
+      },
+      "peak_first": {
+        "start_register": "sample_magnitude[2]",
+        "end_register": "peak_first[2]",
+        "slack_ns": 6.614264,
+        "data_delay_ns": 5.380386
+      },
+      "prescale_count": {
+        "start_register": "rst_n",
+        "end_register": "prescale_count[26]",
+        "slack_ns": 6.776254,
+        "data_delay_ns": null
+      },
+      "history_pointer": {
+        "start_register": "prescale_count[14]",
+        "end_register": "history_pointer[10]",
+        "slack_ns": 7.248905,
+        "data_delay_ns": 4.78578
+      },
+      "running_sum": {
+        "start_register": "running_sum[1]",
+        "end_register": "running_sum[11]",
+        "slack_ns": 7.928968,
+        "data_delay_ns": 4.067538
+      }
+    }
+  },
+  "interpretation": "Divider-only control: peak selectors restored to v6; implementation configuration unchanged. Physical differences include synthesis remapping and placement/routing. No isolated peak-only implementation has been run.",
+  "peak_path_diagnosis": {
+    "v6": {
+      "start_register": "sample_magnitude[2]",
+      "end_register": "peak_second_position[5]",
+      "slack_ns": -7.933555,
+      "data_delay_ns": 18.87602,
+      "data_budget_ns": 10.942464999999999,
+      "combinational_cells": 15,
+      "buffers": 5,
+      "buffer_cell_delay_ns": 3.660749,
+      "cell_arcs": [
+        {
+          "pin": "_8095_/Q",
+          "cell": "dffq_1",
+          "delay_ns": 3.684654,
+          "fanout": 5,
+          "cap": 0.052082,
+          "slew": 2.338834
+        },
+        {
+          "pin": "_2993_/ZN",
+          "cell": "inv_2",
+          "delay_ns": 0.667973,
+          "fanout": 6,
+          "cap": 0.034254,
+          "slew": 0.84864
+        },
+        {
+          "pin": "_5700_/ZN",
+          "cell": "oai22_1",
+          "delay_ns": 0.867951,
+          "fanout": 1,
+          "cap": 0.005901,
+          "slew": 1.549272
+        },
+        {
+          "pin": "_5701_/ZN",
+          "cell": "oai22_1",
+          "delay_ns": 1.014771,
+          "fanout": 1,
+          "cap": 0.015301,
+          "slew": 1.152914
+        },
+        {
+          "pin": "_5703_/ZN",
+          "cell": "aoi221_1",
+          "delay_ns": 2.023905,
+          "fanout": 1,
+          "cap": 0.007053,
+          "slew": 2.108147
+        },
+        {
+          "pin": "_5705_/ZN",
+          "cell": "oai221_1",
+          "delay_ns": 1.241245,
+          "fanout": 1,
+          "cap": 0.012973,
+          "slew": 1.652527
+        },
+        {
+          "pin": "_5707_/ZN",
+          "cell": "aoi22_2",
+          "delay_ns": 1.952295,
+          "fanout": 3,
+          "cap": 0.036167,
+          "slew": 2.232255
+        },
+        {
+          "pin": "_5724_/ZN",
+          "cell": "oai31_4",
+          "delay_ns": 0.897851,
+          "fanout": 3,
+          "cap": 0.036545,
+          "slew": 1.065037
+        },
+        {
+          "pin": "rebuffer1286/Z",
+          "cell": "clkbuf_8",
+          "delay_ns": 1.078007,
+          "fanout": 3,
+          "cap": 0.045148,
+          "slew": 0.398957
+        },
+        {
+          "pin": "fanout33/Z",
+          "cell": "buf_8",
+          "delay_ns": 0.689575,
+          "fanout": 7,
+          "cap": 0.060016,
+          "slew": 0.288902
+        },
+        {
+          "pin": "load_slew34/Z",
+          "cell": "buf_8",
+          "delay_ns": 0.65365,
+          "fanout": 4,
+          "cap": 0.061762,
+          "slew": 0.292675
+        },
+        {
+          "pin": "fanout30/Z",
+          "cell": "buf_8",
+          "delay_ns": 0.628955,
+          "fanout": 7,
+          "cap": 0.050508,
+          "slew": 0.265436
+        },
+        {
+          "pin": "load_slew31/Z",
+          "cell": "buf_4",
+          "delay_ns": 0.610562,
+          "fanout": 4,
+          "cap": 0.024986,
+          "slew": 0.259885
+        },
+        {
+          "pin": "_5808_/Z",
+          "cell": "and4_2",
+          "delay_ns": 0.969466,
+          "fanout": 1,
+          "cap": 0.009373,
+          "slew": 0.350888
+        },
+        {
+          "pin": "_5811_/ZN",
+          "cell": "nor4_2",
+          "delay_ns": 1.461569,
+          "fanout": 1,
+          "cap": 0.007355,
+          "slew": 1.622391
+        },
+        {
+          "pin": "_5812_/ZN",
+          "cell": "oai21_1",
+          "delay_ns": 0.421924,
+          "fanout": 1,
+          "cap": 0.003183,
+          "slew": 0.554585
+        }
+      ]
+    },
+    "combined": {
+      "start_register": "sample_position[6]",
+      "end_register": "peak_second_position[8]",
+      "slack_ns": -7.596155,
+      "data_delay_ns": 19.066217,
+      "data_budget_ns": 11.470062,
+      "combinational_cells": 15,
+      "buffers": 5,
+      "buffer_cell_delay_ns": 4.341344,
+      "cell_arcs": [
+        {
+          "pin": "_7951_/Q",
+          "cell": "dffq_2",
+          "delay_ns": 3.2957,
+          "fanout": 7,
+          "cap": 0.062321,
+          "slew": 1.433611
+        },
+        {
+          "pin": "_2930_/ZN",
+          "cell": "clkinv_1",
+          "delay_ns": 0.754021,
+          "fanout": 2,
+          "cap": 0.013566,
+          "slew": 0.827189
+        },
+        {
+          "pin": "_5548_/ZN",
+          "cell": "aoi221_1",
+          "delay_ns": 2.320106,
+          "fanout": 1,
+          "cap": 0.01154,
+          "slew": 2.700128
+        },
+        {
+          "pin": "_5555_/Z",
+          "cell": "and4_2",
+          "delay_ns": 1.732291,
+          "fanout": 1,
+          "cap": 0.021762,
+          "slew": 0.743506
+        },
+        {
+          "pin": "_5556_/ZN",
+          "cell": "nand3_4",
+          "delay_ns": 0.782784,
+          "fanout": 4,
+          "cap": 0.045216,
+          "slew": 1.42829
+        },
+        {
+          "pin": "_5557_/Z",
+          "cell": "and2_4",
+          "delay_ns": 1.111944,
+          "fanout": 3,
+          "cap": 0.034093,
+          "slew": 0.355074
+        },
+        {
+          "pin": "_5639_/ZN",
+          "cell": "aoi211_4",
+          "delay_ns": 1.716881,
+          "fanout": 3,
+          "cap": 0.033044,
+          "slew": 2.039058
+        },
+        {
+          "pin": "fanout42/Z",
+          "cell": "buf_4",
+          "delay_ns": 0.812767,
+          "fanout": 2,
+          "cap": 0.032001,
+          "slew": 0.466742
+        },
+        {
+          "pin": "load_slew44/Z",
+          "cell": "buf_4",
+          "delay_ns": 0.676506,
+          "fanout": 2,
+          "cap": 0.036273,
+          "slew": 0.489443
+        },
+        {
+          "pin": "_5665_/ZN",
+          "cell": "aoi21_4",
+          "delay_ns": 0.536138,
+          "fanout": 2,
+          "cap": 0.02726,
+          "slew": 0.56794
+        },
+        {
+          "pin": "_5673_/ZN",
+          "cell": "oai22_2",
+          "delay_ns": 1.169497,
+          "fanout": 2,
+          "cap": 0.021683,
+          "slew": 2.169101
+        },
+        {
+          "pin": "fanout15/Z",
+          "cell": "buf_2",
+          "delay_ns": 1.131651,
+          "fanout": 4,
+          "cap": 0.035367,
+          "slew": 0.863725
+        },
+        {
+          "pin": "load_slew17/Z",
+          "cell": "buf_4",
+          "delay_ns": 0.977055,
+          "fanout": 5,
+          "cap": 0.072576,
+          "slew": 0.869828
+        },
+        {
+          "pin": "load_slew16/Z",
+          "cell": "buf_8",
+          "delay_ns": 0.743365,
+          "fanout": 3,
+          "cap": 0.071661,
+          "slew": 0.495371
+        },
+        {
+          "pin": "_5712_/ZN",
+          "cell": "aoi221_4",
+          "delay_ns": 0.550328,
+          "fanout": 1,
+          "cap": 0.007977,
+          "slew": 0.96828
+        },
+        {
+          "pin": "_5713_/ZN",
+          "cell": "oai21_1",
+          "delay_ns": 0.740876,
+          "fanout": 1,
+          "cap": 0.002885,
+          "slew": 0.777786
+        }
+      ]
+    },
+    "divider": {
+      "start_register": "sample_position[3]",
+      "end_register": "peak_second[3]",
+      "slack_ns": -10.293527,
+      "data_delay_ns": 21.419603000000002,
+      "data_budget_ns": 11.126077,
+      "combinational_cells": 16,
+      "buffers": 6,
+      "buffer_cell_delay_ns": 6.349407,
+      "cell_arcs": [
+        {
+          "pin": "_7910_/Q",
+          "cell": "dffq_4",
+          "delay_ns": 2.567565,
+          "fanout": 2,
+          "cap": 0.046144,
+          "slew": 0.423659
+        },
+        {
+          "pin": "_5523_/Z",
+          "cell": "xor2_1",
+          "delay_ns": 1.813829,
+          "fanout": 1,
+          "cap": 0.020113,
+          "slew": 0.921688
+        },
+        {
+          "pin": "_5524_/ZN",
+          "cell": "aoi221_1",
+          "delay_ns": 1.97893,
+          "fanout": 1,
+          "cap": 0.009134,
+          "slew": 2.38293
+        },
+        {
+          "pin": "_5525_/ZN",
+          "cell": "nand4_1",
+          "delay_ns": 0.870477,
+          "fanout": 1,
+          "cap": 0.008178,
+          "slew": 1.179439
+        },
+        {
+          "pin": "_5526_/Z",
+          "cell": "or3_2",
+          "delay_ns": 1.923073,
+          "fanout": 3,
+          "cap": 0.029749,
+          "slew": 0.72785
+        },
+        {
+          "pin": "_5528_/ZN",
+          "cell": "nand2_2",
+          "delay_ns": 0.899242,
+          "fanout": 3,
+          "cap": 0.03578,
+          "slew": 1.081829
+        },
+        {
+          "pin": "fanout58/Z",
+          "cell": "clkbuf_8",
+          "delay_ns": 0.902326,
+          "fanout": 2,
+          "cap": 0.036371,
+          "slew": 0.365564
+        },
+        {
+          "pin": "_5592_/Z",
+          "cell": "and4_4",
+          "delay_ns": 1.706896,
+          "fanout": 3,
+          "cap": 0.044772,
+          "slew": 0.80508
+        },
+        {
+          "pin": "fanout47/Z",
+          "cell": "buf_4",
+          "delay_ns": 0.697581,
+          "fanout": 2,
+          "cap": 0.031486,
+          "slew": 0.445526
+        },
+        {
+          "pin": "load_slew55/Z",
+          "cell": "buf_4",
+          "delay_ns": 0.693662,
+          "fanout": 2,
+          "cap": 0.039691,
+          "slew": 0.523812
+        },
+        {
+          "pin": "fanout46/Z",
+          "cell": "buf_8",
+          "delay_ns": 0.679634,
+          "fanout": 3,
+          "cap": 0.067303,
+          "slew": 0.470089
+        },
+        {
+          "pin": "_5649_/ZN",
+          "cell": "oai211_4",
+          "delay_ns": 0.485763,
+          "fanout": 2,
+          "cap": 0.020623,
+          "slew": 1.117958
+        },
+        {
+          "pin": "fanout24/Z",
+          "cell": "buf_1",
+          "delay_ns": 1.746539,
+          "fanout": 5,
+          "cap": 0.049523,
+          "slew": 1.175941
+        },
+        {
+          "pin": "load_slew25/Z",
+          "cell": "buf_1",
+          "delay_ns": 1.629665,
+          "fanout": 4,
+          "cap": 0.039641,
+          "slew": 0.977803
+        },
+        {
+          "pin": "_5759_/ZN",
+          "cell": "oai32_1",
+          "delay_ns": 0.887852,
+          "fanout": 1,
+          "cap": 0.005463,
+          "slew": 2.385608
+        },
+        {
+          "pin": "_5760_/ZN",
+          "cell": "aoi221_1",
+          "delay_ns": 0.969653,
+          "fanout": 1,
+          "cap": 0.006134,
+          "slew": 1.158435
+        },
+        {
+          "pin": "_5761_/ZN",
+          "cell": "oai21_1",
+          "delay_ns": 0.953817,
+          "fanout": 1,
+          "cap": 0.005992,
+          "slew": 0.999564
+        }
+      ]
+    }
+  }
+}
