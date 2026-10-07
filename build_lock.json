@@ -1,7 +1,7 @@
 {
   "baseline_commit": "dae89331466486dab23fe0605b45c979ee50ef03",
   "baseline_run": 35853433128,
-  "source_sha256": "E070E8658952FF7314BFD6CE7E69E035233953CCCED5E57FA44714AE7D9F2FE2",
+  "source_sha256": "54345977664514456EF74C2CDCDB114BE37523DA76E48CA9FCDB1144F9EE9088",
   "action_commit": "395eedb3eeec3c2f4961c3b04ff2cf87f5525636",
   "support_tools_commit": "01d5d2814fa9dd61e9d211e0b235a4a592a9316a",
   "pdk_version": "54435919abffb937387ec956209f9cf5fd2dfbee",
@@ -397,9 +397,9 @@
     "design__lvs_unmatched_net__count": 0.0,
     "design__lvs_unmatched_pin__count": 0.0
   },
-  "experiment": "v7 GF180 80MHz DELAY 0",
+  "experiment": "v7 GF180 80MHz AREA 0 divider23 and flat peak selectors",
   "baseline_strategy": "AREA 0",
-  "experiment_strategy": "DELAY 0",
+  "experiment_strategy": "AREA 0",
   "baseline_reproduced_run": 37642992390,
   "source_repository": "BarryLee911/tt-gf-ucl-project-v6",
   "repository": "BarryLee911/tt-gf-ucl-project-v7",
@@ -456,8 +456,18 @@
     "RUN_CTS": true,
     "RT_MIN_LAYER": "Metal2",
     "RT_MAX_LAYER": "Metal4",
-    "SYNTH_STRATEGY": "DELAY 0"
+    "SYNTH_STRATEGY": "AREA 0"
   },
   "imported_baseline_commit": "0b31615fe098f962caa0cbd24dd1010ff01d4746",
-  "baseline_tree_sha": "bed996911aaa2ec462782405bcb8f5468eb54add"
+  "baseline_tree_sha": "bed996911aaa2ec462782405bcb8f5468eb54add",
+  "baseline_source_sha256": "E070E8658952FF7314BFD6CE7E69E035233953CCCED5E57FA44714AE7D9F2FE2",
+  "delay0_experiment_commit": "411552acfb124ca4a9dec3f6768957c3cc51fceb",
+  "rtl_stage_commits": {
+    "divider23": "e4a65de020d02f448a1fe53a15ca3d6d51c421a6",
+    "peak_selectors": "54b570d853efb6214eff0b4d0ba0031c9a79ce24"
+  },
+  "rtl_changes": [
+    "prescale_count, prescale_terminal_latched and config_terminal: 27 to 23 bits",
+    "direct peak selectors; second-valid equals any survivor; no pipeline change"
+  ]
 }

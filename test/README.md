@@ -29,3 +29,23 @@ unchanged-level regressions cover the longer algorithm scenarios.
 Compile/run failure, timeout, X/Z, contention, missing coverage or missing waves fails.
 The wrapper saves snapshots, logs, level23_results.json and run_results.json, and limits
 the simulator to 1800 seconds. The RTL workflow runs it after the normal cocotb suite.
+
+## AREA 0 RTL optimization checks
+
+```
+python test/run_optimization.py --source src/project.v --output test/output/optimized-area0 --sat
+```
+
+Requires Python, Icarus and Yosys. Fetch full Git history so the imported v6
+baseline `0b31615` is available. The script loads the independent pin reference
+from `test.py` without requiring cocotb, checks all 24 terminal decodes and initial
+sample intervals, and runs 468,829 real clock cycles with original and candidate
+RTL side by side. It compares all output pins, peak values/positions/validity,
+area sum and divider state every cycle, including four candidate survival cases,
+expiry, buffer refill, tied values, position wrap, pending-sample reset and zero/max ADC.
+
+The SAT miter extracts the combinational peak blocks directly from both RTL
+snapshots. It proves equality of all 37 next-state bits for every binary input,
+including invalid slots. This proof does not model X/Z or physical delay; the
+pin regressions separately reject unknown outputs. Logs, source snapshots,
+vectors and JSON results are retained under the chosen output directory.

@@ -31,7 +31,7 @@ def digest(path):
 
 resolved = read_json(run / 'resolved.json')
 source_hash = digest(ROOT / 'src/project.v')
-check(source_hash == lock['source_sha256'], 'RTL source differs from v6')
+check(source_hash == lock['source_sha256'], 'Candidate RTL source hash differs from experiment lock')
 for key, expected in lock['expected_constraints'].items():
     check(key in resolved and resolved[key] == expected,
           f'{key}: expected {expected!r}, got {resolved.get(key)!r}')
@@ -46,6 +46,13 @@ check(ancestor.returncode == 0, 'Imported v6 baseline is not an ancestor')
 if 'baseline_tree_sha' in lock:
     imported_tree = subprocess.run(['git', '-C', str(ROOT), 'rev-parse', imported_baseline + '^{tree}'], capture_output=True, text=True)
     check(imported_tree.returncode == 0 and imported_tree.stdout.strip() == lock['baseline_tree_sha'], 'Imported v6 snapshot tree differs')
+if 'baseline_source_sha256' in lock:
+    baseline_source = subprocess.run(['git', '-C', str(ROOT), 'show', imported_baseline + ':src/project.v'], capture_output=True)
+    check(baseline_source.returncode == 0 and
+          hashlib.sha256(baseline_source.stdout).hexdigest().upper() == lock['baseline_source_sha256'],
+          'Imported v6 RTL source hash differs')
+history = read_json(ROOT / 'docs' / 'v7-delay0-results.json')
+check(history.get('experiment_commit') == lock.get('delay0_experiment_commit'), 'Historical DELAY 0 result commit differs')
 
 metrics_path = run / 'final' / 'metrics.csv'
 metrics = {}
@@ -123,10 +130,13 @@ for corner in lock['sta_corners']:
                   fanout=metric('design__max_fanout_violation__count'))
     if any(v is None for v in values.values()):
         missing.append(f'{corner}: incomplete metrics')
+    if not sta or not (sta / corner / 'min.rpt').is_file():
+        missing.append(f'{corner}: hold path report missing')
     annotation = read_json(sta / corner / 'filter_unannotated_metrics.json') if sta else {}
     unannotated = annotation.get(f'timing__unannotated_net_filtered__count__corner:{corner}')
     check(unannotated == 0, f'{corner}: unannotated functional nets {unannotated}')
     old = lock['baseline_corners'][corner]
+    delay = next((c for c in history.get('corners', []) if c['corner'] == corner), {})
     paths = paths_for(corner)
     groups = {}
     for p in paths:
@@ -136,6 +146,7 @@ for corner in lock['sta_corners']:
                 groups[group] = p
     corners.append(dict(corner=corner, **values, unannotated_functional_nets=unannotated,
                         baseline_setup_ns=old['setup_ns'], baseline_hold_ns=old['hold_ns'],
+                        delay0_setup_ns=delay.get('setup_ns'), delay0_hold_ns=delay.get('hold_ns'),
                         setup_improvement_ns=values['setup_ns'] - old['setup_ns'] if values['setup_ns'] is not None else None,
                         worst_reported_path=min(paths, key=lambda p: p['slack_ns']) if paths else None,
                         reported_path_groups=groups))
@@ -155,6 +166,8 @@ complete = metrics_path.is_file() and not missing and os.environ.get('GDS_BUILD_
 result = dict(experiment=lock['experiment'], experiment_commit=head,
               workflow_run_id=os.environ.get('GITHUB_RUN_ID'), baseline_commit=lock['baseline_commit'],
               source_sha256=source_hash, comparable=not provenance_failures, build_complete=complete,
+              baseline_source_sha256=lock.get('baseline_source_sha256'),
+              delay0_experiment_commit=lock.get('delay0_experiment_commit'),
               physical_pass=physical_pass, timing_pass=timing_pass, electrical_pass=electrical_pass,
               signoff_pass=complete and not provenance_failures and physical_pass and timing_pass and electrical_pass,
               corners=corners, physical=physical, comparison=comparison, provenance_failures=provenance_failures,
@@ -166,14 +179,14 @@ evidence = [ROOT / 'src/project.v', ROOT / 'src/config.json', ROOT / 'build_lock
 if sta:
     evidence += list(sta.rglob('*.rpt')) + list(sta.rglob('*.json'))
 (OUT / 'evidence_sha256.json').write_text(json.dumps({str(p.relative_to(ROOT)): digest(p) for p in evidence if p.is_file()}, indent=2) + '\n')
-lines = ['# v7 DELAY 0 路由后评估', '',
+lines = ['# ' + lock['experiment'] + ' 路由后评估', '',
          f"可比性：{result['comparable']}；构建完成：{complete}；物理检查：{physical_pass}；九角时序：{timing_pass}；电气规则：{electrical_pass}。", '',
-         '| Corner | AREA 0 setup ns | DELAY 0 setup ns | 改善 ns | DELAY 0 hold ns | Slew | Cap | Fanout |',
-         '|---|---:|---:|---:|---:|---:|---:|---:|']
+         '| Corner | v6 AREA 0 setup ns | v7 DELAY 0 setup ns | 优化 AREA 0 setup ns | 对 v6 改善 ns | 优化 hold ns | Slew | Cap | Fanout |',
+         '|---|---:|---:|---:|---:|---:|---:|---:|---:|']
 def fmt(v):
     return 'missing' if v is None else f'{v:.6f}'
 for c in corners:
-    lines.append('| ' + ' | '.join([c['corner']] + [fmt(c[k]) for k in ('baseline_setup_ns', 'setup_ns', 'setup_improvement_ns', 'hold_ns', 'slew', 'capacitance', 'fanout')]) + ' |')
+    lines.append('| ' + ' | '.join([c['corner']] + [fmt(c[k]) for k in ('baseline_setup_ns', 'delay0_setup_ns', 'setup_ns', 'setup_improvement_ns', 'hold_ns', 'slew', 'capacitance', 'fanout')]) + ' |')
 lines += ['', '面积与单元数：', '', json.dumps(comparison, indent=2), '',
           '检查问题：', ''] + ['- ' + x for x in provenance_failures + missing]
 lines += ['', result['scope'], '']
