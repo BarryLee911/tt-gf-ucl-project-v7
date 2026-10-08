@@ -13,8 +13,10 @@ hashes are recorded separately in `build_lock.json`.
 [Builds](https://github.com/BarryLee911/tt-gf-ucl-project-v7/actions)
 
 `build_lock.json` records the pinned tools, PDK, constraints and all nine baseline STA corners.
-The physical flow retains v6's original timing gates. A separate all-corner assessment
-checks setup, hold and electrical violations. Functional gate-level regression does not use SDF.
+The physical flow retains v6's original timing gates. Nine-corner setup, hold and
+electrical results are retained in the build report for analysis; there is no additional
+all-corner closure job blocking the workflow. Build provenance, physical checks,
+precheck and functional gate-level regression remain required. Gate simulation does not use SDF.
 
 Previous results: **DELAY 0 regressed setup and area**. Worst setup: −9.887542 ns
 (v6: −7.933554 ns); standard-cell area: +2.955%. RTL/GDS/precheck passed;

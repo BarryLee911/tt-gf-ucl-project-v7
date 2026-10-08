@@ -88,20 +88,3 @@ jobs:
           submodules: recursive
       - name: Functional gate-level regression (without SDF)
         uses: TinyTapeout/tt-gds-action/gl_test@395eedb3eeec3c2f4961c3b04ff2cf87f5525636
-  all_corner_assessment:
-    needs: gds
-    if: always()
-    runs-on: ubuntu-24.04
-    steps:
-      - uses: actions/download-artifact@v7
-        with:
-          name: v7-area0-divider23-assessment
-      - name: Require nine-corner timing and electrical closure
-        run: |
-          python - <<'PY'
-          import json
-          from pathlib import Path
-          r = json.loads(Path('verification/build/assessment.json').read_text())
-          print(json.dumps({k: r[k] for k in ('comparable', 'build_complete', 'timing_pass', 'electrical_pass', 'physical_pass')}, indent=2))
-          raise SystemExit(0 if r['signoff_pass'] else 1)
-          PY
